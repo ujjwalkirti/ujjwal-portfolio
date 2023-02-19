@@ -1,6 +1,8 @@
 import React from "react";
 import { Fira_Mono, Inter } from "@next/font/google";
 import AboutMe from "./AboutMe";
+import ThingsBuilt from "./ThingsBuilt";
+import GetInTouch from "./GetInTouch";
 const firamono = Fira_Mono({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
@@ -44,7 +46,7 @@ const LandingPage = () => {
         <div
           className={
             "mt-[20px] max-w-[540px] text-justify text-[16px] text-[#8892B0] " +
-            inter.className
+            firamono.className
           }
         >
           <p>
@@ -70,6 +72,8 @@ const LandingPage = () => {
         </button>
       </div>
       <AboutMe font={inter} />
+      <ThingsBuilt font={[inter, firamono]} />
+      <GetInTouch font={[inter, firamono]} />
     </section>
   );
 };

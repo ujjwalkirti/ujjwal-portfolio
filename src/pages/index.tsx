@@ -3,6 +3,7 @@ import { Inter } from "@next/font/google";
 import styles from "@/styles/LandingPage.module.css";
 import LandingPage from "@/components/landing-page/LandingPage";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +18,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <LandingPage />
+      <Footer />
     </section>
   );
 }
