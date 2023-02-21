@@ -5,12 +5,13 @@ import { MdOutlineClose } from "react-icons/md";
 import GetInTouch from "./GetInTouch";
 import Image from "next/image";
 import { AiOutlineCaretRight } from "react-icons/ai";
-import { BsFolder2Open, BsLink45Deg } from "react-icons/bs";
+import styles from "../../styles/LandingPage.module.css";
 import { useState } from "react";
 import Link from "next/link";
 import FeaturedProject from "./FeaturedProject";
 import NoteWorthyProjectsCard from "./NoteWorthyProjectsCard";
 import Footer from "../Footer";
+import { featuredProjects, NoteworthyProjects } from "../data";
 
 const firamono = Fira_Mono({
   subsets: ["latin"],
@@ -33,9 +34,18 @@ const tools = [
   "Express",
 ];
 
-const featuredProjects: Array<Object> = [{}, {}];
+const navbarOptionStyle = "hover:text-[#64ffda] cursor-pointer";
 
-const NoteworthyProjects: Array<Object> = [{}, {}, {}];
+const moveToClass = (id: string): void => {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+  }
+};
 
 const LandingPage = () => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -52,7 +62,7 @@ const LandingPage = () => {
   return (
     <section className=" min-h-screen  px-[25px]">
       <section className="h-[100px] text-[#64FFDA] flex items-center justify-between px-[25px] relative lg:px-[50px]">
-        <p className="text-[24px]">Ujjwal Kirti</p>
+        <Image alt="my logo" src={`/UK.png`} height={60} width={60} />
         <FaHamburger
           className="text-[34px] lg:hidden"
           onClick={() => {
@@ -65,17 +75,26 @@ const LandingPage = () => {
             " hidden lg:flex items-center gap-4 text-[14px] grayish-text"
           }
         >
-          <div>
+          <div
+            onClick={() => moveToClass("about")}
+            className={navbarOptionStyle}
+          >
             <span className="aqua">01.</span> About
           </div>
-          <div>
+          <div
+            onClick={() => moveToClass("work")}
+            className={navbarOptionStyle}
+          >
             <span className="aqua">02.</span> Work
           </div>
-          <div>
+          <div
+            onClick={() => moveToClass("contact")}
+            className={navbarOptionStyle}
+          >
             <span className="aqua">03.</span> Contact
           </div>
           <Link
-            href={`#`}
+            href={`https://drive.google.com/file/d/1Yeheadg5C0nkEJ2_ZqSJPyibcW8By3lz/view?usp=share_link`}
             className="aqua border-[#64FFDA] border px-6 py-2 rounded-md hover:bg-[#64ffda1a]"
           >
             Resume
@@ -152,10 +171,21 @@ const LandingPage = () => {
           Click here!
         </button>
       </div>
+
+      {/* 
+        This marks the beginning of about section
+      */}
+
       <section
-        className={"pb-10 lg:px-[100px] lg:w-4/5 lg:mx-auto " + inter.className}
+        className={
+          "pb-10 lg:px-[100px] lg:w-4/5 lg:mx-auto " +
+          inter.className +
+          " " +
+          styles["about-fade-in-style"]
+        }
+        id="about"
       >
-        <div className="flex pt-[10px] pb-[40px]">
+        <div className="flex pt-[10px] pb-[20px]">
           <p className="grayish-text text-[26px] font-semibold">
             <span className="aqua text-[18px]">01.</span> About Me
           </p>
@@ -213,8 +243,10 @@ const LandingPage = () => {
                   width={259.52}
                 />
                 <div
-                  className={`h-[479.52px] w-[279.52px] absolute border-2 border-[#64ffda] rounded-lg -z-10 ${
-                    removeWrapper ? "top-3 left-3" : "top-6 left-5"
+                  className={`h-[479.52px] w-[279.52px] absolute border-2 border-[#64ffda] top-5 left-4 rounded-lg -z-10 ${
+                    removeWrapper
+                      ? "-translate-y-2 -translate-x-2 duration-300"
+                      : "translate-y-2 translate-x-2 duration-300"
                   }`}
                 ></div>
               </div>
@@ -222,7 +254,14 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
-      <section className="py-10 lg:px-[100px] lg:w-11/12  lg:mx-auto">
+      {/* 
+        works section 
+      */}
+
+      <section
+        className="py-10  lg:px-[100px] lg:w-11/12  lg:mx-auto"
+        id="work"
+      >
         <div className="flex pt-[10px] pb-[20px]">
           <p
             className={
@@ -270,7 +309,9 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
-      <GetInTouch font={[inter, firamono]} />
+      <div id="contact">
+        <GetInTouch font={[inter, firamono]} />
+      </div>
       <Footer />
     </section>
   );

@@ -37,7 +37,10 @@ const Footer = () => {
       <div className="hidden lg:flex lg:fixed lg:bottom-[00px] lg:right-0  lg:flex-col lg:pr-[70px]">
         <Link
           href={`mailto:ujjwalkirti2000@gmail.com`}
-          className="rotate-90 hover:-translate-y-2 fixed bottom-[280px] -right-[52px]  hover:text-[#64ffda] transition-all"
+          className={
+            "rotate-90 hover:-translate-y-2 fixed bottom-[270px] -right-[51px]  hover:text-[#64ffda] transition-all " +
+            firamono.className
+          }
         >
           ujjwalkirti2000@gmail.com
         </Link>
