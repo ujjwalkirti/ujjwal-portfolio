@@ -7,7 +7,7 @@ const featuredProjects: Array<Object> = [
       long: "The website was used to display real time live scores, video streaming of the match, take polls on outcome of matches, make announcements, host contests, attract sponsorship as well as display fixtures and points table which updated dynamically.",
     },
     tags: ["Next.js", "Tailwind CSS", "Firebase", "Vercel"],
-    image_url: "/mmnct.png",
+    image_url: "/mmnct.PNG",
     github_link: "https://github.com/ujjwalkirti/mmnct",
     deployed_link: "https://www.mmnct.in/",
   },
