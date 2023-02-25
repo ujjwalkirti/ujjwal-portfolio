@@ -13,12 +13,12 @@ const Footer = () => {
   return (
     <div
       className={
-        "mt-[180px] lg:mt-[50px] px-[15px] pb-4 lg:pb-10 dark-grayish-text text-center text-[16px]  " +
+        "mt-[180px] lg:mt-[50px] px-[25px] pb-4 lg:pb-10 dark-grayish-text text-center text-[16px]  " +
         firamono.className
       }
     >
       {/* socials icons */}
-      <div className="flex justify-evenly items-center dark-grayish-text lg:fixed lg:bottom-0 lg:flex-col lg:pl-[15px]">
+      <div className="flex justify-evenly items-center dark-grayish-text link-elements lg:fixed lg:bottom-0 lg:flex-col lg:pl-[15px]">
         <Link href="https://github.com/ujjwalkirti">
           <FiGithub className={iconStyle} />
         </Link>
@@ -34,7 +34,7 @@ const Footer = () => {
         <div className="border-r-2 h-[150px] border-[#8892b0] hidden lg:flex"></div>
       </div>
       {/* email address link */}
-      <div className="hidden lg:flex lg:fixed lg:bottom-[00px] lg:right-0  lg:flex-col lg:pr-[70px]">
+      <div className="hidden lg:flex lg:fixed lg:bottom-[00px] lg:right-0  lg:flex-col lg:pr-[70px] link-elements">
         <Link
           href={`mailto:ujjwalkirti2000@gmail.com`}
           className={

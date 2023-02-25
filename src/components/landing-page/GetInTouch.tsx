@@ -3,7 +3,7 @@ import React from "react";
 
 const GetInTouch = ({ font }) => {
   return (
-    <div className="text-center pb-10 lg:max-w-[600px] lg:mx-auto lg:mb-[100px]">
+    <div className="text-center pb-10 px-[25px] lg:max-w-[600px] lg:mx-auto lg:mb-[100px]">
       <p
         className={
           "aqua lg:text-[16px] lg:mb-[20px] lg:mt-[10px] text-[20px] " +

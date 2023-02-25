@@ -1,11 +1,10 @@
-import React from "react";
+import React, { DOMElement, useEffect } from "react";
 import { Fira_Mono, Inter } from "@next/font/google";
 import { FaHamburger } from "react-icons/fa";
 import { MdOutlineClose } from "react-icons/md";
 import GetInTouch from "./GetInTouch";
 import Image from "next/image";
 import { AiOutlineCaretRight } from "react-icons/ai";
-import styles from "../../styles/LandingPage.module.css";
 import { useState } from "react";
 import Link from "next/link";
 import FeaturedProject from "./FeaturedProject";
@@ -35,6 +34,9 @@ const tools = [
 ];
 
 const navbarOptionStyle = "hover:text-[#64ffda] cursor-pointer";
+const smallNavbarOptionStyle =
+  "hover:text-[#64ffda] cursor-pointer flex flex-col items-center text-[18px] px-[20px] pb-[20px] pt-[3px] " +
+  firamono.className;
 
 const moveToClass = (id: string): void => {
   const el = document.getElementById(id);
@@ -47,9 +49,78 @@ const moveToClass = (id: string): void => {
   }
 };
 
+function isInViewport(item: {
+  getBoundingClientRect: () => any;
+  offsetHeight: any;
+  offsetWidth: any;
+}): boolean {
+  var bounding = item.getBoundingClientRect(),
+    myElementHeight = item.offsetHeight,
+    myElementWidth = item.offsetWidth;
+
+  if (
+    bounding.top >= -myElementHeight &&
+    bounding.left >= -myElementWidth &&
+    bounding.right <=
+      (window.innerWidth || document.documentElement.clientWidth) +
+        myElementWidth &&
+    bounding.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) +
+        myElementHeight
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 const LandingPage = () => {
   const [showNavbar, setShowNavbar] = useState(false);
   const [removeWrapper, setRemoveWrapper] = useState(false);
+
+  useEffect(() => {
+    const about_el = document.getElementById("about");
+    const work_el = document.getElementById("work");
+    const contact_el = document.getElementById("contact");
+    // const about_observer = new IntersectionObserver((entries) => {
+    //   about_el.classList.toggle(
+    //     "fade-in-from-bottom",
+    //     entries[0].isIntersecting
+    //   );
+    // });
+    // const work_observer = new IntersectionObserver((entries) => {
+    //   work_el.classList.toggle(
+    //     "fade-in-from-bottom",
+    //     entries[0].isIntersecting
+    //   );
+    // });
+    // const contact_observer = new IntersectionObserver((entries) => {
+    //   contact_el.classList.toggle(
+    //     "fade-in-from-bottom",
+    //     entries[0].isIntersecting
+    //   );
+    // });
+    // about_observer.observe(about_el);
+    // work_observer.observe(work_el);
+    // contact_observer.observe(contact_el);
+    // return () => {
+    //   about_observer.unobserve(about_el);
+    //   work_observer.unobserve(work_el);
+    //   contact_observer.unobserve(contact_el);
+    // };
+
+    if (isInViewport(about_el)) {
+      about_el.classList.add("fade-in-from-bottom");
+    }
+
+    if (isInViewport(work_el)) {
+      work_el.classList.add("fade-in-from-bottom");
+    }
+
+    if (isInViewport(contact_el)) {
+      contact_el.classList.add("fade-in-from-bottom");
+    }
+  }, []);
 
   function styleOfWrapper() {
     if (removeWrapper) {
@@ -60,11 +131,13 @@ const LandingPage = () => {
   }
 
   return (
-    <section className=" min-h-screen  px-[25px]">
-      <section className="h-[100px] text-[#64FFDA] flex items-center justify-between px-[25px] relative lg:px-[50px]">
-        <Image alt="my logo" src={`/UK.png`} height={60} width={60} />
+    <section className=" min-h-screen  ">
+      <section className="h-[100px] px-[25px] text-[#64FFDA] flex items-center justify-between pr-[25px] relative lg:px-[50px] navbar-parent fade-in-from-top">
+        <Link href={`/`}>
+          <Image alt="my logo" src={`/UK.png`} height={60} width={60} />
+        </Link>
         <FaHamburger
-          className="text-[34px] lg:hidden"
+          className="text-[34px] lg:hidden cursor-pointer transi"
           onClick={() => {
             setShowNavbar(true);
           }}
@@ -103,21 +176,62 @@ const LandingPage = () => {
         {showNavbar && (
           <div
             className={
-              "absolute top-0 right-0 w-[100%] min-h-screen z-20 flex justify-end filter backdrop-filter backdrop-blur-sm transition-transform translate-x-3"
+              "absolute top-0 right-0  w-screen min-h-screen z-20 flex justify-end filter backdrop-filter backdrop-blur-sm "
             }
           >
-            <div className="w-[75%] h-screen bg-[#112240] pt-10">
-              <MdOutlineClose
-                className="text-[40px]"
-                onClick={() => {
-                  setShowNavbar(false);
-                }}
-              />
+            <div className="w-[75%] px-[15px] md:w-[56%] h-screen bg-[#112240] pt-10 grayish-text flex flex-col ">
+              <div className="flex justify-end h-1/6">
+                <MdOutlineClose
+                  className="text-[40px] aqua cursor-pointer transition-all transform-gpu hover:rotate-180 duration-300"
+                  onClick={() => {
+                    setShowNavbar(false);
+                  }}
+                />
+              </div>
+              <div className="flex flex-col gap-4 justify-center h-5/6 pb-10">
+                {" "}
+                <div
+                  onClick={() => {
+                    moveToClass("about");
+                    setShowNavbar(false);
+                  }}
+                  className={smallNavbarOptionStyle}
+                >
+                  <span className="aqua">01.</span> About
+                </div>
+                <div
+                  onClick={() => {
+                    moveToClass("work");
+                    setShowNavbar(false);
+                  }}
+                  className={smallNavbarOptionStyle}
+                >
+                  <span className="aqua">02.</span> Work
+                </div>
+                <div
+                  onClick={() => {
+                    moveToClass("contact");
+                    setShowNavbar(false);
+                  }}
+                  className={smallNavbarOptionStyle}
+                >
+                  <span className="aqua">03.</span> Contact
+                </div>
+                <Link
+                  href={`https://drive.google.com/file/d/1Yeheadg5C0nkEJ2_ZqSJPyibcW8By3lz/view?usp=share_link`}
+                  className={
+                    "aqua w-[153.4px] text-center mx-auto border-[#64FFDA] text-[14px] border px-[50px] py-[18px] mt-[38px] rounded-md hover:bg-[#64ffda1a] " +
+                    firamono.className
+                  }
+                >
+                  Resume
+                </Link>
+              </div>
             </div>
           </div>
         )}
       </section>
-      <div className="flex flex-col justify-start items-start pt-[90px] h-screen lg:pt-[40px] lg:px-[100px] lg:mx-auto lg:w-11/12">
+      <div className="flex flex-col justify-start items-start pt-[90px] h-screen lg:pt-[40px] lg:px-[100px] lg:mx-auto lg:w-11/12 fade-in-from-bottom px-[25px]">
         {" "}
         <p
           className={
@@ -178,10 +292,9 @@ const LandingPage = () => {
 
       <section
         className={
-          "pb-10 lg:px-[100px] lg:w-4/5 lg:mx-auto " +
+          "pb-10 lg:px-[100px] px-[25px] lg:w-4/5 lg:mx-auto " +
           inter.className +
-          " " +
-          styles["about-fade-in-style"]
+          " fade-in-from-bottom"
         }
         id="about"
       >
@@ -223,7 +336,7 @@ const LandingPage = () => {
               ))}
             </ul>
           </div>
-          <div className="flex  lg:items-start relative mt-10 lg:w-2/5">
+          <div className="flex justify-center lg:items-start relative mt-10 lg:w-2/5">
             <div
               className="relative z-20"
               onMouseEnter={(e) => {
@@ -254,12 +367,13 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
+
       {/* 
         works section 
       */}
 
       <section
-        className="py-10  lg:px-[100px] lg:w-11/12  lg:mx-auto"
+        className="py-10 px-[25px] lg:px-[100px] lg:w-11/12  lg:mx-auto"
         id="work"
       >
         <div className="flex pt-[10px] pb-[20px]">
@@ -283,6 +397,7 @@ const LandingPage = () => {
             } else {
               alignment = "left";
             }
+
             return (
               <FeaturedProject
                 key={index}

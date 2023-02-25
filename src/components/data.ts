@@ -32,7 +32,12 @@ const NoteworthyProjects: Array<Object> = [
   {
     title: "Netflix Clone",
     desc: "A Reactjs application based on the popular movie streaming platform Netflix.",
-    tags: ["JavaScript", "Reactjs", "React-router"],
+    tags: [
+      "JavaScript",
+      "Reactjs",
+      "React-router",
+      "Payment Gateway Integration",
+    ],
     github_link: "https://github.com/ujjwalkirti/netflix-clone",
   },
 ];

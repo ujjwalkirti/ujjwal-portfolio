@@ -5,18 +5,19 @@ import { AiFillGithub } from "react-icons/ai";
 import { BsLink45Deg } from "react-icons/bs";
 
 function styleBasedOnAlignment(alignment: String) {
-  return alignment === "right"
-    ? "lg:justify-end lg:text-end"
-    : "lg:justify-start lg:text-start";
+  if (alignment === "right") {
+    return "lg:justify-end lg:text-end";
+  } else {
+    return "lg:justify-start lg:text-start";
+  }
 }
 
 const FeaturedProject = ({ font, alignment, project }) => {
-  console.log(alignment);
   return (
     <div
-      className={`shadow-xl lg:shadow-none lg:flex   lg:mb-[120px] lg:min-h-[400px] rounded-md p-[25px] ${
+      className={`shadow-xl lg:shadow-none lg:flex   lg:mb-[120px] lg:min-h-[400px] rounded-md p-[25px] ${" "} ${
         font[0].className
-      } ${styleBasedOnAlignment(alignment)}`}
+      }${" "} ${styleBasedOnAlignment(alignment)}`}
     >
       {/* image showing snip of code opened in vscode */}
       <div className="hidden lg:flex lg:flex-col lg:items-center  lg:bg-[#233554] lg:px-2 lg:py-2 lg:rounded-md  lg:gap-3 lg:w-3/5">
@@ -29,11 +30,11 @@ const FeaturedProject = ({ font, alignment, project }) => {
         <Image
           alt="Project Image"
           src={project.image_url}
-          height={400}
+          height={400}  
           width={400}
           className="h-full w-full"
         />
-      </div>
+      </div> 
       <div className="lg:flex lg:flex-col lg:justify-center lg:relative  lg:items-end  lg:gap-4 lg:w-2/5">
         <p className={"aqua " + font[1].className}>Featured Project</p>
         {/* name of project */}
@@ -41,7 +42,7 @@ const FeaturedProject = ({ font, alignment, project }) => {
           {project.title}
         </p>
         {/* description of project */}
-        <p className="text-[12px] text-[#A8B2D1] py-[25px] lg:bg-[#112240] lg:px-10 lg:w-[600px] lg:shadow-xl lg:rounded-md">
+        <p className="text-[14px] text-[#A8B2D1] py-[25px] lg:bg-[#112240] lg:px-3 lg:w-[600px] lg:shadow-xl lg:rounded-md">
           {project.desc.long}
         </p>
         {/* tags of project */}
