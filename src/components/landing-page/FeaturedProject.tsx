@@ -30,11 +30,11 @@ const FeaturedProject = ({ font, alignment, project }) => {
         <Image
           alt="Project Image"
           src={project.image_url}
-          height={400}  
+          height={400}
           width={400}
           className="h-full w-full"
         />
-      </div> 
+      </div>
       <div className="lg:flex lg:flex-col lg:justify-center lg:relative  lg:items-end  lg:gap-4 lg:w-2/5">
         <p className={"aqua " + font[1].className}>Featured Project</p>
         {/* name of project */}
