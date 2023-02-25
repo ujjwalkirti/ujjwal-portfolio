@@ -276,14 +276,15 @@ const LandingPage = () => {
             connect!
           </p>
         </div>
-        <button
+        <Link
+          href={`https://www.linkedin.com/in/ujjwal-kirti/`}
           className={
             "text-[#64FFDA] border border-[#64FFDA] rounded-lg text-[14px] mt-[50px] py-[20px] px-[28px] hover:bg-[#64ffda1a] " +
             firamono.className
           }
         >
           Click here!
-        </button>
+        </Link>
       </div>
 
       {/* 
