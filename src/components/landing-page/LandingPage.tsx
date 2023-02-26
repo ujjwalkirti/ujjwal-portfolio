@@ -352,7 +352,7 @@ const LandingPage = () => {
                 <Image
                   className="rounded-lg w-[279.52px] z-20 h-[479.52px]"
                   alt="Ujjwal Kirti"
-                  src={`/me.png`}
+                  src={`/me.jpg`}
                   height={259.52}
                   width={259.52}
                 />
