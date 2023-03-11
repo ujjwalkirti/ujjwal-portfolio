@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
-import styles from "@/styles/LandingPage.module.css";
 import LandingPage from "@/components/landing-page/LandingPage";
 
 const inter = Inter({ subsets: ["latin"] });
