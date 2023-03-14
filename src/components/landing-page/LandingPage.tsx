@@ -11,6 +11,7 @@ import FeaturedProject from "./FeaturedProject";
 import NoteWorthyProjectsCard from "./NoteWorthyProjectsCard";
 import Footer from "../Footer";
 import { featuredProjects, NoteworthyProjects } from "../data";
+import TechStack from "./TechStack";
 
 const firamono = Fira_Mono({
   subsets: ["latin"],
@@ -416,7 +417,9 @@ const LandingPage = () => {
             Other Noteworthy Projects
           </p>
           <p className={"text-[14px] mb-[50px] aqua " + firamono.className}>
-            <Link href={`/view-the-archive`} className='hover:underline'>view the archive</Link>
+            <Link href={`/view-the-archive`} className="hover:underline">
+              view the archive
+            </Link>
           </p>
           <div className="lg:grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-4">
             {NoteworthyProjects.map((project, index) => (
@@ -425,6 +428,7 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
+      <TechStack />
       <div id="contact">
         <GetInTouch font={[inter, firamono]} />
       </div>

@@ -42,4 +42,36 @@ const NoteworthyProjects: Array<Object> = [
   },
 ];
 
-export { featuredProjects, NoteworthyProjects };
+const skills = [
+  {
+    name: "HTML, CSS and JavaScript",
+    proficiency: 87,
+  },
+  {
+    name: "React",
+    proficiency: 80,
+  },
+  {
+    name: "Next.js",
+    proficiency: 70,
+  },
+];
+const otherSkills = [
+  { name: "Tailwind CSS", imgUrl: "/tech/tailwindcss.jpg" },
+  { name: "Express", imgUrl: "/tech/express.png" },
+  { name: "Mongodb", imgUrl: "/tech/mongodb.png" },
+  { name: "Ruby on Rails", imgUrl: "/tech/rails.png" },
+  { name: "Firebase", imgUrl: "/tech/firebase.png" },
+];
+
+const languages = [
+  { name: "C++", imgUrl: "/tech/cpp.png" },
+  { name: "Ruby", imgUrl: "/tech/ruby.png" },
+  {
+    name: "TypeScript",
+    imgUrl: "/tech/ts.png",
+  },
+  { name: "Python", imgUrl: "/tech/python.png" },
+  { name: "Java", imgUrl: "/tech/java.png" },
+];
+export { featuredProjects, NoteworthyProjects, skills, otherSkills, languages };
