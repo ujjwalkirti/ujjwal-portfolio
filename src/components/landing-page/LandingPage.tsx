@@ -428,7 +428,7 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
-      <TechStack />
+      {/* <TechStack /> */}
       <div id="contact">
         <GetInTouch font={[inter, firamono]} />
       </div>

@@ -35,7 +35,7 @@ const TechStack = () => {
             >
               {skill.name}
             </p>
-            <div className="bg-white w-full rounded-full mx-auto h-[20px]">
+            {/* <div className="bg-white w-full rounded-full mx-auto h-[20px]">
               <div
                 style={{
                   width: skill.proficiency.toString() + "%",
@@ -43,7 +43,7 @@ const TechStack = () => {
                 }}
                 className="h-[20px] rounded-full"
               ></div>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>
@@ -53,7 +53,7 @@ const TechStack = () => {
             key={index}
             className="w-4/5 mx-auto my-4 bg-[#112240] rounded-t-lg"
           >
-            <div className="bg-white  rounded-t-lg">
+            {/* <div className="bg-white  rounded-t-lg">
               <Image
                 alt={`${skill.name}'s image`}
                 src={skill.imgUrl}
@@ -61,7 +61,7 @@ const TechStack = () => {
                 width={80}
                 className=" h-[90px] w-[296px] object-contain px-2"
               />
-            </div>
+            </div> */}
             <p
               className={
                 "text-lg py-3 text-center font-medium " + firamono.className
@@ -86,7 +86,7 @@ const TechStack = () => {
             key={index}
             className="w-4/5 mx-auto my-4 bg-[#112240] rounded-t-lg"
           >
-            <div className="bg-white rounded-t-lg py-1">
+            {/* <div className="bg-white rounded-t-lg py-1">
               <Image
                 alt={`${lang.name}'s image`}
                 src={lang.imgUrl}
@@ -94,7 +94,7 @@ const TechStack = () => {
                 width={80}
                 className="mx-auto object-contain px-2 h-[60px] rounded-t-lg"
               />
-            </div>
+            </div> */}
             <p
               className={
                 "text-lg flex items-center justify-center py-3 text-center font-medium " +
