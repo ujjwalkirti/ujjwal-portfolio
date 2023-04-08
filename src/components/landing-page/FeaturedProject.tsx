@@ -62,9 +62,11 @@ const FeaturedProject = ({ font, alignment, project }) => {
           <Link href={project.github_link}>
             <AiFillGithub className="cursor-pointer hover:-translate-y-1 hover:text-[#64ffda] transition-all" />
           </Link>
-          <Link href={project.deployed_link}>
-            <BsLink45Deg className="cursor-pointer hover:-translate-y-1 hover:text-[#64ffda] transition-all" />
-          </Link>
+          {project.deployed_link && (
+            <Link href={project.deployed_link}>
+              <BsLink45Deg className="cursor-pointer hover:-translate-y-1 hover:text-[#64ffda] transition-all" />
+            </Link>
+          )}
         </div>
       </div>
     </div>

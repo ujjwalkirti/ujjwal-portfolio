@@ -1,4 +1,4 @@
-import React, { DOMElement, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Fira_Mono, Inter } from "@next/font/google";
 import { FaHamburger } from "react-icons/fa";
 import { MdOutlineClose } from "react-icons/md";
@@ -11,7 +11,6 @@ import FeaturedProject from "./FeaturedProject";
 import NoteWorthyProjectsCard from "./NoteWorthyProjectsCard";
 import Footer from "../Footer";
 import { featuredProjects, NoteworthyProjects } from "../data";
-import TechStack from "./TechStack";
 
 const firamono = Fira_Mono({
   subsets: ["latin"],
@@ -50,77 +49,44 @@ const moveToClass = (id: string): void => {
   }
 };
 
-function isInViewport(item: {
-  getBoundingClientRect: () => any;
-  offsetHeight: any;
-  offsetWidth: any;
-}): boolean {
-  var bounding = item.getBoundingClientRect(),
-    myElementHeight = item.offsetHeight,
-    myElementWidth = item.offsetWidth;
-
-  if (
-    bounding.top >= -myElementHeight &&
-    bounding.left >= -myElementWidth &&
-    bounding.right <=
-      (window.innerWidth || document.documentElement.clientWidth) +
-        myElementWidth &&
-    bounding.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) +
-        myElementHeight
-  ) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
 const LandingPage = () => {
   const [showNavbar, setShowNavbar] = useState(false);
   const [removeWrapper, setRemoveWrapper] = useState(false);
+  const about_ref = useRef(null);
+  const work_ref = useRef(null);
+  const contact_ref = useRef(null);
 
   useEffect(() => {
-    const about_el = document.getElementById("about");
-    const work_el = document.getElementById("work");
-    const contact_el = document.getElementById("contact");
-    // const about_observer = new IntersectionObserver((entries) => {
-    //   about_el.classList.toggle(
-    //     "fade-in-from-bottom",
-    //     entries[0].isIntersecting
-    //   );
-    // });
-    // const work_observer = new IntersectionObserver((entries) => {
-    //   work_el.classList.toggle(
-    //     "fade-in-from-bottom",
-    //     entries[0].isIntersecting
-    //   );
-    // });
-    // const contact_observer = new IntersectionObserver((entries) => {
-    //   contact_el.classList.toggle(
-    //     "fade-in-from-bottom",
-    //     entries[0].isIntersecting
-    //   );
-    // });
-    // about_observer.observe(about_el);
-    // work_observer.observe(work_el);
-    // contact_observer.observe(contact_el);
-    // return () => {
-    //   about_observer.unobserve(about_el);
-    //   work_observer.unobserve(work_el);
-    //   contact_observer.unobserve(contact_el);
-    // };
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in-from-bottom");
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.5 }
+    );
 
-    if (isInViewport(about_el)) {
-      about_el.classList.add("fade-in-from-bottom");
+    if (about_ref.current) {
+      observer.observe(about_ref.current);
     }
-
-    if (isInViewport(work_el)) {
-      work_el.classList.add("fade-in-from-bottom");
+    if (work_ref.current) {
+      observer.observe(work_ref.current);
     }
-
-    if (isInViewport(contact_el)) {
-      contact_el.classList.add("fade-in-from-bottom");
+    if (contact_ref.current) {
+      observer.observe(contact_ref.current);
     }
+    return () => {
+      if (about_ref.current) {
+        observer.unobserve(about_ref.current);
+      }
+      if (work_ref.current) {
+        observer.unobserve(work_ref.current);
+      }
+      if (contact_ref.current) {
+        observer.unobserve(contact_ref.current);
+      }
+    };
   }, []);
 
   function styleOfWrapper() {
@@ -294,10 +260,9 @@ const LandingPage = () => {
 
       <section
         className={
-          "pb-10 lg:px-[100px] px-[25px] lg:w-4/5 lg:mx-auto " +
-          inter.className +
-          " fade-in-from-bottom"
+          "pb-10 lg:px-[100px] px-[25px] lg:w-4/5 lg:mx-auto " + inter.className
         }
+        ref={about_ref}
         id="about"
       >
         <div className="flex pt-[10px] pb-[20px]">
@@ -352,8 +317,8 @@ const LandingPage = () => {
               <div className="relative z-20">
                 <Image
                   className="rounded-lg w-[279.52px] z-20 h-[479.52px]"
-                  alt="Ujjwal Kirti"
-                  src={`/me.jpg`}
+                  alt="Ujjwal Kirti's image"
+                  src={`https://firebasestorage.googleapis.com/v0/b/fir-react-native-expo-bbbae.appspot.com/o/me.jpg?alt=media&token=69b3f08f-1df9-4125-a94e-4c017acef623`}
                   height={259.52}
                   width={259.52}
                 />
@@ -377,6 +342,7 @@ const LandingPage = () => {
       <section
         className="py-10 px-[25px] lg:px-[100px] lg:w-11/12  lg:mx-auto"
         id="work"
+        ref={work_ref}
       >
         <div className="flex pt-[10px] pb-[20px]">
           <p
@@ -429,7 +395,7 @@ const LandingPage = () => {
         </div>
       </section>
       {/* <TechStack /> */}
-      <div id="contact">
+      <div id="contact" ref={contact_ref}>
         <GetInTouch font={[inter, firamono]} />
       </div>
       <Footer />
