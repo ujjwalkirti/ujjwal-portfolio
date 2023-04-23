@@ -52,41 +52,9 @@ const moveToClass = (id: string): void => {
 const LandingPage = () => {
   const [showNavbar, setShowNavbar] = useState(false);
   const [removeWrapper, setRemoveWrapper] = useState(false);
-  const about_ref = useRef(null);
-  const work_ref = useRef(null);
-  const contact_ref = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("fade-in-from-bottom");
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (about_ref.current) {
-      observer.observe(about_ref.current);
-    }
-    if (work_ref.current) {
-      observer.observe(work_ref.current);
-    }
-    if (contact_ref.current) {
-      observer.observe(contact_ref.current);
-    }
-    return () => {
-      if (about_ref.current) {
-        observer.unobserve(about_ref.current);
-      }
-      if (work_ref.current) {
-        observer.unobserve(work_ref.current);
-      }
-      if (contact_ref.current) {
-        observer.unobserve(contact_ref.current);
-      }
-    };
+    
   }, []);
 
   function styleOfWrapper() {
@@ -98,7 +66,7 @@ const LandingPage = () => {
   }
 
   return (
-    <section className=" min-h-screen  ">
+    <section className=" min-h-screen">
       <section className="h-[100px] px-[25px] text-[#64FFDA] flex items-center justify-between pr-[25px] relative lg:px-[50px] navbar-parent fade-in-from-top">
         <Link href={`/`}>
           <Image alt="my logo" src={`/UK.png`} height={60} width={60} />
@@ -198,7 +166,7 @@ const LandingPage = () => {
           </div>
         )}
       </section>
-      <div className="flex flex-col justify-start items-start pt-[90px] h-screen lg:pt-[40px] lg:px-[100px] lg:mx-auto lg:w-11/12 fade-in-from-bottom px-[25px]">
+      <div className="flex flex-col justify-start items-start pt-[90px] min-h-screen lg:pt-[40px] lg:px-[100px] lg:mx-auto lg:w-11/12 fade-in-from-bottom px-[25px]">
         {" "}
         <p
           className={
@@ -262,7 +230,6 @@ const LandingPage = () => {
         className={
           "pb-10 lg:px-[100px] px-[25px] lg:w-4/5 lg:mx-auto " + inter.className
         }
-        ref={about_ref}
         id="about"
       >
         <div className="flex pt-[10px] pb-[20px]">
@@ -316,7 +283,7 @@ const LandingPage = () => {
               <div className={styleOfWrapper()}></div>
               <div className="relative z-20">
                 <Image
-                  className="rounded-lg w-[279.52px] z-20 h-[479.52px]"
+                  className="rounded-lg w-[279.52px] z-20 h-[479.52px] object-cover"
                   alt="Ujjwal Kirti's image"
                   src={`https://firebasestorage.googleapis.com/v0/b/fir-react-native-expo-bbbae.appspot.com/o/me.jpg?alt=media&token=69b3f08f-1df9-4125-a94e-4c017acef623`}
                   height={259.52}
@@ -342,7 +309,6 @@ const LandingPage = () => {
       <section
         className="py-10 px-[25px] lg:px-[100px] lg:w-11/12  lg:mx-auto"
         id="work"
-        ref={work_ref}
       >
         <div className="flex pt-[10px] pb-[20px]">
           <p
@@ -395,7 +361,7 @@ const LandingPage = () => {
         </div>
       </section>
       {/* <TechStack /> */}
-      <div id="contact" ref={contact_ref}>
+      <div id="contact">
         <GetInTouch font={[inter, firamono]} />
       </div>
       <Footer />
