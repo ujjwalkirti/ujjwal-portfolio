@@ -2,10 +2,16 @@ import Link from "next/link";
 import React from "react";
 import { BsFolder2Open, BsLink45Deg } from "react-icons/bs";
 import { FiGithub } from "react-icons/fi";
+import { monsterrat } from "../data";
 
 const NoteWorthyProjectsCard = ({ project }) => {
   return (
-    <div className="p-[25px] mb-10 text-left shadow-xl bg-[#112240] rounded-sm hover:-translate-y-3 transition-all cursor-pointer flex flex-col justify-between">
+    <div
+      className={
+        "py-[25px] px-4 mb-10 text-left shadow-xl bg-[#112240] rounded-sm lg:hover:-translate-y-3 transition-all cursor-pointer flex flex-col justify-between " +
+        monsterrat.className
+      }
+    >
       <div className="flex justify-between mb-7">
         <BsFolder2Open className="aqua text-[30px] hover:text-[#64FFDA]" />
         <div className="flex gap-4">
@@ -28,7 +34,10 @@ const NoteWorthyProjectsCard = ({ project }) => {
       <p className="text-[16px] dark-grayish-text">{project.desc}</p>
       <div className="break-words mt-[25px] mb-[10px] text-[13px] flex flex-wrap grayish-text ">
         {project.tags.map((tag: string, index: number) => (
-          <span key={index} className="mr-[10px] mb-[5px]">
+          <span
+            key={index}
+            className="mr-[10px] mb-[5px] bg-gray-500 px-2 py-1 rounded-md text-white "
+          >
             {tag}
           </span>
         ))}

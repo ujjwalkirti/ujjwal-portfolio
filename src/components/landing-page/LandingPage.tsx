@@ -166,7 +166,7 @@ const LandingPage = () => {
           </div>
         )}
       </section>
-      <div className="flex flex-col justify-start items-start pt-[90px] min-h-screen lg:pt-[40px] lg:px-[100px] lg:mx-auto lg:w-11/12 fade-in-from-bottom px-[25px]">
+      <div className="flex flex-col justify-start items-start pt-[40px] lg:min-h-screen lg:pt-[40px] lg:px-[100px] lg:mx-auto lg:w-11/12 fade-in-from-bottom px-[25px]">
         {" "}
         <p
           className={
@@ -178,7 +178,7 @@ const LandingPage = () => {
         </p>
         <p
           className={
-            "text-[40px] lg:text-[80px] font-semibold text-[#CCD6f6] my-[2px] " +
+            "text-[40px] lg:text-[60px] font-semibold text-[#CCD6f6] my-[2px] " +
             inter.className
           }
         >
@@ -186,7 +186,7 @@ const LandingPage = () => {
         </p>
         <p
           className={
-            "text-[40px] lg:text-[80px] text-[#8892B0] mt-[5px] font-semibold leading-[0.9] " +
+            "text-[40px] lg:text-[55px] text-[#8892B0] mt-[5px] font-semibold leading-[0.9] " +
             inter.className
           }
         >
@@ -214,7 +214,7 @@ const LandingPage = () => {
         <Link
           href={`https://www.linkedin.com/in/ujjwal-kirti/`}
           className={
-            "text-[#64FFDA] border border-[#64FFDA] rounded-lg text-[14px] mt-[50px] py-[20px] px-[28px] hover:bg-[#64ffda1a] " +
+            "text-[#64FFDA] border border-[#64FFDA] rounded-lg text-[14px] mt-[30px] py-[10px] px-[18px] hover:bg-[#64ffda1a] " +
             firamono.className
           }
         >
@@ -228,7 +228,7 @@ const LandingPage = () => {
 
       <section
         className={
-          "pb-10 lg:px-[100px] px-[25px] lg:w-4/5 lg:mx-auto " + inter.className
+          "pb-10 lg:px-[100px] px-[25px] mt-10 lg:w-4/5 lg:mx-auto " + inter.className
         }
         id="about"
       >
@@ -307,7 +307,7 @@ const LandingPage = () => {
       */}
 
       <section
-        className="py-10 px-[25px] lg:px-[100px] lg:w-11/12  lg:mx-auto"
+        className="py-10 px-[15px] lg:px-[100px] lg:w-11/12  lg:mx-auto"
         id="work"
       >
         <div className="flex pt-[10px] pb-[20px]">

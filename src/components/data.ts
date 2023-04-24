@@ -1,3 +1,5 @@
+import { Montserrat } from "@next/font/google";
+
 const featuredProjects: Array<Object> = [
   {
     title: "MMNCT Website",
@@ -13,24 +15,17 @@ const featuredProjects: Array<Object> = [
     deployed_link: "https://www.mmnct.in/",
   },
   {
-    title: "Reddit Clone",
+    title: "LAC Website",
     desc: {
       short:
-        "Reddit 2.0, made using Next.js, TypeScript and backed by graphql.",
-      long: "A Reddit clone has been developed using a combination of modern technologies, including Next.js, TailwindCSS, GraphQL, StepZen, Supabase, and React Hook Forms. The web application offers users a highly responsive and interactive environment for creating posts, upvoting and downvoting them, and leaving comments. With its contemporary design, seamless user experience, and powerful backend, the Reddit clone is likely to engage and captivate users from all backgrounds.",
+        "Full Stack Website, developed and currently being maintained by me.",
+      long: "The Literary Affairs Committee web application was developed using Next.js in Typescript and styled with Tailwind CSS. The website used Firebase as the database, which allowed for efficient development and real-time synchronization. The website included an admin panel for content and user management and was deployed on Vercel, resulting in an excellent user experience.",
     },
-    tags: [
-      "Next.js",
-      "Tailwind CSS",
-      "Supabase",
-      "StepZen",
-      "Graphql",
-      "Vercel",
-    ],
+    tags: ["Next.js", "Tailwind CSS", "Firebase", "Vercel", "React Hook Forms"],
     image_url:
-      "https://firebasestorage.googleapis.com/v0/b/fir-react-native-expo-bbbae.appspot.com/o/Reddit-launches-NFT-marketplace-for-unique-collectible-avatars-1024x682.jpg?alt=media&token=18dc20de-31dc-42b2-b6cf-800fb979817b",
-    github_link: "https://github.com/ujjwalkirti/reddit-clone",
-    // deployed_link: "https://www.mmnct.in/",
+      "https://firebasestorage.googleapis.com/v0/b/fir-react-native-expo-bbbae.appspot.com/o/Screenshot%202023-04-22%20135249.png?alt=media&token=35fd4d53-e8e3-42f1-ba13-8e72003e7594",
+    github_link: "https://github.com/ujjwalkirti/lac-website/tree/main",
+    deployed_link: "https://www.lac-website.vercel.app",
   },
 ];
 
@@ -41,6 +36,21 @@ const NoteworthyProjects: Array<Object> = [
     tags: ["Next.js", "Firebase", "REST APIs"],
     github_link: "https://github.com/ujjwalkirti/help-college",
     deployed_link: "https://help-college-real.vercel.app/",
+  },
+  {
+    title: "Reddit Clone",
+    desc: "Reddit 2.0, made using Next.js, TypeScript and backed by graphql.",
+
+    tags: [
+      "Next.js",
+      "Tailwind CSS",
+      "Supabase",
+      "StepZen",
+      "Graphql",
+      "Vercel",
+    ],
+    github_link: "https://github.com/ujjwalkirti/reddit-clone",
+    // deployed_link: "https://www.mmnct.in/",
   },
   {
     title: "Pomodoro Timer (Based on Harry Potter Movies)",
@@ -95,4 +105,17 @@ const languages = [
   { name: "Python", imgUrl: "/tech/python.png" },
   { name: "Java", imgUrl: "/tech/java.png" },
 ];
-export { featuredProjects, NoteworthyProjects, skills, otherSkills, languages };
+
+const monsterrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["200", "400", "600", "800"],
+  display: "swap",
+});
+export {
+  featuredProjects,
+  NoteworthyProjects,
+  skills,
+  otherSkills,
+  languages,
+  monsterrat,
+};
