@@ -6,6 +6,8 @@ import Head from "next/head";
 import Link from "next/link";
 import React, { useRef } from "react";
 import { IoIosArrowBack } from "react-icons/io";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 type props = {
   blogs: Blog[];
@@ -20,10 +22,10 @@ const Blogs = ({ blogs }: props) => {
       .insert({ email: emailRef.current.value });
 
     if (error) {
-      console.error("Error adding email:", error);
+      toast.error("Error adding email: " + error.message);
       return null;
     }
-
+    toast.success("Email added successfully!");
     return data;
   }
   return (
@@ -82,6 +84,7 @@ const Blogs = ({ blogs }: props) => {
           )}
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
