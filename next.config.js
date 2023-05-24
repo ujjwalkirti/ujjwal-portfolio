@@ -5,8 +5,9 @@ const nextConfig = {
     domains: [
       "avatars.githubusercontent.com",
       "firebasestorage.googleapis.com",
+      "tghtovqmkscbuoezwsqx.supabase.co",
     ],
   },
 };
 
-module.exports = nextConfig
+module.exports = nextConfig;

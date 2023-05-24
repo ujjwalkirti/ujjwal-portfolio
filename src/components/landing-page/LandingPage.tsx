@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Fira_Mono, Inter } from "@next/font/google";
+import { Inter } from "@next/font/google";
 import { FaHamburger } from "react-icons/fa";
 import { MdOutlineClose } from "react-icons/md";
 import GetInTouch from "./GetInTouch";
@@ -11,13 +11,7 @@ import FeaturedProject from "./FeaturedProject";
 import NoteWorthyProjectsCard from "./NoteWorthyProjectsCard";
 import Footer from "../Footer";
 import { featuredProjects, NoteworthyProjects } from "../data";
-
-const firamono = Fira_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  display: "swap",
-});
-
+import { firamono } from "@/components/data";
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
@@ -53,9 +47,7 @@ const LandingPage = () => {
   const [showNavbar, setShowNavbar] = useState(false);
   const [removeWrapper, setRemoveWrapper] = useState(false);
 
-  useEffect(() => {
-    
-  }, []);
+  useEffect(() => {}, []);
 
   function styleOfWrapper() {
     if (removeWrapper) {
@@ -67,6 +59,7 @@ const LandingPage = () => {
 
   return (
     <section className=" min-h-screen">
+      {/* Navbar section */}
       <section className="h-[100px] px-[25px] text-[#64FFDA] flex items-center justify-between pr-[25px] relative lg:px-[50px] navbar-parent fade-in-from-top">
         <Link href={`/`}>
           <Image alt="my logo" src={`/UK.png`} height={60} width={60} />
@@ -101,6 +94,9 @@ const LandingPage = () => {
           >
             <span className="aqua">03.</span> Contact
           </div>
+          <Link href="/blogs" className={navbarOptionStyle}>
+            <span className="aqua">04.</span> Blogs
+          </Link>
           <Link
             href={`https://drive.google.com/file/d/1Yeheadg5C0nkEJ2_ZqSJPyibcW8By3lz/view?usp=share_link`}
             className="aqua border-[#64FFDA] border px-6 py-2 rounded-md hover:bg-[#64ffda1a]"
@@ -152,6 +148,15 @@ const LandingPage = () => {
                 >
                   <span className="aqua">03.</span> Contact
                 </div>
+                <Link
+                  href="/blogs"
+                  onClick={() => {
+                    setShowNavbar(false);
+                  }}
+                  className={smallNavbarOptionStyle}
+                >
+                  <span className="aqua">04.</span> Blogs
+                </Link>
                 <Link
                   href={`https://drive.google.com/file/d/1Yeheadg5C0nkEJ2_ZqSJPyibcW8By3lz/view?usp=share_link`}
                   className={
@@ -228,7 +233,8 @@ const LandingPage = () => {
 
       <section
         className={
-          "pb-10 lg:px-[100px] px-[25px] mt-10 lg:w-4/5 lg:mx-auto " + inter.className
+          "pb-10 lg:px-[100px] px-[25px] mt-10 lg:w-4/5 lg:mx-auto " +
+          inter.className
         }
         id="about"
       >

@@ -1,4 +1,4 @@
-import { Montserrat } from "@next/font/google";
+import { Fira_Mono, Libre_Caslon_Text, Montserrat } from "@next/font/google";
 
 const featuredProjects: Array<Object> = [
   {
@@ -111,6 +111,17 @@ const monsterrat = Montserrat({
   weight: ["200", "400", "600", "800"],
   display: "swap",
 });
+
+const firamono = Fira_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  display: "swap",
+});
+const libre_caslon_text = Libre_Caslon_Text({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+});
 export {
   featuredProjects,
   NoteworthyProjects,
@@ -118,4 +129,6 @@ export {
   otherSkills,
   languages,
   monsterrat,
+  firamono,
+  libre_caslon_text,
 };
