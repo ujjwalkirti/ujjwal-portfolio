@@ -98,7 +98,7 @@ const LandingPage = () => {
             <span className="aqua">04.</span> Blogs
           </Link>
           <Link
-            href={`https://drive.google.com/file/d/1Yeheadg5C0nkEJ2_ZqSJPyibcW8By3lz/view?usp=share_link`}
+            href={`https://drive.google.com/file/d/1opNGGLlmwOOS11Jw2llGQyaO49s9bnoh/view?usp=sharing`}
             className="aqua border-[#64FFDA] border px-6 py-2 rounded-md hover:bg-[#64ffda1a]"
           >
             Resume
