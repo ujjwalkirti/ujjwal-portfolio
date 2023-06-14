@@ -16,9 +16,9 @@ function styleBasedOnAlignment(alignment: String) {
 const FeaturedProject = ({ font, alignment, project }) => {
   return (
     <div
-      className={`shadow-xl lg:shadow-none lg:flex   lg:mb-[120px] lg:min-h-[400px] rounded-md p-[25px] ${" "} ${
-        monsterrat.className
-      }${" "} ${styleBasedOnAlignment(alignment)}`}
+      className={`shadow-xl lg:shadow-none lg:flex   lg:mb-[120px] lg:min-h-[400px] rounded-md p-[25px] ${" "} ${" "} ${styleBasedOnAlignment(
+        alignment
+      )}`}
     >
       {/* image showing snip of code opened in vscode */}
       <div className="hidden lg:flex lg:flex-col lg:items-center  lg:bg-[#233554] lg:px-2 lg:py-2 lg:rounded-md  lg:gap-3 lg:w-3/5">

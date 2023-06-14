@@ -8,7 +8,7 @@ const NoteWorthyProjectsCard = ({ project }) => {
   return (
     <div
       className={
-        "py-[25px] px-4 mb-10 text-left shadow-xl bg-[#112240] rounded-sm lg:hover:-translate-y-3 transition-all cursor-pointer flex flex-col justify-between " +
+        "py-[25px] px-4 mb-2 lg:mb-0 text-left shadow-xl bg-[#112240] rounded-sm lg:hover:-translate-y-3 transition-all cursor-pointer flex flex-col justify-between " +
         monsterrat.className
       }
     >

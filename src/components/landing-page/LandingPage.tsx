@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from "react";
-import { Inter } from "@next/font/google";
+import React, { useEffect } from "react";
 import { FaHamburger } from "react-icons/fa";
 import { MdOutlineClose } from "react-icons/md";
 import GetInTouch from "./GetInTouch";
@@ -10,27 +9,15 @@ import Link from "next/link";
 import FeaturedProject from "./FeaturedProject";
 import NoteWorthyProjectsCard from "./NoteWorthyProjectsCard";
 import Footer from "../Footer";
-import { featuredProjects, NoteworthyProjects } from "../data";
+import {
+  featuredProjects,
+  inter,
+  navbarOptionStyle,
+  NoteworthyProjects,
+  smallNavbarOptionStyle,
+  tools,
+} from "../data";
 import { firamono } from "@/components/data";
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  display: "swap",
-});
-
-const tools = [
-  "JavaScript (ES6+)",
-  "Python",
-  "React, Next.js",
-  "Firebase",
-  "Tailwind CSS",
-  "Express",
-];
-
-const navbarOptionStyle = "hover:text-[#64ffda] cursor-pointer";
-const smallNavbarOptionStyle =
-  "hover:text-[#64ffda] cursor-pointer flex flex-col items-center text-[18px] px-[20px] pb-[20px] pt-[3px] " +
-  firamono.className;
 
 const moveToClass = (id: string): void => {
   const el = document.getElementById(id);
@@ -46,8 +33,28 @@ const moveToClass = (id: string): void => {
 const LandingPage = () => {
   const [showNavbar, setShowNavbar] = useState(false);
   const [removeWrapper, setRemoveWrapper] = useState(false);
+  const [scrollDirection, setScrollDirection] = useState("down");
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    let handleScroll = () => {};
+
+    const navbarParent = document.getElementById("navbar");
+    if (navbarParent) {
+      handleScroll = () => {
+        const currentScrollPosition = window.scrollY;
+        const scrollDirection =
+          currentScrollPosition > previousScrollPosition ? "down" : "up";
+        setScrollDirection(scrollDirection);
+        previousScrollPosition = currentScrollPosition;
+      };
+
+      let previousScrollPosition = window.scrollY;
+      window.addEventListener("scroll", handleScroll);
+    }
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   function styleOfWrapper() {
     if (removeWrapper) {
@@ -60,7 +67,14 @@ const LandingPage = () => {
   return (
     <section className=" min-h-screen">
       {/* Navbar section */}
-      <section className="h-[100px] px-[25px] text-[#64FFDA] flex items-center justify-between pr-[25px] relative lg:px-[50px] navbar-parent fade-in-from-top">
+      <section
+        className={`h-[80px] px-[25px] text-[#64FFDA] flex items-center justify-between pr-[25px] relative lg:px-[50px] navbar-parent fade-in-from-top bg-[#0a192f] bg-opacity-50 backdrop-filter backdrop-blur ${
+          scrollDirection === "up"
+            ? "transform-gpu  transition-transform duration-300 top-0 sticky z-50"
+            : ""
+        }`}
+        id="navbar"
+      >
         <Link href={`/`}>
           <Image alt="my logo" src={`/UK.png`} height={60} width={60} />
         </Link>
@@ -171,7 +185,7 @@ const LandingPage = () => {
           </div>
         )}
       </section>
-      <div className="flex flex-col justify-start items-start pt-[40px] lg:min-h-screen lg:pt-[40px] lg:px-[100px] lg:mx-auto lg:w-11/12 fade-in-from-bottom px-[25px]">
+      <div className="flex flex-col justify-center gap-y-4 items-start pt-[40px] min-h-[85vh] lg:pt-[40px] lg:px-[100px] lg:mx-auto lg:w-11/12 fade-in-from-bottom px-[25px]">
         {" "}
         <p
           className={

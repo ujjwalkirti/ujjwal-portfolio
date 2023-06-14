@@ -1,4 +1,9 @@
-import { Fira_Mono, Libre_Caslon_Text, Montserrat } from "@next/font/google";
+import {
+  Fira_Mono,
+  Inter,
+  Libre_Caslon_Text,
+  Montserrat,
+} from "@next/font/google";
 
 const featuredProjects: Array<Object> = [
   {
@@ -73,39 +78,6 @@ const NoteworthyProjects: Array<Object> = [
   },
 ];
 
-const skills = [
-  {
-    name: "HTML, CSS and JavaScript",
-    proficiency: 87,
-  },
-  {
-    name: "React",
-    proficiency: 80,
-  },
-  {
-    name: "Next.js",
-    proficiency: 70,
-  },
-];
-const otherSkills = [
-  { name: "Tailwind CSS", imgUrl: "/tech/tailwindcss.jpg" },
-  { name: "Express", imgUrl: "/tech/express.png" },
-  { name: "Mongodb", imgUrl: "/tech/mongodb.png" },
-  { name: "Ruby on Rails", imgUrl: "/tech/rails.png" },
-  { name: "Firebase", imgUrl: "/tech/firebase.png" },
-];
-
-const languages = [
-  { name: "C++", imgUrl: "/tech/cpp.png" },
-  { name: "Ruby", imgUrl: "/tech/ruby.png" },
-  {
-    name: "TypeScript",
-    imgUrl: "/tech/ts.png",
-  },
-  { name: "Python", imgUrl: "/tech/python.png" },
-  { name: "Java", imgUrl: "/tech/java.png" },
-];
-
 const monsterrat = Montserrat({
   subsets: ["latin"],
   weight: ["200", "400", "600", "800"],
@@ -122,13 +94,35 @@ const libre_caslon_text = Libre_Caslon_Text({
   weight: ["400", "700"],
   display: "swap",
 });
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  display: "swap",
+});
+
+const tools = [
+  "JavaScript (ES6+)",
+  "Python",
+  "React, Next.js",
+  "Firebase",
+  "Tailwind CSS",
+  "Express",
+];
+
+const navbarOptionStyle = "hover:text-[#64ffda] cursor-pointer";
+const smallNavbarOptionStyle =
+  "hover:text-[#64ffda] cursor-pointer flex flex-col items-center text-[18px] px-[20px] pb-[20px] pt-[3px] " +
+  firamono.className;
+
 export {
   featuredProjects,
   NoteworthyProjects,
-  skills,
-  otherSkills,
-  languages,
   monsterrat,
   firamono,
   libre_caslon_text,
+  inter,
+  tools,
+  navbarOptionStyle,
+  smallNavbarOptionStyle,
 };

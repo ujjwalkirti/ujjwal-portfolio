@@ -5,6 +5,7 @@ import "@/styles/LandingPage.css";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Loader from "@/components/Loader";
+import { monsterrat } from "@/components/data";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(false);
@@ -29,11 +30,12 @@ export default function App({ Component, pageProps }: AppProps) {
       router.events.off("routeChangeError", handleComplete);
     };
   }, []);
+
   return (
-    <>
+    <div className={monsterrat.className}>
       {loading && <Loader />}
       <Component {...pageProps} />
       <Analytics />
-    </>
+    </div>
   );
 }
