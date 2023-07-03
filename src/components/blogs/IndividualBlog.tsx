@@ -23,7 +23,6 @@ const IndividualBlog = ({ blog }: props) => {
     // Navigate to a different page with the data
     router.push({
       pathname: "/blogs/" + blog.id,
-      query: { blog: JSON.stringify(blog) },
     });
   };
 
@@ -34,7 +33,7 @@ const IndividualBlog = ({ blog }: props) => {
           src={blog.img_url}
           alt="the blog's image"
           fill
-          className="rounded-t-md"
+          className="rounded-t-md object-cover"
         />
       </div>
       <div className="px-2 py-4 flex flex-col gap-3 items-center">
@@ -62,12 +61,12 @@ const IndividualBlog = ({ blog }: props) => {
           </div>
         </div>
 
-        <p className="text-justify lg:text-sm">{trimContent(blog.content)}</p>
+        <p className="text-justify lg:text-sm">{trimContent(blog.intro)}</p>
         <button
           onClick={() => {
             handleNavigation();
           }}
-          className="bg-white text-blue-700 text-xl lg:text-sm font-semibold w-1/2 text-center py-2 rounded-md"
+          className="bg-white text-blue-700 hover:bg-blue-700 hover:text-white text-xl lg:text-sm font-semibold w-1/2 text-center py-2 rounded-md"
         >
           Read More!
         </button>

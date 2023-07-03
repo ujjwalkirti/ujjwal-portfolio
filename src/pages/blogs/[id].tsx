@@ -4,8 +4,7 @@ import moment from "moment";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { GoPrimitiveDot } from "react-icons/go";
 import { RxPinTop } from "react-icons/rx";
@@ -13,23 +12,31 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 type props = {
-  comments: Blog_Comment[];
+  id: string;
+  server_comments: Blog_Comment[];
 };
 
-const ReadBlog = ({ comments }: props) => {
+const ReadBlog = ({ id, server_comments }: props) => {
+  const [comments, setComments] = useState(server_comments);
+  const [blog, setBlog] = useState<any>({});
   const commentRef = useRef(null);
   const usernameRef = useRef(null);
-  const router = useRouter();
   const titleRef = useRef(null);
 
-  // Access the data from the query parameters
-  let blog: any = {};
-  if (typeof router.query.blog === "string") {
-    blog = JSON.parse(router.query.blog || "{}");
-  } else if (Array.isArray(router.query.blog)) {
-    blog = JSON.parse(router.query.blog[0] || "{}");
-  }
+  useEffect(() => {
+    async function fetchBlogFromId(id: string) {
+      const { data, error } = await supabase
+        .from("posts")
+        .select("*")
+        .eq("id", id);
 
+      if (error) {
+        setBlog(null);
+      }
+      setBlog(data[0]);
+    }
+    fetchBlogFromId(id);
+  }, []);
   async function addComment(e: any) {
     e.preventDefault();
     const commentData = {
@@ -77,11 +84,17 @@ const ReadBlog = ({ comments }: props) => {
           <p className="text-sm">{parsedDate.format("MMM DD, YYYY")}</p>
         </div>
         <div className="relative h-56 lg:h-72 w-full lg:w-4/5 lg:mx-auto my-5">
-          <Image src={blog.img_url} alt="the blog's image" fill />
+          <Image
+            src={blog.img_url}
+            alt="the blog's image"
+            fill
+            priority
+            className="object-cover"
+          />
         </div>
         <p
           dangerouslySetInnerHTML={{ __html: blog.content }}
-          className="text-justify px-2 text-lg"
+          className="text-justify px-2 lg:text-lg w-full md:w-11/12 lg:w-4/5"
         ></p>
         {/* upvotes and downvotes */}
         <div></div>
@@ -96,34 +109,38 @@ const ReadBlog = ({ comments }: props) => {
             Comments
           </p>
           <div className="flex flex-col gap-3">
-            {comments.map((comment: Blog_Comment, index) => (
-              <div key={index} className="bg-[#112240] rounded-md px-1 py-2">
-                <p className="italic">
-                  <span className="font-semibold">{comment.author}</span> says
-                </p>
-                <p className="px-2">~ {comment.content}</p>
-              </div>
-            ))}
+            {comments &&
+              comments.map((comment: Blog_Comment, index) => (
+                <div key={index} className="bg-[#112240] rounded-md px-1 py-2">
+                  <p className="italic">
+                    <span className="font-semibold">{comment.author}</span> says
+                  </p>
+                  <p className="px-2">~ {comment.content}</p>
+                </div>
+              ))}
           </div>
           <form
-            onSubmit={addComment}
+            onSubmit={async (event) => {
+              const client_comments = await addComment(event);
+              setComments(client_comments);
+            }}
             className=" bg-[#112240] flex flex-col gap-3 my-3 px-2 py-2 text-black"
           >
             <textarea
               ref={commentRef}
-              className="h-56 px-2 py-2 outline-none"
+              className="h-56 px-2 py-2 outline-none bg-[#0a192f] text-white"
               placeholder="Please Enter your comment here!"
             ></textarea>
             <input
               type="text"
               ref={usernameRef}
-              className="px-2 py-2 outline-none"
+              className="px-2 py-2 outline-none bg-[#0a192f] text-white"
               required
               placeholder="Enter your name"
             />
             <button
               type="submit"
-              className="bg-white text-blue-700 text-xl font-semibold w-1/2 text-center py-2 rounded-md mx-auto"
+              className="bg-white text-blue-700 hover:bg-blue-700 hover:text-white text-xl font-semibold w-1/2 text-center py-2 rounded-md mx-auto"
             >
               Add Comment!
             </button>
@@ -134,7 +151,7 @@ const ReadBlog = ({ comments }: props) => {
           onClick={() => {
             handleScrollToTitle();
           }}
-          className="bg-white text-blue-700 text-xl font-semibold w-2/3 lg:w-1/4 text-center py-2 rounded-md flex items-center justify-center gap-3"
+          className="bg-white text-blue-700 hover:bg-blue-700 hover:text-white text-xl font-semibold w-2/3 lg:w-1/4 text-center py-2 rounded-md flex items-center justify-center gap-3"
         >
           Go back to top! <RxPinTop />
         </button>
@@ -154,6 +171,7 @@ export default ReadBlog;
 
 export async function getServerSideProps(context: any) {
   const table_id = context.query.id;
+
   // Fetch data from Supabase
   const { data, error } = await supabase
     .from("comments")
@@ -165,14 +183,16 @@ export async function getServerSideProps(context: any) {
     console.error("Error fetching data:", error);
     return {
       props: {
-        data: null,
+        id: table_id,
+        server_comments: null,
       },
     };
   }
 
   return {
     props: {
-      comments: data,
+      id: table_id,
+      server_comments: data,
     },
   };
 }

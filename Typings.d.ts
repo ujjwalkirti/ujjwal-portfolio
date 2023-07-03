@@ -7,6 +7,7 @@ type Blog = {
   downvotes: number;
   content: string;
   img_url: string;
+  intro: string;
 };
 
 type Blog_Comment = {
