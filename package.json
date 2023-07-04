@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.7.1",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@next/font": "13.1.6",
     "@supabase/supabase-js": "^2.22.0",
     "@types/node": "18.14.0",
@@ -18,6 +21,7 @@
     "@vercel/analytics": "^1.0.1",
     "appwrite": "^11.0.0",
     "axios": "^1.3.4",
+    "framer-motion": "^10.12.18",
     "moment": "^2.29.4",
     "next": "13.1.6",
     "react": "18.2.0",

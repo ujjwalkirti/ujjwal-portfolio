@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Loader from "@/components/Loader";
 import { monsterrat } from "@/components/data";
+import { ChakraProvider } from "@chakra-ui/react";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(false);
@@ -34,7 +35,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className={monsterrat.className}>
       {loading && <Loader />}
-      <Component {...pageProps} />
+      <ChakraProvider>
+        <Component {...pageProps} />
+      </ChakraProvider>
       <Analytics />
     </div>
   );

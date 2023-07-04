@@ -15,7 +15,7 @@ type props = {
 
 const Blogs = ({ blogs }: props) => {
   const emailRef = useRef(null);
-  async function addToEmailList(e) {
+  async function addToEmailList(e: { preventDefault: () => void }) {
     e.preventDefault();
     const { data, error } = await supabase
       .from("notification_emails")
