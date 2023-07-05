@@ -112,7 +112,7 @@ const LandingPage = () => {
             <span className="aqua">04.</span> Blogs
           </Link>
           <Link
-            href={`https://drive.google.com/file/d/1opNGGLlmwOOS11Jw2llGQyaO49s9bnoh/view?usp=sharing`}
+            href={`https://drive.google.com/file/d/1I-JqJGe2U9PBaO_GLAcwH_tdCWlc7EUI/view?usp=sharing`}
             className="aqua border-[#64FFDA] border px-6 py-2 rounded-md hover:bg-[#64ffda1a]"
           >
             Resume
