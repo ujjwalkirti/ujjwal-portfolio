@@ -13,6 +13,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { Skeleton, SkeletonCircle, SkeletonText } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
 import CommentsSection from "@/components/blogs/CommentsSection";
+import VotesDisplayer from "@/components/blogs/VotesDisplayer";
 
 type props = {
   id: string;
@@ -71,7 +72,7 @@ const ReadBlog = ({ id, server_comments }: props) => {
     <div className={"bg-[#0a192f] min-h-screen " + monsterrat.className}>
       <Head>
         <title>{blog.title ? blog.title : "..."}</title>
-        <meta name="description" content="Blogs written by Ujjwal Kirti" />
+        <meta name="description" content={blog.intro} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/UK.png" />
       </Head>
@@ -83,19 +84,31 @@ const ReadBlog = ({ id, server_comments }: props) => {
         {isLoaded ? (
           <div className="px-2 pt-10 flex flex-col items-center gap-3">
             {" "}
+            <div className="w-full flex flex-col items-center  dark-grayish-text text-md">
+              <Link href={`/blogs`} className="mb-10">
+                {" "}
+                <Image
+                  src={"/me.png"}
+                  height={80}
+                  width={80}
+                  className="rounded-full mx-auto"
+                  alt="Ujjwal Kirti's picture!"
+                />
+                <p className="mt-3 font-semibold">
+                  {blog.author.toUpperCase()}
+                </p>
+              </Link>
+              <p className="">{parsedDate.format("MMM DD, YYYY")}</p>
+            </div>
             <p
               ref={titleRef}
               className={
-                "aqua text-3xl text-center font-semibold " +
+                "aqua text-4xl lg:text-6xl text-center font-semibold my-4 " +
                 libre_caslon_text.className
               }
             >
               {blog.title}
             </p>
-            <div className="w-full flex flex-col items-end">
-              <p className="text-xl">~ {blog.author}</p>
-              <p className="text-sm">{parsedDate.format("MMM DD, YYYY")}</p>
-            </div>
             <div className="relative h-56 lg:h-72 w-full lg:w-4/5 lg:mx-auto my-5">
               <Image
                 src={blog.img_url}
@@ -107,10 +120,10 @@ const ReadBlog = ({ id, server_comments }: props) => {
             </div>
             <p
               dangerouslySetInnerHTML={{ __html: blog.content }}
-              className="text-justify px-2 lg:text-lg w-full md:w-11/12 lg:w-4/5"
+              className="text-justify px-2 lg:text-lg w-full md:w-11/12 lg:w-4/5 grayish-text"
             ></p>
             {/* upvotes and downvotes */}
-            <div></div>
+            {/* <VotesDisplayer upvotes={blog.upvotes} downvotes={blog.downvotes} /> */}
             {/* Comments section */}
             <CommentsSection comments={comments} blog_id={id} />
             <button
@@ -150,7 +163,6 @@ export default ReadBlog;
 
 export async function getServerSideProps(context: any) {
   const table_id = context.query.id;
-  console.log(context.query);
 
   // Fetch data from Supabase
   const { data, error } = await supabase

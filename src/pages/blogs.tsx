@@ -3,6 +3,7 @@ import { firamono } from "@/components/data";
 import { supabase } from "@/lib/supabaseClient";
 import axios from "axios";
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useRef } from "react";
 import { IoIosArrowBack } from "react-icons/io";
@@ -41,6 +42,32 @@ const Blogs = ({ blogs }: props) => {
           {" "}
           <IoIosArrowBack className="bg-white text-2xl rounded-full hover:bg-[#64ffda] cursor-pointer text-[#0a192f] mt-10 ml-3" />
         </Link>
+        <div className="w-full flex flex-col items-center  dark-grayish-text text-md mb-10">
+          <Link href={`/`} className="mb-3">
+            {" "}
+            <Image
+              src={"/me.png"}
+              height={60}
+              width={60}
+              className="rounded-full mx-auto"
+              alt="Ujjwal Kirti's picture!"
+            />
+            <p className="mt-3 text-center font-semibold">UJJWAL KIRTI</p>
+          </Link>
+          <p className="text-center w-4/5 md:w-3/5 mx-auto">
+            Crafted websites for{" "}
+            <Link className="underline" href={`https://lac-website.vercel.app`}>
+              LAC, SVNIT Surat
+            </Link>{" "}
+            and{" "}
+            <Link className="underline" href={"https://mmnct.in"}>
+              MMNCT
+            </Link>{" "}
+            while freelancing and expanding my repertoire.
+            <br /> Embracing continual learning, I remain dedicated to creating
+            exceptional web experiences. Keep Learning, Keep Growing!
+          </p>
+        </div>
         <p
           className={
             "text-5xl mb-6 text-center py-3 aqua " + firamono.className
@@ -48,9 +75,31 @@ const Blogs = ({ blogs }: props) => {
         >
           Blogs
         </p>
+        <p className="text-center dark-grayish-text">
+          Subscribe to get future posts via email
+        </p>
+        <form
+          onSubmit={addToEmailList}
+          className="flex flex-row items-center justify-between mt-2 mb-16 rounded-full border border-gray-700 w-full sm:w-2/3 md:w-1/3  mx-auto"
+        >
+          <input
+            type="email"
+            required
+            ref={emailRef}
+            className="outline-none px-5 grayish-text rounded-full text-black w-full bg-inherit"
+            placeholder="Type your email..."
+          />
+          <button
+            type="submit"
+            className="bg-gray-300 bg-opacity-30 grayish-text lg:text-md text-center py-1 px-2 rounded-r-full h-full h-10"
+          >
+            Subscribe
+          </button>
+        </form>
+
         <div className="">
           {blogs.length !== 0 ? (
-            <div className="grid grid-cols-1 lg:grid-cols-3 lg:w-4/5 lg:mx-auto">
+            <div className="w-full px-6">
               {blogs.map((blog, index) => (
                 <IndividualBlog blog={blog} key={index} />
               ))}
@@ -62,24 +111,6 @@ const Blogs = ({ blogs }: props) => {
                 <br />
                 Please come back later!
               </p>
-              <form
-                onSubmit={addToEmailList}
-                className="flex flex-col lg:flex-row items-center justify-center gap-3 my-6"
-              >
-                <input
-                  type="email"
-                  required
-                  ref={emailRef}
-                  className="outline-none px-2 py-2 rounded-md w-full lg:w-1/2 text-black"
-                  placeholder="Please enter your email!"
-                />
-                <button
-                  type="submit"
-                  className="bg-white text-blue-700 text-xl lg:text-md font-semibold text-center py-1 rounded-md px-2"
-                >
-                  Notify me!
-                </button>
-              </form>
             </div>
           )}
         </div>
