@@ -82,28 +82,15 @@ const ReadBlog = ({ id, server_comments }: props) => {
           <IoIosArrowBack className="bg-white text-2xl rounded-full hover:bg-[#64ffda] cursor-pointer text-[#0a192f] ml-3 mb-6" />
         </Link>
         {isLoaded ? (
-          <div className="px-2 pt-10 flex flex-col items-center gap-3">
+          <div className="px-2  flex flex-col items-center gap-3">
             {" "}
             <div className="w-full flex flex-col items-center  dark-grayish-text text-md">
-              <Link href={`/blogs`} className="mb-10">
-                {" "}
-                <Image
-                  src={"/me.png"}
-                  height={80}
-                  width={80}
-                  className="rounded-full mx-auto"
-                  alt="Ujjwal Kirti's picture!"
-                />
-                <p className="mt-3 font-semibold">
-                  {blog.author.toUpperCase()}
-                </p>
-              </Link>
               <p className="">{parsedDate.format("MMM DD, YYYY")}</p>
             </div>
             <p
               ref={titleRef}
               className={
-                "aqua text-4xl lg:text-6xl text-center font-semibold my-4 " +
+                "aqua text-3xl lg:text-4xl text-center font-semibold my-4 " +
                 libre_caslon_text.className
               }
             >
@@ -120,7 +107,7 @@ const ReadBlog = ({ id, server_comments }: props) => {
             </div>
             <p
               dangerouslySetInnerHTML={{ __html: blog.content }}
-              className="text-justify px-2 lg:text-lg w-full md:w-11/12 lg:w-4/5 grayish-text"
+              className="text-justify px-2 text-sm w-full md:w-11/12 lg:w-4/5 grayish-text"
             ></p>
             {/* upvotes and downvotes */}
             {/* <VotesDisplayer upvotes={blog.upvotes} downvotes={blog.downvotes} /> */}
