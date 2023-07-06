@@ -157,7 +157,6 @@ export async function getServerSideProps(context: NextPageContext) {
 
   let blogs = await fetchBlogFromId(table_id as string);
 
-  console.log(blogs);
   // Fetch data from Supabase
   const { data, error } = await supabase
     .from("comments")
