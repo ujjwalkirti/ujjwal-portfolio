@@ -30,7 +30,7 @@ const featuredProjects: Array<Object> = [
     image_url:
       "https://firebasestorage.googleapis.com/v0/b/fir-react-native-expo-bbbae.appspot.com/o/Screenshot%202023-04-22%20135249.png?alt=media&token=35fd4d53-e8e3-42f1-ba13-8e72003e7594",
     github_link: "https://github.com/ujjwalkirti/lac-website/tree/main",
-    deployed_link: "https://www.lac-website.vercel.app",
+    deployed_link: "https://lac-website.vercel.app/",
   },
 ];
 
