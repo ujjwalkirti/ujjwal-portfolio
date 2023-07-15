@@ -10,12 +10,13 @@ import { RxPinTop } from "react-icons/rx";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { SanityDocument, groq } from "next-sanity";
+import { groq } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
 import { PortableText } from "@portabletext/react";
 import { client } from "../../../sanity/lib/client";
 import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 import { TypedObject } from "sanity";
+import { Skeleton, SkeletonCircle, Stack } from "@chakra-ui/react";
 
 const builder = imageUrlBuilder(client);
 
@@ -55,6 +56,29 @@ const ReadBlog = ({ blog }: props) => {
   const handleScrollToTitle = () => {
     titleRef.current.scrollIntoView({ behavior: "smooth" });
   };
+
+  if (typeof blog === "undefined") {
+    return (
+      <div className="bg-[#0a192f] min-h-screen px-2 pt-10">
+        <Stack gap={3} className="w-full lg:w-4/5  mx-auto">
+          <Skeleton className="mb-5">
+            <div>contents wrapped</div>
+            <div>won't be visible</div>
+          </Skeleton>
+          <SkeletonCircle size="10" />
+
+          <Skeleton height="20px" />
+          <Skeleton height="20px" />
+          <Skeleton height="20px" />
+          <Skeleton height="20px" />
+          <Skeleton height="20px" />
+          <Skeleton height="20px" />
+          <Skeleton height="20px" />
+          <Skeleton height="20px" />
+        </Stack>
+      </div>
+    );
+  }
 
   return (
     <div className={"bg-[#0a192f] min-h-screen " + monsterrat.className}>
@@ -154,7 +178,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const queryParams = { slug: params?.slug ?? `` };
 
   const post = await client.fetch(postQuery, queryParams);
-  console.log(post);
 
   return {
     props: {
