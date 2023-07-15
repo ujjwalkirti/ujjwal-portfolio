@@ -15,12 +15,12 @@ function trimContent(content: string) {
 }
 
 const IndividualBlog = ({ blog }: props) => {
-  const parsedDate = moment(blog.created_at, "YYYY-MM-DDTHH:mm:ssZ");
+  const parsedDate = moment(blog.publishedAt, "YYYY-MM-DDTHH:mm:ssZ");
   const router = useRouter();
   const handleNavigation = () => {
     // Navigate to a different page with the data
     router.push({
-      pathname: "/blogs/" + blog.id,
+      pathname: "/blogs/" + blog.slug.current,
     });
   };
 

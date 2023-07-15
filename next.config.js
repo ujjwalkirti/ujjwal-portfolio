@@ -6,6 +6,7 @@ const nextConfig = {
       "avatars.githubusercontent.com",
       "firebasestorage.googleapis.com",
       "tghtovqmkscbuoezwsqx.supabase.co",
+      'cdn.sanity.io'
     ],
   },
 };

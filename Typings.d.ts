@@ -1,13 +1,15 @@
 type Blog = {
-  id: number;
+  _id: string;
   author: string;
   title: string;
-  created_at: string;
-  upvotes: number;
-  downvotes: number;
-  content: string;
-  img_url: string;
-  intro: string;
+  publishedAt: string;
+  slug: {
+    current: string;
+    _type: string;
+  };
+  body: string;
+  mainImage: string;
+  intro?: string;
 };
 
 type Blog_Comment = {

@@ -1,7 +1,7 @@
 import IndividualBlog from "@/components/blogs/IndividualBlog";
 import { firamono } from "@/components/data";
 import { supabase } from "@/lib/supabaseClient";
-import axios from "axios";
+import { groq } from "next-sanity";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,6 +9,7 @@ import React, { useRef } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { client } from "../../sanity/lib/client";
 
 type props = {
   blogs: Blog[];
@@ -123,13 +124,10 @@ const Blogs = ({ blogs }: props) => {
 export default Blogs;
 
 export async function getServerSideProps(context: any) {
-  const api = axios.create({
-    baseURL: process.env.NEXT_PUBLIC_BASE_URL, // Set the base URL here
-  });
-  let blogs = [];
-  const response = await api.get("/api/get-all-blogs");
-  blogs = response.data.blogs;
-
+  const postsQuery = groq`*[_type == "post" && defined(slug.current)]{
+    _id, title, slug, publishedAt,intro
+  }`;
+  const blogs = await client.fetch(postsQuery);
   return {
     props: {
       blogs,

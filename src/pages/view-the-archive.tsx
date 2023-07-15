@@ -2,7 +2,6 @@ import { Fira_Mono } from "@next/font/google";
 import axios from "axios";
 import Head from "next/head";
 import Link from "next/link";
-import react from "react";
 import { AiOutlineGithub, AiOutlineLink } from "react-icons/ai";
 import { IoIosArrowBack } from "react-icons/io";
 
@@ -28,6 +27,12 @@ function ViewTheArchive({ repos }) {
     <div className="bg-[#0a192f] min-h-screen">
       <Head>
         <title>Collection of my works!</title>
+        <meta
+          name="description"
+          content="Page providing a glimpse into all of the coding work Ujjwal has been doing!"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/UK.png" />
       </Head>
       <div className="w-[90%] lg:w-[78%] mx-auto pt-[40px]">
         <Link href={`/`}>
