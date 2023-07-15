@@ -15,12 +15,16 @@ import imageUrlBuilder from "@sanity/image-url";
 import { PortableText } from "@portabletext/react";
 import { client } from "../../../sanity/lib/client";
 import { SanityImageSource } from "@sanity/image-url/lib/types/types";
+import { TypedObject } from "sanity";
 
 const builder = imageUrlBuilder(client);
 
-const ReadBlog = ({ data }: { data: { post: SanityDocument } }) => {
+type props = {
+  blog: Blog;
+};
+
+const ReadBlog = ({ blog }: props) => {
   const titleRef = useRef(null);
-  const blog = data.post;
 
   function urlFor(source: SanityImageSource) {
     return imageUrlBuilder(client).image(source);
@@ -96,7 +100,10 @@ const ReadBlog = ({ data }: { data: { post: SanityDocument } }) => {
             </div>
           ) : null}
           {blog?.body ? (
-            <PortableText value={blog.body} components={ptComponents} />
+            <PortableText
+              value={blog.body as unknown as TypedObject[]}
+              components={ptComponents}
+            />
           ) : null}
           {/* upvotes and downvotes */}
           {/* <VotesDisplayer upvotes={blog.upvotes} downvotes={blog.downvotes} /> */}
@@ -147,10 +154,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const queryParams = { slug: params?.slug ?? `` };
 
   const post = await client.fetch(postQuery, queryParams);
+  console.log(post);
 
   return {
     props: {
-      data: { post },
+      blog: post,
     },
   };
 };

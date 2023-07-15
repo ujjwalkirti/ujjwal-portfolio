@@ -8,7 +8,14 @@ type Blog = {
     _type: string;
   };
   body: string;
-  mainImage: string;
+  mainImage: {
+    alt: string;
+    _type: string;
+    asset: {
+      _ref: string;
+      _type: string;
+    };
+  };
   intro?: string;
 };
 
