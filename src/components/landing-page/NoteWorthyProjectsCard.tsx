@@ -32,11 +32,11 @@ const NoteWorthyProjectsCard = ({ project }) => {
         {project.title}
       </p>
       <p className="text-[16px] dark-grayish-text">{project.desc}</p>
-      <div className="break-words mt-[25px] mb-[10px] text-[13px] flex flex-wrap grayish-text ">
+      <div className="break-words mt-[25px] mb-[10px] text-[13px] flex flex-wrap grayish-text gap-2">
         {project.tags.map((tag: string, index: number) => (
           <span
             key={index}
-            className="mr-[10px] mb-[5px] bg-gray-500 px-2 py-1 rounded-md text-white "
+            className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 "
           >
             {tag}
           </span>

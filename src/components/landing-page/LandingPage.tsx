@@ -56,14 +56,6 @@ const LandingPage = () => {
     };
   }, []);
 
-  function styleOfWrapper() {
-    if (removeWrapper) {
-      return "hidden";
-    } else {
-      return "absolute rounded-lg bg-[#64ffda] h-full w-full bg-opacity-30 z-30";
-    }
-  }
-
   return (
     <section className=" min-h-screen">
       {/* Navbar section */}
@@ -241,7 +233,7 @@ const LandingPage = () => {
         </Link>
       </div>
 
-      {/* 
+      {/*
         This marks the beginning of about section
       */}
 
@@ -271,8 +263,13 @@ const LandingPage = () => {
               multiple <span className="aqua">full stack web applications</span>
               , several <span className="aqua">APIs</span>, developing websites
               as a <span className="aqua">freelancer</span> and working with a{" "}
-              <span className="aqua">student led club</span> to build there
-              website. My main focus these days is learning{" "}
+              <Link
+                href="https://lac-website.vercel.app/"
+                className="aqua hover:underline hover:underline-offset-2"
+              >
+                student led club
+              </Link>{" "}
+              to build there website. My main focus these days is learning{" "}
               <span className="aqua">Graphql</span>.
             </p>
             <p className="mb-[15px]">
@@ -285,7 +282,9 @@ const LandingPage = () => {
                   className="pb-[20px] font-medium flex text-[15px] items-center gap-2"
                 >
                   <AiOutlineCaretRight className="aqua text-[10px]" />
-                  {tool}
+                  <span className="border-b-2 border-transparent hover:border-[#64ffda] transition-all duration-150 cursor-pointer">
+                    {tool}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -300,17 +299,16 @@ const LandingPage = () => {
                 setRemoveWrapper(!removeWrapper);
               }}
             >
-              <div className={styleOfWrapper()}></div>
               <div className="relative z-20">
                 <Image
-                  className="rounded-lg w-[279.52px] z-20 h-[479.52px] object-cover"
+                  className="rounded-lg w-[279.52px] z-20 h-[279.52px] object-contain"
                   alt="Ujjwal Kirti's image"
-                  src={`https://firebasestorage.googleapis.com/v0/b/fir-react-native-expo-bbbae.appspot.com/o/me.jpg?alt=media&token=69b3f08f-1df9-4125-a94e-4c017acef623`}
+                  src={`/me.png`}
                   height={259.52}
                   width={259.52}
                 />
                 <div
-                  className={`h-[479.52px] w-[279.52px] absolute border-2 border-[#64ffda] top-5 left-4 rounded-lg -z-10 ${
+                  className={`h-[279.52px] w-[279.52px] absolute border-2 border-[#64ffda] top-4   left-4 rounded-lg -z-10 ${
                     removeWrapper
                       ? "-translate-y-2 -translate-x-2 duration-300"
                       : "translate-y-2 translate-x-2 duration-300"
@@ -322,8 +320,8 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* 
-        works section 
+      {/*
+        works section
       */}
 
       <section
