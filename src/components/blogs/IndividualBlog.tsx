@@ -27,7 +27,7 @@ const IndividualBlog = ({ blog }: props) => {
   return (
     <div
       className={
-        "bg-inherit border border-gray-700 rounded-sm w-full md:w-2/3 mx-auto shadow-2xl p-3 pt-14 " +
+        "bg-inherit border border-gray-700 rounded-sm w-full md:w-2/3 mx-auto shadow-2xl p-3 pt-14 mb-5 " +
         monsterrat.className
       }
     >
