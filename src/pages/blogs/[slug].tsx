@@ -41,12 +41,7 @@ const ReadBlog = ({ blog }: props) => {
           <img
             alt={value.alt || " "}
             loading="lazy"
-            src={urlFor(value)
-              .width(320)
-              .height(240)
-              .fit("max")
-              .auto("format")
-              .url()}
+            src={urlFor(value).fit("max").auto("format").url()}
           />
         );
       },
@@ -116,7 +111,7 @@ const ReadBlog = ({ blog }: props) => {
             <div className="relative h-56 lg:h-72 w-full lg:w-4/5 lg:mx-auto my-5">
               <Image
                 priority
-                className="object-cover"
+                className="object-contain"
                 src={builder.image(blog.mainImage).width(300).height(300).url()}
                 fill
                 alt={blog?.mainImage?.alt}
