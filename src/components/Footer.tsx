@@ -1,3 +1,4 @@
+import { github_url, linkedin_url, twitter_url } from "@/urls";
 import { Fira_Mono } from "@next/font/google";
 import Link from "next/link";
 import React from "react";
@@ -19,16 +20,16 @@ const Footer = () => {
     >
       {/* socials icons */}
       <div className="flex justify-evenly items-center dark-grayish-text link-elements lg:fixed lg:bottom-0 lg:flex-col lg:pl-[15px]">
-        <Link href="https://github.com/ujjwalkirti">
+        <Link href={github_url}>
           <FiGithub className={iconStyle} />
         </Link>
-        <Link href={`https://www.instagram.com/ujjwal_kirti/`}>
+        {/* <Link href={l}>
           <FiInstagram className={iconStyle} />
-        </Link>
-        <Link href={`https://twitter.com/kirti_ujjwal`}>
+        </Link> */}
+        <Link href={twitter_url}>
           <FiTwitter className={iconStyle} />
         </Link>
-        <Link href={`https://www.linkedin.com/in/ujjwal-kirti/`}>
+        <Link href={linkedin_url}>
           <FiLinkedin className={iconStyle} />
         </Link>
         <div className="border-r-2 h-[150px] border-[#8892b0] hidden lg:flex"></div>

@@ -18,6 +18,7 @@ import {
   tools,
 } from "../data";
 import { firamono } from "@/components/data";
+import { linkedin_url } from "@/urls";
 
 const moveToClass = (id: string): void => {
   const el = document.getElementById(id);
@@ -223,7 +224,7 @@ const LandingPage = () => {
           </p>
         </div>
         <Link
-          href={`https://www.linkedin.com/in/ujjwal-kirti-562b922a0/`}
+          href={linkedin_url}
           className={
             "text-[#64FFDA] border border-[#64FFDA] rounded-lg text-[14px] mt-[30px] py-[10px] px-[18px] hover:bg-[#64ffda1a] " +
             firamono.className
@@ -270,7 +271,7 @@ const LandingPage = () => {
                 student led club
               </Link>{" "}
               to build there website. My main focus these days is learning{" "}
-              <span className="aqua">Graphql</span>.
+              <span className="aqua">Network Security</span>.
             </p>
             <p className="mb-[15px]">
               Here are a few technologies I’ve been working with recently:
