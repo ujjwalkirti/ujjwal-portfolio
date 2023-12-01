@@ -223,7 +223,7 @@ const LandingPage = () => {
           </p>
         </div>
         <Link
-          href={`https://www.linkedin.com/in/ujjwal-kirti/`}
+          href={`https://www.linkedin.com/in/ujjwal-kirti-562b922a0/`}
           className={
             "text-[#64FFDA] border border-[#64FFDA] rounded-lg text-[14px] mt-[30px] py-[10px] px-[18px] hover:bg-[#64ffda1a] " +
             firamono.className
