@@ -6,21 +6,22 @@ import { BsLink45Deg } from "react-icons/bs";
 
 function styleBasedOnAlignment(alignment: String) {
   if (alignment === "right") {
-    return "lg:justify-end lg:text-end";
+    return "lg:flex-row-reverse";
   } else {
     return "lg:justify-start lg:text-start";
   }
 }
 
 const FeaturedProject = ({ font, alignment, project }) => {
+  console.log(alignment);
   return (
     <div
-      className={`shadow-xl lg:shadow-none lg:flex lg:justify-between lg:gap-2  lg:mb-[120px] rounded-md p-[25px] ${styleBasedOnAlignment(
+      className={`shadow-xl lg:shadow-none lg:flex lg:gap-2  lg:mb-[120px] rounded-md p-[25px] ${styleBasedOnAlignment(
         alignment
       )}`}
     >
       {/* image showing snip of code opened in vscode */}
-      <div className="hidden lg:flex lg:flex-col lg:items-center  lg:bg-slate-800/50 lg:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:drop-shadow-lg lg:px-2 lg:py-2 lg:rounded-md  lg:gap-3">
+      <div className="hidden lg:flex lg:flex-col lg:items-center  lg:bg-slate-800/50 lg:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:drop-shadow-lg lg:px-2 lg:py-2 lg:rounded-md  lg:gap-3 ">
         <p
           className={
             "text-[24px] font-semibold text-orange-400 " + font[0].className
@@ -31,15 +32,22 @@ const FeaturedProject = ({ font, alignment, project }) => {
         {/* <p className="text-[14px] text-center dark-grayish-text">
           {project.desc.short}
         </p> */}
-        <Image
-          alt="Project Image"
-          src={project.image_url}
-          height={400}
-          width={400}
-          className="object-cover h-full"
-        />
+        <div className="h-[300px]">
+          <Image
+            alt="Project Image"
+            src={project.image_url}
+            height={400}
+            width={400}
+            className="object-cover origin-center h-full"
+          />
+        </div>
       </div>
-      <div className="lg:flex lg:flex-col lg:justify-center lg:items-end  lg:gap-4">
+
+      <div
+        className={`lg:flex lg:flex-col lg:justify-center  lg:gap-4 ${
+          alignment === "right" ? "lg:items-start" : "lg:items-end"
+        }`}
+      >
         <p className={"aqua " + font[1].className}>Featured Project</p>
         {/* name of project */}
         <p className="grayish-text text-[24px] font-semibold leading-tight">

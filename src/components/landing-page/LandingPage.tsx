@@ -63,13 +63,19 @@ const LandingPage = () => {
       <section
         className={`h-[80px] px-[25px] text-[#64FFDA] flex items-center justify-between pr-[25px] relative lg:px-[50px] navbar-parent fade-in-from-top bg-[#0a192f] bg-opacity-50 backdrop-filter backdrop-blur ${
           scrollDirection === "up"
-            ? "transform-gpu  transition-transform duration-300 top-0 sticky z-50"
+            ? "transform-gpu  transition-transform duration-300 top-0 sticky z-30"
             : ""
         }`}
         id="navbar"
       >
         <Link href={`/`}>
-          <Image alt="my logo" src={`/UK.png`} height={60} width={60} />
+          <Image
+            alt="my logo"
+            src={`/UK.png`}
+            height={60}
+            width={60}
+            priority
+          />
         </Link>
         <FaHamburger
           className="text-[34px] lg:hidden cursor-pointer transi"
@@ -101,9 +107,9 @@ const LandingPage = () => {
           >
             <span className="aqua">03.</span> Contact
           </div>
-          <Link href="/blogs" className={navbarOptionStyle}>
+          {/* <Link href="/blogs" className={navbarOptionStyle}>
             <span className="aqua">04.</span> Blogs
-          </Link>
+          </Link> */}
           <Link
             href={`https://drive.google.com/file/d/1I-JqJGe2U9PBaO_GLAcwH_tdCWlc7EUI/view?usp=sharing`}
             className="aqua border-[#64FFDA] border px-6 py-2 rounded-md hover:bg-[#64ffda1a]"
@@ -111,74 +117,8 @@ const LandingPage = () => {
             Resume
           </Link>
         </div>
-        {showNavbar && (
-          <div
-            className={
-              "absolute top-0 right-0  w-screen min-h-screen z-20 flex justify-end filter backdrop-filter backdrop-blur-sm "
-            }
-          >
-            <div className="w-[75%] px-[15px] md:w-[56%] h-screen bg-[#112240] pt-10 grayish-text flex flex-col ">
-              <div className="flex justify-end h-1/6">
-                <MdOutlineClose
-                  className="text-[40px] aqua cursor-pointer transition-all transform-gpu hover:rotate-180 duration-300"
-                  onClick={() => {
-                    setShowNavbar(false);
-                  }}
-                />
-              </div>
-              <div className="flex flex-col gap-4 justify-center h-5/6 pb-10">
-                {" "}
-                <div
-                  onClick={() => {
-                    moveToClass("about");
-                    setShowNavbar(false);
-                  }}
-                  className={smallNavbarOptionStyle}
-                >
-                  <span className="aqua">01.</span> About
-                </div>
-                <div
-                  onClick={() => {
-                    moveToClass("work");
-                    setShowNavbar(false);
-                  }}
-                  className={smallNavbarOptionStyle}
-                >
-                  <span className="aqua">02.</span> Work
-                </div>
-                <div
-                  onClick={() => {
-                    moveToClass("contact");
-                    setShowNavbar(false);
-                  }}
-                  className={smallNavbarOptionStyle}
-                >
-                  <span className="aqua">03.</span> Contact
-                </div>
-                <Link
-                  href="/blogs"
-                  onClick={() => {
-                    setShowNavbar(false);
-                  }}
-                  className={smallNavbarOptionStyle}
-                >
-                  <span className="aqua">04.</span> Blogs
-                </Link>
-                <Link
-                  href={`https://drive.google.com/file/d/1Yeheadg5C0nkEJ2_ZqSJPyibcW8By3lz/view?usp=share_link`}
-                  className={
-                    "aqua w-[153.4px] text-center mx-auto border-[#64FFDA] text-[14px] border px-[50px] py-[18px] mt-[38px] rounded-md hover:bg-[#64ffda1a] " +
-                    firamono.className
-                  }
-                >
-                  Resume
-                </Link>
-              </div>
-            </div>
-          </div>
-        )}
       </section>
-      <div className="flex flex-col justify-center gap-y-4 items-start pt-[40px] min-h-[85vh] lg:pt-[40px] lg:px-[100px] lg:mx-auto lg:w-11/12 fade-in-from-bottom px-[25px]">
+      <div className="flex flex-col justify-start lg:justify-center gap-y-4 items-start pt-[20px] min-h-[85vh] lg:px-[100px] lg:mx-auto lg:w-11/12 fade-in-from-bottom px-[25px]">
         {" "}
         <p
           className={
@@ -206,19 +146,27 @@ const LandingPage = () => {
         </p>
         <div
           className={
-            "mt-[20px] max-w-[540px] lg:max-w-[720px] text-justify text-[16px] lg:text-[18px] text-[#8892B0] " +
+            "mt-[10px] max-w-[540px] lg:max-w-[820px] text-justify text-[14px] lg:text-[16px] text-[#8892B0] " +
             firamono.className
           }
         >
           <p>
-            I am a final-year student at NIT Surat. My significant interest lies
-            in software development, with web applications being the primary
-            focus. <br />
-            Currently, I'm looking for entry level{" "}
-            <span className="text-[#64FFDA]">SDE</span> /{" "}
-            <span className="text-[#64FFDA]">SWE</span> positions.
+            Hello! I'm a passionate Web Developer with 3 years of freelancing
+            experience. I specialize in creating dynamic and beautiful web
+            applications. I have rich experience in{" "}
+            <span className="aqua font-semibold">Next.js</span>,
+            <span className="aqua font-semibold">Firebase</span>,{" "}
+            <span className="aqua font-semibold">Express</span>,{" "}
+            <span className="aqua font-semibold">MongoDB</span>,{" "}
+            <span className="aqua font-semibold">React.js</span>, and{" "}
+            <span className="aqua font-semibold">Redux</span>.<br /> I'm very
+            passionate about web development and strive to better myself as a
+            developer by learning from each project. I take pride in my work and
+            enjoy seeing my applications come to life and help businesses grow.
+            <br />
+            Let's create something amazing together!
           </p>
-          <p>
+          <p className="mt-3">
             So if you can help me out or assist me in any other way, let's
             connect!
           </p>
@@ -384,6 +332,72 @@ const LandingPage = () => {
         <GetInTouch font={[inter, firamono]} />
       </div>
       <Footer />
+      {showNavbar && (
+        <div
+          className={
+            "fixed top-0 right-0  w-screen min-h-screen z-50 flex justify-end filter backdrop-filter backdrop-blur-sm "
+          }
+        >
+          <div className="w-[75%] px-[15px] md:w-[56%] h-screen bg-[#112240] pt-10 grayish-text flex flex-col ">
+            <div className="flex justify-end h-1/6">
+              <MdOutlineClose
+                className="text-[40px] aqua cursor-pointer transition-all transform-gpu hover:rotate-180 duration-300"
+                onClick={() => {
+                  setShowNavbar(false);
+                }}
+              />
+            </div>
+            <div className="flex flex-col gap-4 justify-center h-5/6 pb-10">
+              {" "}
+              <div
+                onClick={() => {
+                  moveToClass("about");
+                  setShowNavbar(false);
+                }}
+                className={smallNavbarOptionStyle}
+              >
+                <span className="aqua">01.</span> About
+              </div>
+              <div
+                onClick={() => {
+                  moveToClass("work");
+                  setShowNavbar(false);
+                }}
+                className={smallNavbarOptionStyle}
+              >
+                <span className="aqua">02.</span> Work
+              </div>
+              <div
+                onClick={() => {
+                  moveToClass("contact");
+                  setShowNavbar(false);
+                }}
+                className={smallNavbarOptionStyle}
+              >
+                <span className="aqua">03.</span> Contact
+              </div>
+              {/* <Link
+                  href="/blogs"
+                  onClick={() => {
+                    setShowNavbar(false);
+                  }}
+                  className={smallNavbarOptionStyle}
+                >
+                  <span className="aqua">04.</span> Blogs
+                </Link> */}
+              <Link
+                href={`https://drive.google.com/file/d/1Yeheadg5C0nkEJ2_ZqSJPyibcW8By3lz/view?usp=share_link`}
+                className={
+                  "aqua w-[153.4px] text-center mx-auto border-[#64FFDA] text-[14px] border px-[50px] py-[18px] mt-[38px] rounded-md hover:bg-[#64ffda1a] " +
+                  firamono.className
+                }
+              >
+                Resume
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

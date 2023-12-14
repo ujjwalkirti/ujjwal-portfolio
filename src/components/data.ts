@@ -15,9 +15,9 @@ const featuredProjects: Array<Object> = [
     },
     tags: ["Next.js", "Tailwind CSS", "Firebase", "Vercel"],
     image_url:
-      "https://firebasestorage.googleapis.com/v0/b/fir-react-native-expo-bbbae.appspot.com/o/mmnct.png?alt=media&token=b123bccc-0b38-4f55-bf91-abf2f95df239",
+      "https://firebasestorage.googleapis.com/v0/b/fir-react-native-expo-bbbae.appspot.com/o/screencapture-mmnct-yzbk-vercel-app-2023-12-14-13_46_07.png?alt=media&token=cddf42d5-fdca-4dde-a504-d6ccf25beeb8",
     github_link: "https://github.com/ujjwalkirti/mmnct",
-    deployed_link: "https://www.mmnct.in/",
+    deployed_link: "https://mmnct-yzbk.vercel.app/",
   },
   {
     title: "LAC Website",
@@ -28,7 +28,7 @@ const featuredProjects: Array<Object> = [
     },
     tags: ["Next.js", "Tailwind CSS", "Firebase", "Vercel", "React Hook Forms"],
     image_url:
-      "https://firebasestorage.googleapis.com/v0/b/fir-react-native-expo-bbbae.appspot.com/o/Screenshot%202023-04-22%20135249.png?alt=media&token=35fd4d53-e8e3-42f1-ba13-8e72003e7594",
+      "https://firebasestorage.googleapis.com/v0/b/fir-react-native-expo-bbbae.appspot.com/o/lac-website.png?alt=media&token=daffa70b-37d5-4a8c-b99b-be7587c01e6d",
     github_link: "https://github.com/ujjwalkirti/lac-website/tree/main",
     deployed_link: "https://lac-website.vercel.app/",
   },
