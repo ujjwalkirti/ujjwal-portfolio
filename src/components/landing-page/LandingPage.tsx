@@ -19,6 +19,7 @@ import {
 } from "../data";
 import { firamono } from "@/components/data";
 import { linkedin_url } from "@/urls";
+import ToolComponent from "./ToolComponent";
 
 const moveToClass = (id: string): void => {
   const el = document.getElementById(id);
@@ -224,17 +225,9 @@ const LandingPage = () => {
             <p className="mb-[15px]">
               Here are a few technologies I’ve been working with recently:
             </p>
-            <ul className="grid grid-cols-2 text-[13px]">
+            <ul className="grid grid-cols-1 sm:grid-cols-2  text-[13px]">
               {tools.map((tool, index) => (
-                <li
-                  key={index}
-                  className="pb-[20px] font-medium flex text-[15px] items-center gap-2"
-                >
-                  <AiOutlineCaretRight className="aqua text-[10px]" />
-                  <span className="border-b-2 border-transparent hover:border-[#64ffda] transition-all duration-150 cursor-pointer">
-                    {tool}
-                  </span>
-                </li>
+                <ToolComponent tool={tool} index={index} />
               ))}
             </ul>
           </div>

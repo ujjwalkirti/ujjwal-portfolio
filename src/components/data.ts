@@ -4,6 +4,11 @@ import {
   Libre_Caslon_Text,
   Montserrat,
 } from "@next/font/google";
+import { SiExpress, SiFirebase, SiTailwindcss } from "react-icons/si";
+import {  IoLogoPython } from "react-icons/io";
+import { TbBrandNextjs } from "react-icons/tb";
+import { IoLogoJavascript } from "react-icons/io5";
+
 
 const featuredProjects: Array<Object> = [
   {
@@ -102,12 +107,12 @@ const inter = Inter({
 });
 
 const tools = [
-  "JavaScript (ES6+)",
-  "Python",
-  "React, Next.js",
-  "Firebase",
-  "Tailwind CSS",
-  "Express",
+  { title: "JavaScript (ES6+)", icon: IoLogoJavascript },
+  { title: "Python", icon: IoLogoPython },
+  { title: "React, Next.js", icon: TbBrandNextjs },
+  { title: "Firebase", icon: SiFirebase },
+  { title: "Tailwind CSS", icon: SiTailwindcss },
+  { title: "Express", icon: SiExpress },
 ];
 
 const navbarOptionStyle = "hover:text-[#64ffda] cursor-pointer";
