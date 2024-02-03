@@ -5,7 +5,7 @@ import {
   Montserrat,
 } from "@next/font/google";
 import { SiExpress, SiFirebase, SiTailwindcss } from "react-icons/si";
-import {  IoLogoPython } from "react-icons/io";
+import { IoLogoPython } from "react-icons/io";
 import { TbBrandNextjs } from "react-icons/tb";
 import { IoLogoJavascript } from "react-icons/io5";
 
@@ -41,11 +41,10 @@ const featuredProjects: Array<Object> = [
 
 const NoteworthyProjects: Array<Object> = [
   {
-    title: "Helping You Through",
-    desc: "Built a one stop solution in the form of a web application to help fresher students of my institute get academic resources, second hand books, bikes, and reviews about various institute facilities easily.",
-    tags: ["Next.js", "Firebase", "REST APIs"],
-    github_link: "https://github.com/ujjwalkirti/help-college",
-    deployed_link: "https://help-college-real.vercel.app/",
+    title: "Scalable Realtime Chat App",
+    desc: " Developed a full-stack chat application using Next.js for the frontend and Node.js for the backend,following the MVC design pattern.",
+    tags: ["Next.js", "Expressjs", "Kafka", "Postgresql", "Socket.io", "Turborepo"],
+    github_link: "https://github.com/ujjwalkirti/scalable-realtime-chat-app",
   },
   {
     title: "Reddit Clone",
@@ -69,17 +68,6 @@ const NoteworthyProjects: Array<Object> = [
     github_link:
       "https://github.com/ujjwalkirti/pomodoro-timer-harry_potter-theme",
     deployed_link: "https://nifty-volhard-fa38be.netlify.app/",
-  },
-  {
-    title: "Netflix Clone",
-    desc: "A Reactjs application based on the popular movie streaming platform Netflix.",
-    tags: [
-      "JavaScript",
-      "Reactjs",
-      "React-router",
-      "Payment Gateway Integration",
-    ],
-    github_link: "https://github.com/ujjwalkirti/netflix-clone",
   },
 ];
 

@@ -13,7 +13,6 @@ function styleBasedOnAlignment(alignment: String) {
 }
 
 const FeaturedProject = ({ font, alignment, project }) => {
-  console.log(alignment);
   return (
     <div
       className={`shadow-xl lg:shadow-none lg:flex lg:gap-2  lg:mb-[120px] rounded-md p-[25px] ${styleBasedOnAlignment(

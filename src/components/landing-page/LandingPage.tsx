@@ -18,8 +18,9 @@ import {
   tools,
 } from "../data";
 import { firamono } from "@/components/data";
-import { linkedin_url } from "@/urls";
+import { linkedin_url, resume_url } from "@/urls";
 import ToolComponent from "./ToolComponent";
+import Header from "./Header";
 
 const moveToClass = (id: string): void => {
   const el = document.getElementById(id);
@@ -34,7 +35,6 @@ const moveToClass = (id: string): void => {
 
 const LandingPage = () => {
   const [showNavbar, setShowNavbar] = useState(false);
-  const [removeWrapper, setRemoveWrapper] = useState(false);
   const [scrollDirection, setScrollDirection] = useState("down");
 
   useEffect(() => {
@@ -119,69 +119,8 @@ const LandingPage = () => {
           </Link>
         </div>
       </section>
-      <div className="flex flex-col justify-start lg:justify-center gap-y-4 items-start pt-[20px] min-h-[85vh] lg:px-[100px] lg:mx-auto lg:w-11/12 fade-in-from-bottom px-[25px]">
-        {" "}
-        <p
-          className={
-            "font-normal text-[#64FFDA] text-[16px] lg:ml-[4px] lg:mb-[2px] " +
-            firamono.className
-          }
-        >
-          Hi, my name is
-        </p>
-        <p
-          className={
-            "text-[40px] lg:text-[60px] font-semibold text-[#CCD6f6] my-[2px] " +
-            inter.className
-          }
-        >
-          Ujjwal Kirti.
-        </p>
-        <p
-          className={
-            "text-[40px] lg:text-[55px] text-[#8892B0] mt-[5px] font-semibold leading-[0.9] " +
-            inter.className
-          }
-        >
-          I build things for the web.
-        </p>
-        <div
-          className={
-            "mt-[10px] max-w-[540px] lg:max-w-[820px] text-justify text-[14px] lg:text-[16px] text-[#8892B0] " +
-            firamono.className
-          }
-        >
-          <p>
-            Hello! I'm a passionate Web Developer with 3 years of freelancing
-            experience. I specialize in creating dynamic and beautiful web
-            applications. I have rich experience in{" "}
-            <span className="aqua font-semibold">Next.js</span>,
-            <span className="aqua font-semibold">Firebase</span>,{" "}
-            <span className="aqua font-semibold">Express</span>,{" "}
-            <span className="aqua font-semibold">MongoDB</span>,{" "}
-            <span className="aqua font-semibold">React.js</span>, and{" "}
-            <span className="aqua font-semibold">Redux</span>.<br /> I'm very
-            passionate about web development and strive to better myself as a
-            developer by learning from each project. I take pride in my work and
-            enjoy seeing my applications come to life and help businesses grow.
-            <br />
-            Let's create something amazing together!
-          </p>
-          <p className="mt-3">
-            So if you can help me out or assist me in any other way, let's
-            connect!
-          </p>
-        </div>
-        <Link
-          href={linkedin_url}
-          className={
-            "text-[#64FFDA] border border-[#64FFDA] rounded-lg text-[14px] mt-[30px] py-[10px] px-[18px] hover:bg-[#64ffda1a] " +
-            firamono.className
-          }
-        >
-          Click here!
-        </Link>
-      </div>
+
+      <Header />
 
       {/*
         This marks the beginning of about section
@@ -189,77 +128,42 @@ const LandingPage = () => {
 
       <section
         className={
-          "pb-10 lg:px-[100px] px-[25px] mt-10 lg:w-4/5 lg:mx-auto " +
+          "flex flex-col lg:flex-row items-start gap-10 pb-10 lg:px-[100px] px-[25px] mt-10 lg:w-11/12 lg:mx-auto " +
           inter.className
         }
         id="about"
       >
-        <div className="flex pt-[10px] pb-[20px]">
-          <p className="grayish-text text-[26px] font-semibold">
-            <span className="aqua text-[18px]">01.</span> About Me
-          </p>
-          <hr className="dark-grayish-text" />
-        </div>
-        <div className="dark-grayish-text text-[18px] lg:text-[16px] lg:flex lg:items-center lg:gap-[50px] ">
-          <div className="lg:w-3/5 lg:flex lg:flex-col lg:justify-center lg:h-full">
+        <div className="dark-grayish-text text-[18px] lg:text-[16px] flex flex-col justify-start align-top h-full lg:gap-[20px] lg:w-1/2">
+          <div className="flex mt-10">
+            <p className="grayish-text text-[26px] font-semibold">
+              <span className="aqua text-[18px]">01.</span> About Me
+            </p>
+            <hr className="dark-grayish-text" />
+          </div>
+          <div className=" lg:flex lg:flex-col lg:justify-center lg:h-full text-[16px] lg:text-md">
             <p className="mb-[15px] ">
               Hello! My name is Ujjwal and I enjoy creating things that live on
-              the internet. My interest in web development started back in 2018
-              when I decided to opt for Computer Science as my fifth subject in
-              senior secondary!
-            </p>
-            <p className="mb-[15px]">
-              Fast-forward to today, and I’ve had the experience of developing
-              multiple <span className="aqua">full stack web applications</span>
-              , several <span className="aqua">APIs</span>, developing websites
-              as a <span className="aqua">freelancer</span> and working with a{" "}
-              <Link
-                href="https://lac-website.vercel.app/"
-                className="aqua hover:underline hover:underline-offset-2"
-              >
-                student led club
+              the internet. I recently stumbled across the youtube channel
+              called{" "}
+              <Link href={"#"} className="hover:underline aqua">
+                <span className="aqua">george hotz archive</span>
               </Link>{" "}
-              to build there website. My main focus these days is learning{" "}
-              <span className="aqua">Network Security</span>.
+              where his streams are uploaded.<br/> I became fascinated by his
+              approach and have decided to deep dive into world of ML using
+              Tinygrad (ML Library).
             </p>
-            <p className="mb-[15px]">
-              Here are a few technologies I’ve been working with recently:
-            </p>
-            <ul className="grid grid-cols-1 sm:grid-cols-2  text-[13px]">
-              {tools.map((tool, index) => (
-                <ToolComponent tool={tool} index={index} />
-              ))}
-            </ul>
-          </div>
-          <div className="flex justify-center lg:items-start relative mt-10 lg:w-2/5">
-            <div
-              className="relative z-20"
-              onMouseEnter={(e) => {
-                setRemoveWrapper(!removeWrapper);
-              }}
-              onMouseLeave={(e) => {
-                setRemoveWrapper(!removeWrapper);
-              }}
-            >
-              <div className="relative z-20">
-                <Image
-                  className="rounded-lg w-[279.52px] z-20 h-[279.52px] object-contain"
-                  alt="Ujjwal Kirti's image"
-                  src={`/me.png`}
-                  height={259.52}
-                  width={259.52}
-                />
-                <div
-                  className={`h-[279.52px] w-[279.52px] absolute border-2 border-[#64ffda] top-4   left-4 rounded-lg -z-10 ${
-                    removeWrapper
-                      ? "-translate-y-2 -translate-x-2 duration-300"
-                      : "translate-y-2 translate-x-2 duration-300"
-                  }`}
-                ></div>
-              </div>
-            </div>
           </div>
         </div>
+
+        <ul className="grid grid-cols-1 sm:grid-cols-2  text-[13px] w-full lg:w-1/2">
+          {tools.map((tool, index) => (
+            <ToolComponent
+              tool={tool}
+              index={index}
+              key={tool.title + index.toString()}
+            />
+          ))}
+        </ul>
       </section>
 
       {/*
@@ -313,7 +217,7 @@ const LandingPage = () => {
               view the archive
             </Link>
           </p>
-          <div className="lg:grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-4">
+          <div className="gap-4 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-4">
             {NoteworthyProjects.map((project, index) => (
               <NoteWorthyProjectsCard key={index} project={project} />
             ))}
@@ -369,17 +273,8 @@ const LandingPage = () => {
               >
                 <span className="aqua">03.</span> Contact
               </div>
-              {/* <Link
-                  href="/blogs"
-                  onClick={() => {
-                    setShowNavbar(false);
-                  }}
-                  className={smallNavbarOptionStyle}
-                >
-                  <span className="aqua">04.</span> Blogs
-                </Link> */}
               <Link
-                href={`https://drive.google.com/file/d/1Yeheadg5C0nkEJ2_ZqSJPyibcW8By3lz/view?usp=share_link`}
+                href={resume_url}
                 className={
                   "aqua w-[153.4px] text-center mx-auto border-[#64FFDA] text-[14px] border px-[50px] py-[18px] mt-[38px] rounded-md hover:bg-[#64ffda1a] " +
                   firamono.className

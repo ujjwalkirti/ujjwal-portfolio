@@ -1,6 +1,6 @@
 const linkedin_url = "https://www.linkedin.com/in/ujjwal-kirti-562b922a0/";
 const resume_url =
-  "https://drive.google.com/file/d/1kDT_x2REMQx9irNsgZpcuf8cGjvf6A4g/view?usp=drive_link";
+  "https://drive.google.com/file/d/1AIWK5dK3Y05ctK4gMEACtBFQ1QkaxuFL/view?usp=sharing";
 const twitter_url = "https://twitter.com/kirti_ujjwal";
 const github_url = "https://github.com/ujjwalkirti";
 
