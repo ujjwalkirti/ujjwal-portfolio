@@ -8,7 +8,7 @@ const Header = () => {
   const [removeWrapper, setRemoveWrapper] = React.useState(false);
 
   return (
-    <div className="flex lg:flex-row flex-col items-center justify-center lg:h-[85vh] lg:w-10/12 mx-auto">
+    <div className="flex lg:flex-row flex-col items-center justify-center lg:h-[85vh] lg:w-11/12 mx-auto">
       <div className="flex flex-col justify-start lg:justify-center gap-y-4 items-start pt-[20px] lg:px-[100px] lg:mx-auto w-full lg:w-3/5 fade-in-from-bottom px-[25px]">
         {" "}
         <p

@@ -33,7 +33,7 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <div className={monsterrat.className}>
+    <div className={"bg-[#0a192f] " + monsterrat.className}>
       {loading && <Loader />}
       <ChakraProvider>
         <Component {...pageProps} />

@@ -62,7 +62,7 @@ const LandingPage = () => {
     <section className=" min-h-screen">
       {/* Navbar section */}
       <section
-        className={`h-[80px] px-[25px] text-[#64FFDA] flex items-center justify-between pr-[25px] relative lg:px-[50px] navbar-parent fade-in-from-top bg-[#0a192f] bg-opacity-50 backdrop-filter backdrop-blur ${
+        className={`h-[80px] px-[25px] text-[#64FFDA] flex items-center justify-between pr-[25px] relative lg:px-[50px] navbar-parent fade-in-from-top bg-opacity-50 backdrop-filter backdrop-blur ${
           scrollDirection === "up"
             ? "transform-gpu  transition-transform duration-300 top-0 sticky z-30"
             : ""
@@ -112,7 +112,7 @@ const LandingPage = () => {
             <span className="aqua">04.</span> Blogs
           </Link> */}
           <Link
-            href={`https://drive.google.com/file/d/1I-JqJGe2U9PBaO_GLAcwH_tdCWlc7EUI/view?usp=sharing`}
+            href={resume_url}
             className="aqua border-[#64FFDA] border px-6 py-2 rounded-md hover:bg-[#64ffda1a]"
           >
             Resume
@@ -128,13 +128,13 @@ const LandingPage = () => {
 
       <section
         className={
-          "flex flex-col lg:flex-row items-start gap-10 pb-10 lg:px-[100px] px-[25px] mt-10 lg:w-11/12 lg:mx-auto " +
+          "flex flex-col lg:flex-row items-center gap-10 pb-10 lg:px-[100px] px-[25px] mt-10 lg:w-11/12 lg:mx-auto " +
           inter.className
         }
         id="about"
       >
         <div className="dark-grayish-text text-[18px] lg:text-[16px] flex flex-col justify-start align-top h-full lg:gap-[20px] lg:w-1/2">
-          <div className="flex mt-10">
+          <div className="flex">
             <p className="grayish-text text-[26px] font-semibold">
               <span className="aqua text-[18px]">01.</span> About Me
             </p>
@@ -145,13 +145,46 @@ const LandingPage = () => {
               Hello! My name is Ujjwal and I enjoy creating things that live on
               the internet. I recently stumbled across the youtube channel
               called{" "}
-              <Link href={"#"} className="hover:underline aqua">
+              <Link
+                href={"https://www.youtube.com/@geohotarchive"}
+                className="hover:underline aqua"
+              >
                 <span className="aqua">george hotz archive</span>
               </Link>{" "}
-              where his streams are uploaded.<br/> I became fascinated by his
-              approach and have decided to deep dive into world of ML using
-              Tinygrad (ML Library).
+              where his streams are uploaded.
+              <br /> I became fascinated by his approach and have decided to
+              deep dive into world of ML using Tinygrad (ML Library).
             </p>
+
+            <div className="border-2 border-[#64ffda] px-3 py-5 rounded-lg relative my-4">
+              <p className="absolute -top-[15px] text-xl font-bold aqua bg-[#0a192f] px-2">
+                My Educational Background:
+              </p>
+              <ul className="list-inside mt-4">
+                <li className="list-item">
+                  <span className="aqua">Latest Education</span>: Graduate
+                </li>
+                <li className="list-item">
+                  <span className="aqua">Degree</span>: Bachelors of Technology
+                </li>
+                <li className="list-item">
+                  <span className="aqua">Major</span>: Civil Engineering{" "}
+                </li>
+                <li className="list-item">
+                  <span className="aqua">Institute</span>: National Institute of
+                  Technology, Surat (SVNIT){" "}
+                  <Link
+                    className="aqua hover:underline"
+                    href={`https://svnit.ac.in/`}
+                  >
+                    link
+                  </Link>
+                </li>
+                <li className="list-item">
+                  <span className="aqua">Duration</span>: 2019-2023
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
