@@ -12,6 +12,17 @@ import { IoLogoJavascript } from "react-icons/io5";
 
 const featuredProjects: Array<Object> = [
   {
+    title: "Grocery Delivery Application",
+    desc: {
+      short: "An ecommerce application for grocery delivery right to your doorstep.",
+      long: "An ecommerce application for grocery delivery right to your doorstep."
+    },
+    tags: ["Next.js (app router)", "TypeScript", "Shadcn/ui", "Zustand", "MongoDB", "Razorpay", "next-auth","Render"],
+    image_url: "https://firebasestorage.googleapis.com/v0/b/ecommerce-homespa.appspot.com/o/screencapture-localhost-3001-2024-03-27-13_17_17.png?alt=media&token=fbb61d7e-1aa1-45e9-89aa-ea69a621898b",
+    github_link: "https://github.com/ujjwalkirtitests/grocery-shopping-nextjs",
+    deployed_link: "https://grocery-shopping-nextjs-web.onrender.com/"
+  },
+  {
     title: "MMNCT Website",
     desc: {
       short:

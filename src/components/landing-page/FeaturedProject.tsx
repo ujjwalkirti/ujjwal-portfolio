@@ -15,23 +15,12 @@ function styleBasedOnAlignment(alignment: String) {
 const FeaturedProject = ({ font, alignment, project }) => {
   return (
     <div
-      className={`shadow-xl lg:shadow-none lg:flex lg:gap-2  lg:mb-[120px] rounded-md p-[25px] ${styleBasedOnAlignment(
+      className={`shadow-xl lg:shadow-none lg:flex lg:justify-between lg:gap-2  lg:mb-[120px] rounded-md p-[25px] ${styleBasedOnAlignment(
         alignment
       )}`}
     >
       {/* image showing snip of code opened in vscode */}
       <div className="hidden lg:flex lg:flex-col lg:items-center  lg:bg-slate-800/50 lg:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:drop-shadow-lg lg:px-2 lg:py-2 lg:rounded-md  lg:gap-3 ">
-        <p
-          className={
-            "text-[24px] font-semibold text-orange-400 " + font[0].className
-          }
-        >
-          {project.title}
-        </p>
-        {/* <p className="text-[14px] text-center dark-grayish-text">
-          {project.desc.short}
-        </p> */}
-        <div className="h-[300px]">
           <Image
             alt="Project Image"
             src={project.image_url}
@@ -39,7 +28,6 @@ const FeaturedProject = ({ font, alignment, project }) => {
             width={400}
             className="object-cover origin-center h-full"
           />
-        </div>
       </div>
 
       <div
@@ -53,7 +41,7 @@ const FeaturedProject = ({ font, alignment, project }) => {
           {project.title}
         </p>
         {/* description of project */}
-        <div className="text-justify lg:text-left text-[14px] text-[#A8B2D1] py-[25px] lg:hover:bg-slate-800/50 lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg lg:px-3 lg:w-[600px]  lg:shadow-xl lg:rounded-md">
+        <div className="text-justify lg:text-left text-[14px] text-[#A8B2D1] py-[25px] lg:bg-slate-800/50 lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg lg:px-3 lg:w-[600px]  lg:shadow-xl lg:rounded-md">
           <p>{project.desc.long}</p>
         </div>
         {/* tags of project */}
