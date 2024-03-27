@@ -3,7 +3,6 @@ import { FaHamburger } from "react-icons/fa";
 import { MdOutlineClose } from "react-icons/md";
 import GetInTouch from "./GetInTouch";
 import Image from "next/image";
-import { AiOutlineCaretRight } from "react-icons/ai";
 import { useState } from "react";
 import Link from "next/link";
 import FeaturedProject from "./FeaturedProject";

@@ -2,7 +2,7 @@ import { github_url, linkedin_url, twitter_url } from "@/urls";
 import { Fira_Mono } from "@next/font/google";
 import Link from "next/link";
 import React from "react";
-import { FiGithub, FiInstagram, FiLinkedin, FiTwitter } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
 const iconStyle =
   "text-[24px] hover:aqua mb-6 hover:-translate-y-2 hover:text-[#64ffda] transition-all";
 const firamono = Fira_Mono({
