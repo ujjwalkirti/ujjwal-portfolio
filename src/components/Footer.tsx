@@ -26,12 +26,12 @@ const Footer = () => {
         {/* <Link href={l}>
           <FiInstagram className={iconStyle} />
         </Link> */}
-        <Link href={twitter_url}>
+        {/* <Link href={twitter_url}>
           <FiTwitter className={iconStyle} />
         </Link>
         <Link href={linkedin_url}>
           <FiLinkedin className={iconStyle} />
-        </Link>
+        </Link> */}
         <div className="border-r-2 h-[150px] border-[#8892b0] hidden lg:flex"></div>
       </div>
       {/* email address link */}

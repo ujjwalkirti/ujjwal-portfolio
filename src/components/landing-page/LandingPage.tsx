@@ -152,7 +152,7 @@ const LandingPage = () => {
               </Link>{" "}
               where his streams are uploaded.
               <br /> I became fascinated by his approach and have decided to
-              deep dive into world of ML using Tinygrad (ML Library).
+              deep dive into world of ML and Statistics.
             </p>
 
             <div className="border-2 border-[#64ffda] px-3 py-5 rounded-lg relative my-4">
