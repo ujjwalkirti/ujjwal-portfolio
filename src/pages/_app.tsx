@@ -5,7 +5,7 @@ import "@/styles/LandingPage.css";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Loader from "@/components/Loader";
-import { monsterrat } from "@/components/data";
+import { monsterrat } from "@/constants/data";
 import { ChakraProvider } from "@chakra-ui/react";
 
 export default function App({ Component, pageProps }: AppProps) {

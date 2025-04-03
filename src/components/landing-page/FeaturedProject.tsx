@@ -1,48 +1,27 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { AiFillGithub } from "react-icons/ai";
 import { BsLink45Deg } from "react-icons/bs";
 
-function styleBasedOnAlignment(alignment: String) {
-  if (alignment === "right") {
-    return "lg:flex-row-reverse";
-  } else {
-    return "lg:justify-start lg:text-start";
-  }
-}
-
-const FeaturedProject = ({ font, alignment, project }) => {
+const FeaturedProject = ({ font, project }) => {
+  const [isHovered, setIsHovered] = React.useState(false);
   return (
     <div
-      className={`shadow-xl lg:shadow-none lg:flex lg:justify-between lg:gap-2  lg:mb-[120px] rounded-md p-[25px] ${styleBasedOnAlignment(
-        alignment
-      )}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className={`shadow-xl lg:shadow-none lg:flex lg:justify-between lg:gap-2 rounded-md p-[25px] ${isHovered ? 'transform active:scale-90 transition-transform duration-200 lg:bg-slate-800/50 lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg' : ''}`}
     >
-      {/* image showing snip of code opened in vscode */}
-      <div className="hidden lg:flex lg:flex-col lg:items-center  lg:bg-slate-800/50 lg:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:drop-shadow-lg lg:px-2 lg:py-2 lg:rounded-md  lg:gap-3 ">
-          <Image
-            alt="Project Image"
-            src={project.image_url}
-            height={400}
-            width={400}
-            className="object-cover origin-center h-full"
-          />
-      </div>
-
       <div
-        className={`lg:flex lg:flex-col lg:justify-center  lg:gap-4 ${
-          alignment === "right" ? "lg:items-start" : "lg:items-end"
-        }`}
+        className={`lg:flex lg:flex-col lg:justify-center  lg:gap-4 `}
       >
-        <p className={"aqua " + font[1].className}>Featured Project</p>
+        <p className={"aqua text-[14px] rounded-md w-fit " + font[1].className}>Featured Project</p>
         {/* name of project */}
-        <p className="grayish-text text-[24px] font-semibold leading-tight">
+        <p className={` text-[24px] font-semibold leading-tight ${isHovered ? 'text-teal-300' : 'grayish-text'}`}>
           {project.title}
         </p>
         {/* description of project */}
-        <div className="text-justify lg:text-left text-[14px] text-[#A8B2D1] py-[25px] lg:bg-slate-800/50 lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg lg:px-3 lg:w-[600px]  lg:shadow-xl lg:rounded-md">
-          <p>{project.desc.long}</p>
+        <div className={`text-justify lg:text-left text-[14px] text-[#A8B2D1] lg:rounded-md ${isHovered ? 'grayish-text' : 'dark-grayish-text'}`}>
+          {project.desc.long.split(". ").map((line: string, index: number) => <p className="p-2" key={index}>{line}.<br /></p>)}
         </div>
         {/* tags of project */}
         <div

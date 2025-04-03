@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { BsFolder2Open, BsLink45Deg } from "react-icons/bs";
 import { FiGithub } from "react-icons/fi";
-import { monsterrat } from "../data";
+import { monsterrat } from "../../constants/data";
 
 const NoteWorthyProjectsCard = ({ project }) => {
   return (

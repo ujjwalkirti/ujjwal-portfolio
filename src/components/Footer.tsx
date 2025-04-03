@@ -1,8 +1,8 @@
-import { github_url, linkedin_url, twitter_url } from "@/urls";
+import { github_url, instagram_url, linkedin_url, twitter_url } from "@/constants/urls";
 import { Fira_Mono } from "@next/font/google";
 import Link from "next/link";
 import React from "react";
-import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
+import { FiGithub, FiInstagram, FiLinkedin, FiTwitter } from "react-icons/fi";
 const iconStyle =
   "text-[24px] hover:aqua mb-6 hover:-translate-y-2 hover:text-[#64ffda] transition-all";
 const firamono = Fira_Mono({
@@ -19,27 +19,27 @@ const Footer = () => {
       }
     >
       {/* socials icons */}
-      <div className="flex justify-evenly items-center dark-grayish-text link-elements lg:fixed lg:bottom-0 lg:flex-col lg:pl-[15px]">
+      <div className="flex justify-evenly items-center dark-grayish-text link-elements lg:fixed lg:bottom-0 lg:flex-col">
         <Link href={github_url}>
           <FiGithub className={iconStyle} />
         </Link>
-        {/* <Link href={l}>
+        <Link href={instagram_url}>
           <FiInstagram className={iconStyle} />
-        </Link> */}
+        </Link>
         {/* <Link href={twitter_url}>
           <FiTwitter className={iconStyle} />
-        </Link>
+        </Link> */}
         <Link href={linkedin_url}>
           <FiLinkedin className={iconStyle} />
-        </Link> */}
+        </Link>
         <div className="border-r-2 h-[150px] border-[#8892b0] hidden lg:flex"></div>
       </div>
       {/* email address link */}
-      <div className="hidden lg:flex lg:fixed lg:bottom-[00px] lg:right-0  lg:flex-col lg:pr-[70px] link-elements">
+      <div className="hidden dark-grayish-text link-elements lg:flex lg:flex-col lg:items-center lg:fixed lg:bottom-0 lg:-right-20">
         <Link
           href={`mailto:ujjwalkirti2000@gmail.com`}
           className={
-            "rotate-90 hover:-translate-y-2 fixed bottom-[270px] -right-[51px]  hover:text-[#64ffda] transition-all " +
+            "rotate-90 -translate-y-[130px] hover:text-[#64ffda] transition-all " +
             firamono.className
           }
         >

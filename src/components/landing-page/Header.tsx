@@ -1,15 +1,15 @@
 import React from "react";
-import { firamono, inter } from "../data";
+import { firamono, inter } from "../../constants/data";
 import Link from "next/link";
-import { linkedin_url } from "@/urls";
+import { linkedin_url } from "@/constants/urls";
 import Image from "next/image";
 
 const Header = () => {
   const [removeWrapper, setRemoveWrapper] = React.useState(false);
 
   return (
-    <div className="flex lg:flex-row flex-col items-center justify-center lg:h-[85vh] lg:w-11/12 mx-auto">
-      <div className="flex flex-col justify-start lg:justify-center gap-y-4 items-start pt-[20px] lg:px-[100px] lg:mx-auto w-full lg:w-3/5 fade-in-from-bottom px-[25px]">
+    <section className="flex lg:flex-row flex-col items-center justify-center px-[15px] lg:px-[100px] lg:w-11/12 mx-auto">
+      <div className="flex flex-col justify-start lg:justify-center gap-y-4 items-start pt-[20px] lg:mx-auto w-full lg:w-3/5 fade-in-from-bottom lg:pr-[25px]">
         {" "}
         <p
           className={
@@ -21,7 +21,7 @@ const Header = () => {
         </p>
         <p
           className={
-            "text-[40px] lg:text-[60px] font-semibold text-[#CCD6f6] my-[2px] " +
+            "text-[40px] lg:text-[40px] font-semibold text-[#CCD6f6] my-[2px] " +
             inter.className
           }
         >
@@ -29,7 +29,7 @@ const Header = () => {
         </p>
         <p
           className={
-            "text-[40px] lg:text-[52px] text-[#8892B0] mt-[5px] font-semibold leading-[1.2] lg:leading-none " +
+            "text-[40px] lg:text-[22px] text-[#8892B0] mt-[5px] font-semibold leading-[1.2] lg:leading-none " +
             inter.className
           }
         >
@@ -37,21 +37,16 @@ const Header = () => {
         </p>
         <div
           className={
-            "mt-[10px] text-justify text-[14px] lg:text-[16px] text-[#8892B0] " +
+            "mt-[10px] lg:text-justify text-[14px] lg:text-[16px] text-[#8892B0] " +
             firamono.className
           }
         >
           <p>
-            My apps are generally made using{" "}
-            <span className="aqua font-semibold">Next.js</span>,{" "}
-            <span className="aqua font-semibold">Firebase</span>,{" "}
-            <span className="aqua font-semibold">Express</span>,{" "}
-            <span className="aqua font-semibold">MongoDB</span>,{" "}
-            <span className="aqua font-semibold">React.js</span>, and{" "}
-            <span className="aqua font-semibold">Redux</span>.<br />
-            And, I am learning Machine learning these days (inspired by{" "}
-            <span className="aqua">george hotz</span>).
+            I build scalable applications, optimize infrastructure, and automate deployments for reliability and efficiency. <br />
+            Currently, I’m diving deeper into <span className="aqua font-semibold">DevOps</span> and <span className="aqua font-semibold">Machine Learning</span> to create smarter, self-managing systems.
           </p>
+
+
         </div>
         <Link
           href={linkedin_url}
@@ -82,16 +77,15 @@ const Header = () => {
               width={259.52}
             />
             <div
-              className={`h-[279.52px] w-[279.52px] absolute border-2 border-[#64ffda] top-4   left-4 rounded-lg -z-10 ${
-                removeWrapper
-                  ? "-translate-y-2 -translate-x-2 duration-300"
-                  : "translate-y-2 translate-x-2 duration-300"
-              }`}
+              className={`h-[279.52px] w-[279.52px] absolute border-2 border-[#64ffda] top-4   left-4 rounded-lg -z-10 ${removeWrapper
+                ? "-translate-y-2 -translate-x-2 duration-300"
+                : "translate-y-2 translate-x-2 duration-300"
+                }`}
             ></div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

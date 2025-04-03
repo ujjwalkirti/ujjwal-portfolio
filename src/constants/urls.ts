@@ -3,5 +3,6 @@ const resume_url =
   "https://drive.google.com/file/d/1MXEvt4XhnFT1isIMQyyHf0NJbdHR7BoK/view?usp=sharing";
 const twitter_url = "https://twitter.com/UjjwalKirt22551";
 const github_url = "https://github.com/ujjwalkirti";
+const instagram_url = "https://www.instagram.com/ujjwal_kirti/"
 
-export { linkedin_url, resume_url, twitter_url, github_url };
+export { linkedin_url, resume_url, twitter_url, github_url, instagram_url };

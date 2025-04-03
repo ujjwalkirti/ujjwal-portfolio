@@ -10,7 +10,7 @@ const GetInTouch = ({ font }) => {
           font[1].className
         }
       >
-        03. What's Next?
+        04. What's Next?
       </p>
       <p className="grayish-text font-semibold text-[30px] lg:text-[60px] lg:mb-[10px]">
         Get In Touch

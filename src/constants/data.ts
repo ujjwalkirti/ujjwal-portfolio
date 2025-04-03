@@ -4,7 +4,7 @@ import {
   Libre_Caslon_Text,
   Montserrat,
 } from "@next/font/google";
-import { SiExpress, SiFirebase, SiTailwindcss } from "react-icons/si";
+import { SiAmazonaws, SiAngular, SiDocker, SiExpress, SiFirebase, SiGithubactions, SiKubernetes, SiMongodb, SiNginx, SiPostgresql, SiSupabase, SiTailwindcss, SiVercel } from "react-icons/si";
 import { IoLogoPython } from "react-icons/io";
 import { TbBrandNextjs } from "react-icons/tb";
 import { IoLogoJavascript } from "react-icons/io5";
@@ -15,9 +15,9 @@ const featuredProjects: Array<Object> = [
     title: "Grocery Delivery Application",
     desc: {
       short: "An ecommerce application for grocery delivery right to your doorstep.",
-      long: "An ecommerce application for grocery delivery right to your doorstep."
+      long: "I built a full-stack E-commerce Grocery Delivery App using Next.js (App Router), TypeScript, and Shadcn/ui for a seamless and responsive UI. It features state management with Zustand, secure authentication with next-auth, and payments via Razorpay. The backend is powered by MongoDB for efficient data handling, and the application is deployed on Render for smooth and scalable performance. The platform includes real-time order tracking, multi-vendor support, and an intuitive checkout process, ensuring a seamless shopping experience."
     },
-    tags: ["Next.js (app router)", "TypeScript", "Shadcn/ui", "Zustand", "MongoDB", "Razorpay", "next-auth","Render"],
+    tags: ["Next.js (app router)", "TypeScript", "Shadcn/ui", "Zustand", "MongoDB", "Razorpay", "next-auth", "Render"],
     image_url: "https://firebasestorage.googleapis.com/v0/b/ecommerce-homespa.appspot.com/o/screencapture-localhost-3001-2024-03-27-13_17_17.png?alt=media&token=fbb61d7e-1aa1-45e9-89aa-ea69a621898b",
     github_link: "https://github.com/ujjwalkirtitests/grocery-shopping-nextjs",
     deployed_link: "https://grocery-shopping-nextjs-web.onrender.com/"
@@ -109,9 +109,21 @@ const tools = [
   { title: "JavaScript (ES6+)", icon: IoLogoJavascript },
   { title: "Python", icon: IoLogoPython },
   { title: "React, Next.js", icon: TbBrandNextjs },
+  // angular
+  { title: "Angular", icon: SiAngular },
   { title: "Firebase", icon: SiFirebase },
   { title: "Tailwind CSS", icon: SiTailwindcss },
   { title: "Express", icon: SiExpress },
+  { title: "Docker", icon: SiDocker },
+  { title: "Kubernetes", icon: SiKubernetes },
+  { title: "Github Actions", icon: SiGithubactions },
+  { title: "AWS", icon: SiAmazonaws },
+  { title: "Vercel", icon: SiVercel },
+  { title: "Supabase", icon: SiSupabase },
+  // mongodb
+  { title: "MongoDB", icon: SiMongodb },
+  { title: "Postgresql", icon: SiPostgresql },
+  { title: "Nginx", icon: SiNginx },
 ];
 
 const navbarOptionStyle = "hover:text-[#64ffda] cursor-pointer";
