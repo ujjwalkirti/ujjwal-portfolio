@@ -9,7 +9,7 @@ function AboutMe() {
     return (
         <section
             className={
-                "flex flex-col items-center gap-10 pb-10 lg:px-[100px] px-[25px] mt-10 lg:w-11/12 lg:mx-auto " +
+                "flex flex-col items-center gap-10 py-10 lg:px-[100px] px-[25px] mt-10 lg:w-11/12 lg:mx-auto " +
                 inter.className
             }
             id="about"
