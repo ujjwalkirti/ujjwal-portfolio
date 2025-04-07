@@ -34,13 +34,13 @@ function BlogCard({ blog }: BlogCardProps) {
 			className="-inset-x-4 -inset-y-4 rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:bg-slate-800/50 lg:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:drop-shadow-lg"
 		>
 			{/* Image */}
-			<ChakraLink as={NextLink} href={`/blog/${blog.slug}`} _hover={{ textDecoration: "none" }}>
+			<ChakraLink as={NextLink} href={`/blogs/${blog.slug}`} _hover={{ textDecoration: "none" }}>
 				<Image src={blog.image} alt={`${blog.title} image`} objectFit="cover" w="100%" h="180px" transition="transform 0.5s ease" _hover={{ transform: "scale(1.05)" }} />
 			</ChakraLink>
 
 			{/* Content */}
 			<Box p={4} display="flex" flexDirection="column" flexGrow={1}>
-				<ChakraLink as={NextLink} href={`/blog/${blog.slug}`} _hover={{ textDecoration: "none" }}>
+				<ChakraLink as={NextLink} href={`/blogs/${blog.slug}`} _hover={{ textDecoration: "none" }}>
 					<Text fontWeight="bold" mb={3} fontSize="lg" lineHeight="short" className="aqua" noOfLines={2} fontFamily="'Inter', 'Roboto', sans-serif" _hover={{ color: "#21bdfe" }}>
 						{blog.title}
 					</Text>
@@ -95,7 +95,7 @@ function BlogCard({ blog }: BlogCardProps) {
 				</Text>
 
 				<Flex justify="space-between" align="center">
-					<ChakraLink as={NextLink} href={`/blog/${blog.slug}`} fontSize="sm" fontWeight="semibold" className="grayish-text" _hover={{ color: "#64ffda" }} fontFamily="'Inter', sans-serif">
+					<ChakraLink as={NextLink} href={`/blogs/${blog.slug}`} fontSize="sm" fontWeight="semibold" className="grayish-text" _hover={{ color: "#64ffda" }} fontFamily="'Inter', sans-serif">
 						Read more →
 					</ChakraLink>
 

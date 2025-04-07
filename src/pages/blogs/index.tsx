@@ -21,7 +21,7 @@ function Blogs() {
 	}, []);
 
 	return (
-		<main className="bg-[#0a192f] min-h-screen">
+		<main className="min-h-screen">
 			<Head>
 				<title>Ujjwal Kirti | DevOps Blogs</title>
 				<meta name="description" content="Explore technical blogs by Ujjwal Kirti on DevOps, Kubernetes, CI/CD, and cloud-native tools." />
