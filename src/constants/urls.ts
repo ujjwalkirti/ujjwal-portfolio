@@ -1,7 +1,8 @@
-const linkedin_url = "https://www.linkedin.com/in/ujjwal-kirti-562b922a0/";
-const resume_url = process.env.NEXT_PUBLIC_RESUME_URL || "";
-const twitter_url = "https://twitter.com/UjjwalKirt22551";
-const github_url = "https://github.com/ujjwalkirti";
-const instagram_url = "https://www.instagram.com/ujjwal_kirti/"
+export const linkedin_url = process.env.NEXT_PUBLIC_LINKEDIN_URL || "";
+export const resume_url = process.env.NEXT_PUBLIC_RESUME_URL || "";
+export const twitter_url = process.env.NEXT_PUBLIC_TWITTER_URL || "";
+export const github_url = process.env.NEXT_PUBLIC_GITHUB_URL || "";
+export const instagram_url = process.env.NEXT_PUBLIC_INSTAGRAM_URL || "";
+export const url = process.env.NEXT_PUBLIC_BASE_URL || "";
 
-export { linkedin_url, resume_url, twitter_url, github_url, instagram_url };
+

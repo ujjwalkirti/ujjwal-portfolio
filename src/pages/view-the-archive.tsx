@@ -1,3 +1,4 @@
+import { url } from "@/constants/urls";
 import { Fira_Mono } from "@next/font/google";
 import axios from "axios";
 import Head from "next/head";
@@ -34,15 +35,15 @@ function ViewTheArchive({ repos }) {
 				{/* Open Graph Tags */}
 				<meta property="og:title" content="Ujjwal Kirti | Projects Archive" />
 				<meta property="og:description" content="Browse through Ujjwal Kirti’s complete project archive – from web development to DevOps and everything in between." />
-				<meta property="og:image" content="https://ujjwal-portfolio-flame.vercel.app/me.png" />
-				<meta property="og:url" content="https://ujjwal-portfolio-flame.vercel.app/archive" />
+				<meta property="og:image" content={url + "me.png"} />
+				<meta property="og:url" content={url} />
 				<meta property="og:type" content="website" />
 
 				{/* Twitter Card Tags */}
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:title" content="Ujjwal Kirti | Projects Archive" />
 				<meta name="twitter:description" content="Browse through Ujjwal Kirti’s complete project archive – from web development to DevOps and everything in between." />
-				<meta name="twitter:image" content="https://ujjwal-portfolio-flame.vercel.app/me.png" />
+				<meta name="twitter:image" content={url + "me.png"} />
 			</Head>
 
 			<div className="w-[90%] lg:w-[78%] mx-auto pt-[40px]">
