@@ -1,28 +1,27 @@
-type Blog = {
-  _id: string;
-  author: string;
-  title: string;
-  publishedAt: string;
-  slug: {
-    current: string;
-    _type: string;
-  };
-  body: string;
-  mainImage: {
-    alt: string;
-    _type: string;
-    asset: {
-      _ref: string;
-      _type: string;
-    };
-  };
-  intro?: string;
-};
+export interface Author {
+  name: string;
+  profile: string;
+  avatar: string | null;
+}
 
-type Blog_Comment = {
-  id: number;
-  author: string;
-  content: string;
-  created_at: string;
-  table_id: string;
-};
+export interface Blog {
+  title: string;
+  slug: string;
+  description: string;
+  authors: Author[];
+  image: string;
+  tags: string[];
+  created: string;
+  updated: string;
+}
+
+export interface IndividualBlog {
+  title: string;
+  description?: string;
+  authors: Author[];
+  markdown: string;
+  thumbnail: string | null;
+  branch?: string;
+  created: string;
+  updated: string;
+}

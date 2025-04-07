@@ -2,8 +2,6 @@ import Head from "next/head";
 import LandingPage from "@/components/landing-page/LandingPage";
 import { github_url, instagram_url, linkedin_url, twitter_url, url } from "@/constants/urls";
 
-
-
 export default function Home() {
 	return (
 		<main className="bg-[#0a192f] min-h-screen">
