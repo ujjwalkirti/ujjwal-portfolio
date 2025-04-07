@@ -104,7 +104,7 @@ function MarkdownContainer({ markdown, branch }: MarkdownContainerProps) {
 				// Code
 				"& code": {
 					fontFamily: "'Fira Code', 'SF Mono', Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
-					backgroundColor: "#f1f5f9",
+					// backgroundColor: "#f1f5f9",
 					padding: "0.2em 0.4em",
 					borderRadius: "4px",
 					fontSize: "0.875em",

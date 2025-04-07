@@ -69,7 +69,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ markdown, assetsUrl
 							if (node.tagName === "h2" && !firstH2Styled) {
 								firstH2Styled = true; // Mark first h2 as styled
 								node.properties = node.properties || {};
-								node.properties.className = [...(Array.isArray(node.properties.className) ? node.properties.className : []), "text-3xl", "font-bold", "text-gray-800", "mb-4", "mt-6"];
+								node.properties.className = [...(Array.isArray(node.properties.className) ? node.properties.className : []), "text-3xl", "font-bold", "mb-4", "mt-6"];
 							}
 
 							if (node.tagName === "pre" && Array.isArray(node.children)) {
@@ -151,12 +151,13 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ markdown, assetsUrl
 									node.properties = node.properties || {};
 									node.properties.className = [
 										...(Array.isArray(node.properties.className) ? node.properties.className : []),
-										"bg-gray-200", // Light background
+										"bg-teal-400/10", // Light background
 										"px-2", // Small padding
 										"py-1", // Small padding
 										"rounded-md", // Rounded corners
 										"font-mono", // Monospace font
 										"text-sm", // Small font size
+                                        "text-teal-300"
 									];
 								}
 							}

@@ -41,7 +41,7 @@ function DisplayBlog({ title, authors, created, updated, markdown, description, 
 	const formattedUpdated = updated !== created ? `Last updated ${updated}` : null;
 
 	return (
-		<Container maxW="4xl" pb={8}>
+		<Container maxW="4xl" pb={8} className="dark-grayish-text">
 			<BackToBlogSection />
 
 			<Heading as="h1" fontSize={["2.2rem", "2.5rem", "3rem"]} fontWeight="bold" lineHeight={1.2} mb={6} className="aqua" fontFamily="Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif" letterSpacing="-0.02em">
@@ -50,46 +50,26 @@ function DisplayBlog({ title, authors, created, updated, markdown, description, 
 
 			<Flex justify="space-between" align="center" mb={5} wrap="wrap">
 				<Flex align="center" gap={2}>
-					<Text color="#64748b" fontWeight={500}>
-						{formattedCreated}
-					</Text>
+					<Text fontWeight={500}>{formattedCreated}</Text>
 					{formattedUpdated && (
 						<>
-							<Text color="#64748b" mx={1}>
-								•
-							</Text>
-							<Text color="#64748b" fontStyle="italic">
-								{formattedUpdated}
-							</Text>
+							<Text mx={1}>•</Text>
+							<Text fontStyle="italic">{formattedUpdated}</Text>
 						</>
 					)}
 				</Flex>
 
-				<Link href={`https://github.com/ujjwalkirti/blog/blob/main/blogs/${slug}/content.md`} passHref target="_blank">
-					<Button
-						as="a"
-						leftIcon={<FaGithub />}
-						variant="outline"
-						size="sm"
-						borderColor="#e2e8f0"
-						color="#64748b"
-						fontSize="0.825rem"
-						_hover={{
-							borderColor: "#cbd5e1",
-							backgroundColor: "#f8fafc",
-						}}
-					>
-						View on GitHub
-					</Button>
-				</Link>
+				<Button href={`https://github.com/ujjwalkirti/blog/blob/main/blogs/${slug}/content.md`} as="a" rel="noopener noreferrer" target="_blank" leftIcon={<FaGithub />}  size="sm"  colorScheme="teal" fontSize="0.825rem">
+					View on GitHub
+				</Button>
 			</Flex>
 
 			<Flex flexWrap="wrap" mb={6} gap={4}>
 				{authors.map((author) => (
 					<ChakraLink key={author.name} href={author.profile} isExternal _hover={{ textDecoration: "none" }}>
-						<Flex align="center" _hover={{ ".author-name": { color: "#0ea5e9" } }}>
+						<Flex align="center">
 							{author.avatar ? <Avatar src={author.avatar} name={author.name} w="38px" h="38px" mr={3} /> : <Avatar {...stringAvatar(author.name)} w="38px" h="38px" mr={3} />}
-							<Text className="author-name" fontWeight={500} color="#334155" transition="color 0.2s">
+							<Text className="author-name" fontWeight={500} transition="color 0.2s">
 								{author.name}
 							</Text>
 						</Flex>
@@ -98,7 +78,7 @@ function DisplayBlog({ title, authors, created, updated, markdown, description, 
 			</Flex>
 
 			{description && (
-				<Box fontSize="1.15rem" fontWeight={400} lineHeight="1.5" color="#475569" mb={6} p={5} bg="#f8fafc" borderLeft="4px solid #0ea5e9" borderRadius="8px">
+				<Box fontSize="1.15rem" fontWeight={400} lineHeight="1.5"  mb={6} p={5} bg="#f8fafc" borderLeft="4px solid #0ea5e9" borderRadius="8px">
 					{description}
 				</Box>
 			)}
