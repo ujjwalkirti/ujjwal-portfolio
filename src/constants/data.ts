@@ -15,7 +15,7 @@ const featuredProjects: Array<Object> = [
     title: "Grocery Delivery Application",
     desc: {
       short: "An ecommerce application for grocery delivery right to your doorstep.",
-      long: "I built a full-stack E-commerce Grocery Delivery App using Next.js (App Router), TypeScript, and Shadcn/ui for a seamless and responsive UI. It features state management with Zustand, secure authentication with next-auth, and payments via Razorpay. The backend is powered by MongoDB for efficient data handling, and the application is deployed on Render for smooth and scalable performance. The platform includes real-time order tracking, multi-vendor support, and an intuitive checkout process, ensuring a seamless shopping experience."
+      long: "The web app provided a seamless grocery shopping experience with real-time order tracking, multi-vendor support, secure payments, and an intuitive checkout process. It ensured smooth performance, responsive design, and efficient handling of user and order data."
     },
     tags: ["Next.js (app router)", "TypeScript", "Shadcn/ui", "Zustand", "MongoDB", "Razorpay", "next-auth", "Render"],
     image_url: "https://firebasestorage.googleapis.com/v0/b/ecommerce-homespa.appspot.com/o/screencapture-localhost-3001-2024-03-27-13_17_17.png?alt=media&token=fbb61d7e-1aa1-45e9-89aa-ea69a621898b",
@@ -128,7 +128,7 @@ const tools = [
 
 const navbarOptionStyle = "hover:text-[#64ffda] cursor-pointer";
 const smallNavbarOptionStyle =
-  "hover:text-[#64ffda] cursor-pointer flex flex-col items-center text-[18px] px-[20px] pb-[20px] pt-[3px] " +
+  "hover:text-[#64ffda] cursor-pointer flex items-center gap-3 text-[18px] px-[20px] pb-[20px] pt-[3px] hover:scale-105 transition-all " +
   firamono.className;
 
 export {

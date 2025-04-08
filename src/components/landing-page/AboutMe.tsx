@@ -1,6 +1,6 @@
 import React from 'react'
 import ToolComponent from './ToolComponent'
-import { inter, tools } from '../../constants/data'
+import { tools } from '../../constants/data'
 import Link from 'next/link'
 import Marquee from "react-fast-marquee";
 
@@ -9,8 +9,7 @@ function AboutMe() {
     return (
         <section
             className={
-                "flex flex-col items-center gap-10 py-10 lg:px-[100px] px-[25px] mt-10 lg:w-11/12 lg:mx-auto " +
-                inter.className
+                "flex flex-col items-center gap-10 py-10 lg:px-[100px] px-[25px] mt-10 lg:w-11/12 lg:mx-auto "
             }
             id="about"
         >

@@ -63,7 +63,7 @@ function IndividualBlogPage() {
 	}, [slug]);
 
 	return (
-		<main className="relative pt-20 pb-6 w-full min-h-[80vh]" role="main" aria-label="Blog Post">
+		<main className="relative pb-6 w-full min-h-[80vh]" role="main" aria-label="Blog Post">
 			{blog ? (
 				<>
 					<Head>

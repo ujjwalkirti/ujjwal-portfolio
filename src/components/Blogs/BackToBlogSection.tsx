@@ -8,7 +8,7 @@ function BackToBlogSection() {
 		<Box sx={{ pt: 4, pb: 2 }}>
 			<Link href="/blogs" style={{ textDecoration: "none" }}>
 				<Button leftIcon={<IoArrowBack />} colorScheme="teal">
-					Back to blogs
+					<span className="hidden md:inline">Back to blogs</span>
 				</Button>
 			</Link>
 		</Box>

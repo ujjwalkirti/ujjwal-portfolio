@@ -8,7 +8,7 @@ interface BlogGridProps {
 
 function BlogGrid({ blogs }: BlogGridProps) {
 	return (
-		<div className="px-3 w-full lg:w-[85%] mx-auto my-10 h-full">
+		<div className="px-3 w-full lg:w-[85%] mx-auto py-10 h-full">
 			{!blogs ||
 				(blogs.length === 0 && (
 					<div className="flex flex-col items-center grayish-text">

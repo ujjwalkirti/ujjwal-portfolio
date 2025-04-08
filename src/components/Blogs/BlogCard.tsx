@@ -15,7 +15,6 @@ function BlogCard({ blog }: BlogCardProps) {
 
 	return (
 		<Box
-			position="relative"
 			borderRadius="lg"
 			border="1px solid rgba(0,0,0,0.06)"
 			overflow="hidden"
@@ -31,7 +30,7 @@ function BlogCard({ blog }: BlogCardProps) {
 					transform: "translateY(0)",
 				},
 			}}
-			className="-inset-x-4 -inset-y-4 rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:bg-slate-800/50 lg:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:drop-shadow-lg"
+			className="-inset-x-4 -inset-y-4 rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:bg-slate-800/50 lg:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:drop-shadow-lg bg-slate-800"
 		>
 			{/* Image */}
 			<ChakraLink as={NextLink} href={`/blogs/${blog.slug}`} _hover={{ textDecoration: "none" }}>
@@ -71,38 +70,15 @@ function BlogCard({ blog }: BlogCardProps) {
 						</Tag>
 					)}
 				</Flex>
-			</Box>
-
-			{/* Description Overlay */}
-			<Box
-				className="description-overlay"
-				position="absolute"
-				bottom="0"
-				left="0"
-				right="0"
-				bg="rgba(255, 255, 255, 0.98)"
-				px={4}
-				py={3}
-				opacity={0}
-				transform="translateY(100%)"
-				transition="all 0.3s ease"
-				backdropFilter="blur(4px)"
-				borderTop="1px solid rgba(0,0,0,0.08)"
-				boxShadow="0px -2px 10px rgba(0,0,0,0.05)"
-			>
-				<Text fontSize="sm" mb={3} color="#3A4F6D" lineHeight="1.6" fontFamily="'Inter', sans-serif">
-					{blog.description}
-				</Text>
-
-				<Flex justify="space-between" align="center">
-					<ChakraLink as={NextLink} href={`/blogs/${blog.slug}`} fontSize="sm" fontWeight="semibold" className="grayish-text" _hover={{ color: "#64ffda" }} fontFamily="'Inter', sans-serif">
+				<Flex justify="space-between" my={2} align="center">
+					<ChakraLink as={NextLink} href={`/blogs/${blog.slug}`} fontSize="sm" fontWeight="semibold" className="grayish-text" color="#64ffda" fontFamily="'Inter', sans-serif">
 						Read more →
 					</ChakraLink>
 
 					<Tooltip label="Share this blog" hasArrow>
 						<IconButton
 							aria-label="Share this blog"
-							icon={<FaShareAlt size={12} />}
+							icon={<FaShareAlt size={20} />}
 							size="sm"
 							variant="ghost"
 							color="#21bdfe"

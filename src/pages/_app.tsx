@@ -9,6 +9,7 @@ import { monsterrat } from "@/constants/data";
 import { ChakraProvider } from "@chakra-ui/react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import GlowCursor from "@/components/GlowCursor";
 
 export default function App({ Component, pageProps }: AppProps) {
 	const [loading, setLoading] = useState(false);
@@ -37,6 +38,7 @@ export default function App({ Component, pageProps }: AppProps) {
 	return (
 		<div className={"bg-[#0a192f] " + monsterrat.className}>
 			{loading && <Loader />}
+			<GlowCursor />
 			<ChakraProvider>
 				<section className="min-h-screen">
 					<Navbar />
