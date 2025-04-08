@@ -16,7 +16,6 @@
     "@supabase/supabase-js": "^2.22.0",
     "@uiball/loaders": "^1.2.6",
     "@vercel/analytics": "^1.0.1",
-    "@vercel/speed-insights": "^1.2.0",
     "appwrite": "^11.0.0",
     "axios": "^1.3.4",
     "framer-motion": "^10.12.18",
