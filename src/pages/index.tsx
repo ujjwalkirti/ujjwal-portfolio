@@ -24,6 +24,8 @@ export default function Home() {
 				<meta name="twitter:description" content="Check out Ujjwal Kirti’s work in DevOps, including automation, Kubernetes, and scalable infrastructure." />
 				<meta name="twitter:image" content={url + "me.png"} />
 
+				<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
 				{/* Structured Data (JSON-LD) */}
 				<script
 					type="application/ld+json"
