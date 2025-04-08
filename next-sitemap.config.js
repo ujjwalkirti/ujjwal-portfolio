@@ -4,7 +4,7 @@ const { AxiosError } = require('axios');
 
 async function getAllBlogSlugs() {
     try {
-        const GITHUB_API_URL = `https://api.github.com/repos/ujjwalkirti/blog/contents/_blog.yml?ref=initial-setup`;
+        const GITHUB_API_URL = `https://api.github.com/repos/ujjwalkirti/blog/contents/_blog.yml?ref=${process.env.BLOG_BRANCH_NAME}`;
         const response = await axios.get(GITHUB_API_URL);
 
         // Decode base64 content
