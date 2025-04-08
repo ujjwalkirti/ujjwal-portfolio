@@ -10,6 +10,7 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import "highlight.js/styles/github-dark.css";
 import "katex/dist/katex.min.css";
+import { Text } from "hast";
 import React, { useEffect, useState } from "react";
 
 interface MarkdownRendererProps {
@@ -92,7 +93,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ markdown, assetsUrl
 								let codeContent = "";
 								if (codeNode && "children" in codeNode && Array.isArray(codeNode.children)) {
 									codeContent = codeNode.children
-										.filter((child) => child.type === "text")
+										.filter((child): child is Text => child.type === "text")
 										.map((textNode) => textNode.value)
 										.join("");
 								}

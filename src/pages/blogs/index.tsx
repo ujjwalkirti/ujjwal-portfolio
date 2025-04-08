@@ -4,22 +4,7 @@ import React from "react";
 import { Blog } from "Typings";
 import { url, github_url, instagram_url, linkedin_url, twitter_url } from "@/constants/urls";
 
-function Blogs() {
-	const [blogs, setBlogs] = React.useState<Blog[]>([]);
-
-	React.useEffect(() => {
-		const fetchBlogs = async () => {
-			try {
-				const response = await fetch("/api/blog/get-all-blogs");
-				const data = await response.json();
-				setBlogs(data);
-			} catch (error) {
-				console.error("Error fetching blogs:", error);
-			}
-		};
-		fetchBlogs();
-	}, []);
-
+function Blogs({ blogs }: { blogs: Blog[] }) {
 	return (
 		<main className="min-h-screen">
 			<Head>
@@ -71,3 +56,21 @@ function Blogs() {
 }
 
 export default Blogs;
+
+export async function getServerSideProps() {
+	let blogs: Blog[] = [];
+
+	const baseUrl = process.env.NEXT_PUBLIC_DOMAIN || "https://ujjwal-portfolio-flame.vercel.app";
+
+	const fetchBlogs = async () => {
+		try {
+			const response = await fetch(`${baseUrl}/api/blog/get-all-blogs`);
+			const data = await response.json();
+			blogs = data;
+		} catch (error) {
+			console.error("Error fetching blogs:", error);
+		}
+	};
+	await fetchBlogs();
+	return { props: { blogs } };
+}

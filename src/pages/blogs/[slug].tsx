@@ -104,3 +104,28 @@ function IndividualBlogPage() {
 }
 
 export default IndividualBlogPage;
+
+export async function getServerSideProps(context) {
+	const { slug } = context.query;
+	let blog: IndividualBlog | null = null;
+
+	if (!slug) return { props: { blog } };
+
+	const baseUrl = process.env.NEXT_PUBLIC_DOMAIN || "https://ujjwal-portfolio-flame.vercel.app";
+
+	try {
+		const response = await fetch(`${baseUrl}/api/blog/get-individual-blog`, {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({ slug }),
+		});
+		const data = await response.json();
+		blog = data;
+	} catch (error) {
+		console.error("Error fetching blog:", error);
+	}
+
+	return { props: { blog } };
+}
