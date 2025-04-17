@@ -20,15 +20,15 @@ function AboutMe() {
                     </p>
                     <hr className="dark-grayish-text" />
                 </div>
-                <div className=" lg:flex lg:flex-col lg:justify-center lg:h-full text-[16px] lg:text-md">
-                    <p className="mb-[15px]">
+                <div className=" flex flex-col lg:flex-row lg:items-center gap-5 lg:h-full text-[16px] lg:text-md">
+                    <p className="mb-[15px] lg:w-1/2">
                         I love building and optimizing systems that power the internet.
                         Lately, I've been diving deep into <span className="aqua font-semibold">DevOps</span>, exploring automation, cloud infrastructure, and system reliability.
                         My goal is to create seamless deployment pipelines and scalable architectures that keep applications running efficiently.
                     </p>
 
 
-                    <div className="border-2 border-[#64ffda] px-3 py-5 rounded-lg relative my-4">
+                    <div className="lg:w-1/2 border-2 border-[#64ffda] px-3 py-5 rounded-lg relative my-4">
                         <p className="absolute -top-[15px] text-xl font-bold aqua bg-[#0a192f] px-2">
                             My Educational Background:
                         </p>
