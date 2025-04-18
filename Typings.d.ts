@@ -24,4 +24,5 @@ export interface IndividualBlog {
   branch?: string;
   created: string;
   updated: string;
+  tags: string[];
 }

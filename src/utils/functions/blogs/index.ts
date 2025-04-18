@@ -51,6 +51,7 @@ export async function getIndividualBlogFromGitHub(slug: string): Promise<Individ
             markdown: markdownResponse.data,
             thumbnail: `${GITHUB_ASSETS_BASE}/${blogEntry.thumbnail}`,
             authors: blogEntry.authors,
+            tags: blogEntry.tags,
             branch: config.github.blogBranchName
         };
 

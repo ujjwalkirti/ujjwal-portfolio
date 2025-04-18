@@ -1,5 +1,5 @@
+import BlogNotFound from "@/components/Blogs/BlogNotFound";
 import DisplayBlog from "@/components/Blogs/DisplayBlog";
-import { useRouter } from "next/router";
 import Head from "next/head";
 import React from "react";
 import { IndividualBlog } from "Typings";
@@ -35,42 +35,19 @@ function generateArticleSchema(blog: IndividualBlog, slug: string | string[] | u
 	};
 }
 
-function IndividualBlogPage() {
-	const { query } = useRouter();
-	const slug = query.slug;
-	const [blog, setBlog] = React.useState<IndividualBlog | null>(null);
-
-	React.useEffect(() => {
-		if (!slug) return;
-
-		const fetchBlog = async () => {
-			try {
-				const response = await fetch(`/api/blog/get-individual-blog`, {
-					method: "POST",
-					headers: {
-						"Content-Type": "application/json",
-					},
-					body: JSON.stringify({ slug }),
-				});
-				const data = await response.json();
-				setBlog(data);
-			} catch (error) {
-				console.error("Error fetching blog:", error);
-			}
-		};
-
-		fetchBlog();
-	}, [slug]);
-
+function IndividualBlogPage({ blog, slug }: { blog: IndividualBlog; slug: string }) {
 	return (
 		<main className="relative pb-6 w-full min-h-[80vh]" role="main" aria-label="Blog Post">
 			{blog ? (
 				<>
 					<Head>
-						<title>{blog.title} | Ujjwal Kirti</title>
+						<title>{`${blog.title} | Ujjwal Kirti`}</title>
 						<meta name="description" content={blog.description.slice(0, 160)} />
 						<meta name="viewport" content="width=device-width, initial-scale=1" />
 						<link rel="icon" href="/UK.png" />
+
+						{/* key words */}
+						<meta name="keywords" content={blog.tags.join(", ")} />
 
 						{/* Open Graph */}
 						<meta property="og:title" content={blog.title} />
@@ -97,7 +74,7 @@ function IndividualBlogPage() {
 					<DisplayBlog {...blog} slug={slug as string} />
 				</>
 			) : (
-				<p className="text-center text-white">Loading blog...</p>
+				<BlogNotFound />
 			)}
 		</main>
 	);
@@ -127,5 +104,5 @@ export async function getServerSideProps(context) {
 		console.error("Error fetching blog:", error);
 	}
 
-	return { props: { blog } };
+	return { props: { blog, slug } };
 }
