@@ -6,6 +6,7 @@ import BackToBlogSection from "./BackToBlogSection";
 import MarkdownContainer from "./MarkdownContainer";
 import React from "react";
 import { FiArrowUp } from "react-icons/fi";
+import BlogFooter from "./BlogFooter";
 
 interface DisplayBlogProps {
 	title: string;
@@ -91,13 +92,13 @@ function DisplayBlog({ title, authors, created, updated, markdown, description, 
 			</Flex>
 
 			{description && (
-				<Box fontSize="1.15rem" fontWeight={400} lineHeight="1.5" mb={6} p={5} bg="#f8fafc" borderLeft="4px solid #0ea5e9" borderRadius="8px">
+				<Box fontSize="1.15rem" fontWeight={400} lineHeight="1.5" mb={6} p={5} shadow={"lg"} borderLeft="4px solid #0ea5e9" borderRadius="8px">
 					{description}
 				</Box>
 			)}
 
 			<MarkdownContainer markdown={markdown} branch={branch} />
-
+			<BlogFooter />
 			{showScrollTop && <IconButton icon={<FiArrowUp />} aria-label="Scroll to top" position="fixed" bottom="30px" right="30px" zIndex={1000} colorScheme="teal" borderRadius="full" size="lg" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} />}
 		</Container>
 	);

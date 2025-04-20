@@ -34,7 +34,7 @@ function BlogCard({ blog }: BlogCardProps) {
 		>
 			{/* Image */}
 			<ChakraLink as={NextLink} href={`/blogs/${blog.slug}`} _hover={{ textDecoration: "none" }}>
-				<Image src={blog.image} alt={`${blog.title} image`} objectFit="cover" w="100%" h="180px" transition="transform 0.5s ease" _hover={{ transform: "scale(1.05)" }} />
+				<Image src={blog.image} alt={`${blog.title} image`} objectFit="fill" w="100%" h="180px" transition="transform 0.5s ease" _hover={{ transform: "scale(1.05)" }} />
 			</ChakraLink>
 
 			{/* Content */}
