@@ -3,6 +3,7 @@ import BlogGrid from "@/components/Blogs/BlogGrid";
 import React from "react";
 import { Blog } from "Typings";
 import { url, github_url, instagram_url, linkedin_url, twitter_url } from "@/constants/urls";
+import BlogHeader from "@/components/Blogs/BlogHeader";
 
 function Blogs({ blogs }: { blogs: Blog[] }) {
 	return (
@@ -49,6 +50,7 @@ function Blogs({ blogs }: { blogs: Blog[] }) {
 				/>
 			</Head>
 			<section className="h-full" aria-label="Blog Page">
+				<BlogHeader />
 				<BlogGrid blogs={blogs} />
 			</section>
 		</main>

@@ -8,7 +8,7 @@ interface BlogGridProps {
 
 function BlogGrid({ blogs }: BlogGridProps) {
 	return (
-		<div className="px-3 w-full lg:w-[85%] mx-auto py-10 h-full">
+		<div className="px-3 w-full lg:w-[85%] mx-auto pb-10 h-full">
 			{!blogs ||
 				(blogs.length === 0 && (
 					<div className="flex flex-col items-center grayish-text">
@@ -22,7 +22,7 @@ function BlogGrid({ blogs }: BlogGridProps) {
 						</p>
 					</div>
 				))}
-			<div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 h-full">
+			<div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 h-full">
 				{blogs?.map((blog, index) => (
 					<BlogCard key={blog.slug + index.toString()} blog={blog} />
 				))}
