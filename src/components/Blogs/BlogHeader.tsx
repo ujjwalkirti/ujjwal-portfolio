@@ -5,8 +5,8 @@ function BlogHeader() {
 	const keywordClass = "aqua font-bold";
 	return (
 		<div className="flex flex-col lg:flex-row items-center lg:items-start text-white w-full lg:w-[85%] mx-auto pt-10 px-4">
-			<VStack spacing={4} className="w-full lg:w-1/3" alignItems={"start"}>
-				<Text fontSize={{ base: "25px", md: "40px" }} fontWeight={"bold"}>
+			<VStack spacing={4} className="w-full lg:w-1/2" alignItems={"start"}>
+				<Text fontSize={{ base: "45px", md: "40px" }} fontWeight={"bold"}>
 					Ujjwal's Blog
 				</Text>
 				{/* <div className="flex items-center border border-teal-400 rounded-[20px]">

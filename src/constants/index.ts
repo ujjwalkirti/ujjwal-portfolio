@@ -23,13 +23,17 @@ export const experiences = [
         date: "07/2023 - 05/2024",
         title: "Full Stack Developer",
         company: "Root On Immigrations",
-        description: [
-            "Created a comprehensive payment solution using Next.js, TypeScript, and Material UI for the frontend and FastAPI for the backend. Implemented support for both fixed and custom payments via Razorpay and Stripe based on domain, resulting in a 30% increase in successful transactions and a 20% drop in payment failures.",
-            "Orchestrated seamless deployment by hosting the frontend on AWS EC2 and containerizing the backend on Google Cloud Run, optimizing load times by 40% and cutting infrastructure costs by 25%.",
-            "Engineered and embedded a RAG chatbot as a paid service within the platform, boosting user engagement by 50% and generating new revenue by delivering tailored, accurate counseling contributing to a 15% rise in customer satisfaction.",
-            "Built a custom Chrome extension for company counselors to automate client communication regarding immigration updates, streamlining repetitive tasks and saving 20 hours per week per counselor, which elevated operational efficiency by 35% and improved client response time by 40%."
-        ],
         website: "https://rooton.ca/",
-        technologies: ["TypeScript", "Nextjs", "FastAPI", "Stripe", "Razorpay", "AWS", "GCP", "Strapi", "Hubspot", "Material UI"],
-    },
+        description: [
+            "Designed and developed a cloud-native, scalable immigration services platform using Next.js (App Router), TypeScript, TailwindCSS, Material UI, and FastAPI, delivering a seamless experience to thousands of users with >95% Lighthouse scores across devices.",
+            "Architected a hybrid multi-cloud deployment strategy, hosting production workloads on AWS EC2 and optimizing development environments with Vercel (frontend) and Google Cloud Run (Dockerized backend), resulting in a 40% improvement in load times and a 25% reduction in cloud costs.",
+            "Integrated global payment systems (Stripe, Razorpay) with domain-specific flows, boosting successful transactions by 30% and cutting payment failures by 20% through enhanced backend resilience and payment orchestration.",
+            "Engineered platform accelerators like a Course Recommendation System, SOP/SOWP builders, and a paid RAG-based chatbot, increasing customer engagement by 50% and raising satisfaction scores by 15%.",
+            "Built a modular backend architecture to scalably support 26+ immigration service domains, and implemented Infrastructure-as-Code (IaC) practices to streamline service orchestration, boosting deployment speed and maintainability.",
+            "Developed and deployed a custom Chrome Extension to automate counselor-client communication workflows, saving 20+ hours per week and increasing operational efficiency by 35%.",
+            "Enhanced SEO, accessibility, and performance through React Server Components, dynamic sitemap generation, and server-side optimizations, achieving 35% higher organic visibility and 25% faster server response times."
+        ],
+        technologies: ["TypeScript", "Next.js", "FastAPI", "Stripe", "Razorpay", "AWS", "GCP", "Vercel", "TailwindCSS", "Material UI", "Strapi", "Hubspot"],
+    }
+    ,
 ];
