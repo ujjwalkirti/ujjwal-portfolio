@@ -3,7 +3,7 @@ interface NavbarLink {
     id: string;
     link?: string;
 }
-export const navbarLinks: NavbarLink[] = [{ title: "About", id: "about" }, { title: "Experience", id: "experience" }, { title: "Work", id: "work" }, { title: "Contact", id: "contact" }, { title: "Blogs", id: "blogs", link: "/blogs" }];
+export const navbarLinks: NavbarLink[] = [{ title: "About", id: "about" }, { title: "Experience", id: "experience" }, { title: "Work", id: "work" }, { title: "Contact", id: "contact" }];
 
 export const experiences = [
     {
