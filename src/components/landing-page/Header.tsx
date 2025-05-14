@@ -20,7 +20,7 @@ const Header = () => {
 						Currently, I’m diving deeper into <span className="aqua font-semibold">DevOps</span> and <span className="aqua font-semibold">Machine Learning</span> to create smarter, self-managing systems.
 					</p>
 				</div>
-				<Link href={linkedin_url} className={"text-[#64FFDA] border border-[#64FFDA] rounded-lg text-[14px] mt-[30px] py-[10px] px-[18px] hover:bg-[#64ffda1a] " + firamono.className}>
+				<Link href={`mailto:ujjwalkirti2000@gmail.com`} className={"text-[#64FFDA] border border-[#64FFDA] rounded-lg text-[14px] mt-[30px] py-[10px] px-[18px] hover:bg-[#64ffda1a] " + firamono.className}>
 					Let's connect!
 				</Link>
 			</div>
