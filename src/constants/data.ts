@@ -18,7 +18,7 @@ const featuredProjects: Array<Object> = [
       long: "The web app provided a seamless grocery shopping experience with real-time order tracking, multi-vendor support, secure payments, and an intuitive checkout process. It ensured smooth performance, responsive design, and efficient handling of user and order data."
     },
     tags: ["Next.js (app router)", "TypeScript", "Shadcn/ui", "Zustand", "MongoDB", "Razorpay", "next-auth", "Render"],
-    image_url: "https://firebasestorage.googleapis.com/v0/b/ecommerce-homespa.appspot.com/o/screencapture-localhost-3001-2024-03-27-13_17_17.png?alt=media&token=fbb61d7e-1aa1-45e9-89aa-ea69a621898b",
+    image_url: "/assets/landing-page/ecommerce-marketplace.webp",
     github_link: "https://github.com/ujjwalkirtitests/grocery-shopping-nextjs",
     deployed_link: "https://grocery-shopping-nextjs-web.onrender.com/"
   },
@@ -31,7 +31,7 @@ const featuredProjects: Array<Object> = [
     },
     tags: ["Next.js", "Tailwind CSS", "Firebase", "Vercel"],
     image_url:
-      "https://firebasestorage.googleapis.com/v0/b/fir-react-native-expo-bbbae.appspot.com/o/screencapture-mmnct-yzbk-vercel-app-2023-12-14-13_46_07.png?alt=media&token=cddf42d5-fdca-4dde-a504-d6ccf25beeb8",
+      "/assets/landing-page/sports-website.webp",
     github_link: "https://github.com/ujjwalkirti/mmnct",
     deployed_link: "https://mmnct-yzbk.vercel.app/",
   },
@@ -44,7 +44,7 @@ const featuredProjects: Array<Object> = [
     },
     tags: ["Next.js", "Tailwind CSS", "Firebase", "Vercel", "React Hook Forms"],
     image_url:
-      "https://firebasestorage.googleapis.com/v0/b/fir-react-native-expo-bbbae.appspot.com/o/lac-website.png?alt=media&token=daffa70b-37d5-4a8c-b99b-be7587c01e6d",
+      "/assets/landing-page/lac-website.webp",
     github_link: "https://github.com/ujjwalkirti/lac-website/tree/main",
     deployed_link: "https://lac-website.vercel.app/",
   },
