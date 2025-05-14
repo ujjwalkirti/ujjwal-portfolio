@@ -12,6 +12,19 @@ import { IoLogoJavascript } from "react-icons/io5";
 
 const featuredProjects: Array<Object> = [
   {
+    title: "Cloud-Native CI/CD and Monitoring Infrastructure",
+    desc: {
+      short: "A fully automated CI/CD pipeline with Kubernetes-based deployment and monitoring on AWS.",
+      long: "Designed and provisioned a complete production-ready DevOps pipeline using Terraform for infrastructure-as-code, Jenkins for continuous integration, and Argo CD for GitOps-based continuous delivery. Deployed applications to an AWS EKS cluster with zero-downtime rollouts, high availability NGINX Ingress, Route 53 DNS mapping, and real-time observability using Prometheus and Grafana."
+    },
+    tags: [
+      "Terraform", "Jenkins", "Argo CD", "Kubernetes (EKS)", "Prometheus",
+      "Grafana", "GitOps", "NGINX Ingress", "AWS Route 53", "CI/CD"
+    ],
+    image_url: "/assets/landing-page/devops.png",
+    github_link: "https://github.com/ujjwalkirti",
+  },
+  {
     title: "Grocery Delivery Application",
     desc: {
       short: "An ecommerce application for grocery delivery right to your doorstep.",
