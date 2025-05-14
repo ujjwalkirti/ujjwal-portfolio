@@ -1,0 +1,52 @@
+.aqua {
+  color: #64ffda;
+}
+
+.grayish-text {
+  color: #ccd6f6;
+}
+
+.dark-grayish-text {
+  color: #8892b0;
+}
+
+.fade-in-from-bottom {
+  visibility: visible;
+  opacity: 1;
+  animation-delay: 2500ms;
+  animation: fadeInFromBottom 2250ms;
+}
+
+@keyframes fadeInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.fade-in-from-top {
+  visibility: visible;
+  opacity: 1;
+  animation-delay: 250ms;
+  animation: fadeInFromTop 1.25s;
+}
+
+@keyframes fadeInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.link-elements {
+  animation-name: fadeInFromBottom;
+  animation-duration: 2250ms;
+}
