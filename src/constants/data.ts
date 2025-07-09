@@ -65,6 +65,13 @@ const featuredProjects: Array<Object> = [
 
 const NoteworthyProjects: Array<Object> = [
   {
+    title: "End to End Ecommerce Website",
+    desc: "A full stack Ecommerce website with real-time order tracking, multi-vendor support, authentication, secure payments, and an intuitive checkout process.",
+    tags: ["Next.js", "Tailwind CSS", "Shadcn/ui", "TypeScript", "AWS S3", "Netlify", "Razorpay", "Ecommerce"],
+    github_link: "https://github.com/Rectangle-Technologies/jeevika-shah-jewellery-frontend",
+    deployed_link: "https://jeevikashah.com/",
+  },
+  {
     title: "Scalable Realtime Chat App",
     desc: " Developed a full-stack chat application using Next.js for the frontend and Node.js for the backend,following the MVC design pattern.",
     tags: ["Next.js", "Expressjs", "Kafka", "Postgresql", "Socket.io", "Turborepo"],
