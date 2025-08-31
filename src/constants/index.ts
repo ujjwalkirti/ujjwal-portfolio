@@ -9,15 +9,15 @@ export const experiences = [
     {
         date: "06/2024 — Present",
         title: "Backend Developer",
-        company: "Binapani Edu",
+        company: "Freelance",
         description: [
-            "Architected and built REST APIs from scratch using Express.js, PostgreSQL, and Sequelize, laying the foundation for a robust and scalable backend architecture that accelerated product launch by 4 weeks, cut initial development costs by 25%, and facilitated rapid onboarding of new developers.",
-            "Provisioned and configured the entire system on a bare-metal server with static IP using Nginx and Docker containers, implementing optimized routing for both production and development environments; lowered infrastructure costs by 30%, boosted deployment speed by 40%, and achieved 99.9% system uptime.",
+            "Designed and developed scalable REST APIs using Express.js, PostgreSQL, and Sequelize, implementing JWT-based authentication, role-based authorization, and a content management system. Delivered 30+ new services and business-critical endpoints, integrated RabbitMQ + Pub/Sub for asynchronous task processing, and scaled the platform to serve 100,000+ users.",
+            "Deployed development on bare-metal (Docker/Nginx) and production on Azure (GitHub Actions → ACR → Azure Container Apps + Front Door), cutting infra costs by 30%, achieving 99.9% uptime, and enabling zero-downtime releases.",
             "Set up and managed CI/CD pipelines using GitHub Workflows, automating deployments to both production and development servers; slashed deployment time by 60%, eliminated manual errors, and streamlined release cycles, increasing development productivity by 35%.",
             "Created a blogging system that allows users to submit blogs by contributing to a separate GitHub repository, inspired by Hugging Face’s community blog workflow; empowered community-driven content creation, simplified editorial review with pull requests, and enhanced user engagement and content variety."
         ],
         website: "https://binapani.com/",
-        technologies: ["JavaScript", "Angular", "Express.js", "Nextjs (App Router)", "Azure", "PostgreSQL", "Github Actions", "Docker"],
+        technologies: ["JavaScript", "Angular", "Express.js", "Nextjs (App Router)", "Azure", "App Container", "PostgreSQL", "Github Actions", "Docker"],
     },
     {
         date: "07/2023 - 05/2024",
