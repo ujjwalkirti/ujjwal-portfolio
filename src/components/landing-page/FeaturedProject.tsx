@@ -42,9 +42,11 @@ const FeaturedProject = ({ font, project }) => {
 
 				{/* Links */}
 				<div className="grayish-text flex text-[27px] gap-3">
-					<Link href={project.github_link}>
-						<AiFillGithub className="cursor-pointer hover:-translate-y-1 hover:text-[#64ffda] transition-all" />
-					</Link>
+					{project.github_link && (
+						<Link href={project.github_link}>
+							<AiFillGithub className="cursor-pointer hover:-translate-y-1 hover:text-[#64ffda] transition-all" />
+						</Link>
+					)}
 					{project.deployed_link && (
 						<Link href={project.deployed_link}>
 							<BsLink45Deg className="cursor-pointer hover:-translate-y-1 hover:text-[#64ffda] transition-all" />

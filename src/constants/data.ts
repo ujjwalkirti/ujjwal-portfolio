@@ -12,6 +12,17 @@ import { IoLogoJavascript } from "react-icons/io5";
 
 const featuredProjects: Array<Object> = [
   {
+    "title": "Patient Management System",
+    "desc": {
+      "short": "A modular healthcare management system built using Spring Boot and a microservices-style architecture.",
+      "long": "The system manages patient records, appointments, and billing using independent Spring Boot services. It supports REST APIs, asynchronous processing with Kafka/RabbitMQ, secure authentication, and PostgreSQL-backed data storage. The project includes Docker-based deployment on AWS EC2, with real-time updates, centralized logging, and efficient inter-service communication."
+    },
+    "tags": ["Java", "Spring Boot", "Microservices", "PostgreSQL", "Kafka", "RabbitMQ", "Docker", "AWS"],
+    "image_url": "/assets/landing-page/patient-management.png",
+    // "github_link": "https://github.com/ujjwalkirti/your-patient-management-repo",
+    // "deployed_link": "https://your-patient-management-demo-link.com"
+  },
+  {
     title: "Cloud-Native CI/CD and Monitoring Infrastructure",
     desc: {
       short: "A fully automated CI/CD pipeline with Kubernetes-based deployment and monitoring on AWS.",
@@ -47,20 +58,7 @@ const featuredProjects: Array<Object> = [
       "/assets/landing-page/sports-website.webp",
     github_link: "https://github.com/ujjwalkirti/mmnct",
     deployed_link: "https://mmnct-yzbk.vercel.app/",
-  },
-  {
-    title: "LAC Website",
-    desc: {
-      short:
-        "Full Stack Website, developed and currently being maintained by me.",
-      long: "The Literary Affairs Committee web application was developed using Next.js in Typescript and styled with Tailwind CSS. The website used Firebase as the database, which allowed for efficient development and real-time synchronization. The website included an admin panel for content and user management and was deployed on Vercel, resulting in an excellent user experience.",
-    },
-    tags: ["Next.js", "Tailwind CSS", "Firebase", "Vercel", "React Hook Forms"],
-    image_url:
-      "/assets/landing-page/lac-website.webp",
-    github_link: "https://github.com/ujjwalkirti/lac-website/tree/main",
-    deployed_link: "https://lac-website.vercel.app/",
-  },
+  }
 ];
 
 const NoteworthyProjects: Array<Object> = [
@@ -93,13 +91,13 @@ const NoteworthyProjects: Array<Object> = [
     // deployed_link: "https://www.mmnct.in/",
   },
   {
-    title: "Pomodoro Timer (Based on Harry Potter Movies)",
-    desc: "A Pomodoro timer to help you concentrate on your work, with an integrated todo list to keep track of your progress. It comes with theme based on Harry Potter movies, so that all Potterheads out there feel at home!",
-    tags: ["Reactjs", "Firebase", "React-icons", "Context APIs"],
-    github_link:
-      "https://github.com/ujjwalkirti/pomodoro-timer-harry_potter-theme",
-    deployed_link: "https://nifty-volhard-fa38be.netlify.app/",
+    title: "LAC Website",
+    desc: "Full Stack Website, developed and currently being maintained by me.",
+    tags: ["Next.js", "Tailwind CSS", "Firebase", "Vercel", "React Hook Forms"],
+    github_link: "https://github.com/ujjwalkirti/lac-website/tree/main",
+    deployed_link: "https://lac-website.vercel.app/",
   },
+
 ];
 
 const monsterrat = Montserrat({
