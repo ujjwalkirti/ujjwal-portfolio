@@ -9,7 +9,7 @@ import Footer from "../Footer";
 
 const LandingPage = () => {
 	return (
-		<section>
+		<section className={firamono.className}>
 			<Header />
 
 			{/*

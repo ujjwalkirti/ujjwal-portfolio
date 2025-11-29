@@ -1,55 +1,70 @@
-import { List, ListItem } from '@chakra-ui/react';
-import Link from 'next/link';
-import React from 'react'
-import { LuExternalLink } from 'react-icons/lu';
+import { Box, Flex, Heading, Link as ChakraLink, List, ListItem, Stack, Tag, Text } from "@chakra-ui/react";
+import Link from "next/link";
+import React from "react";
+import { LuExternalLink } from "react-icons/lu";
+import { Experience } from "Typings";
 
 interface ExperienceCardProps {
-    exp: {
-        title: string;
-        company: string;
-        website: string;
-        date: string;
-        description: string[];
-        technologies: string[];
-    }
-}
-function ExperienceCard({ exp }: ExperienceCardProps) {
-    const [isHovered, setIsHovered] = React.useState(false);
-    return (
-        <li onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="mb-12">
-            <Link href={exp.website} target="_blank" rel="noopener noreferrer" aria-label={exp.title} title={exp.title} className="group relative grid px-3 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50 hover:cursor-pointer">
-                <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
-                <header
-                    className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"
-                    aria-label={exp.date}
-                >
-                    {exp.date}
-                </header>
-                <div className="z-10 sm:col-span-6">
-                    <h3 className={`font-medium leading-snug  ${isHovered ? 'text-teal-300 focus-visible:text-teal-300' : 'text-slate-200'}`}>
-                        <span className="lg:inline-flex items-baseline font-semibold leading-tight  text-xl">
-                            <span>{exp.title} ·{" "}</span>
-                            <span className="inline-block ml-1">{exp.company}</span> <span>{exp.website ? <Link href={exp.website}><LuExternalLink className="inline-block ml-2" /> </Link> : ""}</span>
-                        </span>
-                    </h3>
-                    <ul className={`mt-2 text-sm list-disc pl-5 leading-normal ${isHovered ? 'grayish-text' : 'dark-grayish-text'}`}>
-                        {exp.description.map((desc, descIndex) => (
-                            <li className='my-2' key={descIndex}>{desc}</li>
-                        ))}
-                    </ul>
-                    <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
-                        {exp.technologies.map((tech, techIndex) => (
-                            <li key={techIndex} className="mr-1.5 mt-2">
-                                <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
-                                    {tech}
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </Link>
-        </li>
-    )
+	exp: Experience;
 }
 
-export default ExperienceCard
+function ExperienceCard({ exp }: ExperienceCardProps) {
+	const [isHovered, setIsHovered] = React.useState(false);
+
+	return (
+		<Box as="li" mb={12} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+			<Flex p={4} borderRadius="md" position="relative" direction={{ base: "column", sm: "row" }} justify="space-between" transition="all 0.2s">
+				{/* Date */}
+				<Text color="gray.500" fontSize="xs" fontWeight="semibold" textTransform="uppercase" flexShrink={0} w={{ sm: "20%" }}>
+					{exp.date}
+				</Text>
+
+				{/* Content */}
+				<Box w={{ sm: "75%" }}>
+					{/* Title + Company */}
+					<ChakraLink as={Link} href={exp.website} target="_blank" rel="noopener noreferrer" aria-label={exp.title} title={exp.title} _hover={{ textDecoration: "none" }}>
+						<Heading as="h3" size="lg" color={isHovered ? "teal.300" : "gray.200"} transition="color 0.2s" display="flex" alignItems="center">
+							{exp.title} · {exp.company}
+							{exp.website && (
+								<ChakraLink as={Link} href={exp.website} ml={2} color="teal.300">
+									<LuExternalLink />
+								</ChakraLink>
+							)}
+						</Heading>
+					</ChakraLink>
+
+					{/* Description */}
+					<List spacing={2} mt={3} fontSize="sm" color={isHovered ? "gray.300" : "gray.400"}>
+						{exp.description.map((desc, i) => (
+							<ListItem key={i} pl={4} style={{ listStyleType: "disc" }}>
+								<Text as="span">
+									{desc.description}{" "}
+									{desc.links && desc.links.length > 0 && (
+										<>
+											{desc.links.map((link, idx) => (
+												<ChakraLink as={Link} key={idx} href={link} target="_blank" rel="noopener noreferrer" aria-label={link} title={link} ml={1} color="teal.300" fontWeight="medium" _hover={{ textDecoration: "underline" }}>
+													[Link {idx + 1}]
+												</ChakraLink>
+											))}
+										</>
+									)}
+								</Text>
+							</ListItem>
+						))}
+					</List>
+
+					{/* Technologies */}
+					<Stack direction="row" wrap="wrap" mt={3} spacing={2}>
+						{exp.technologies.map((tech, idx) => (
+							<Tag key={tech + idx} size="sm" colorScheme="teal.400" variant="subtle" bg="teal.400">
+								{tech}
+							</Tag>
+						))}
+					</Stack>
+				</Box>
+			</Flex>
+		</Box>
+	);
+}
+
+export default ExperienceCard;

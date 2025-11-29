@@ -36,7 +36,7 @@ function WorkSection() {
             </div>
 
             {/* other Projects section */}
-            <div className={"text-center pb-[60px] " + inter.className}>
+            <div className={"text-center pb-[60px] "}>
                 <p className="grayish-text text-[24px] mb-[10px] font-semibold">
                     Other Noteworthy Projects
                 </p>

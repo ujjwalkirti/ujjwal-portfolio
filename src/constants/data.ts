@@ -8,9 +8,35 @@ import { SiAmazonaws, SiAngular, SiDocker, SiExpress, SiFirebase, SiGithubaction
 import { IoLogoPython } from "react-icons/io";
 import { TbBrandNextjs } from "react-icons/tb";
 import { IoLogoJavascript } from "react-icons/io5";
+import { FeaturedProject, NoteworthyProject } from "Typings";
 
 
-const featuredProjects: Array<Object> = [
+const featuredProjects: FeaturedProject[] = [
+  {
+    title: "Mini Vercel — Web App Deployment Platform",
+    desc: {
+      short:
+        "A Vercel-style deployment platform that automates builds, containerizes apps, and provisions isolated preview environments for instant browser testing.",
+      long:
+        "Built a production-ready, Vercel-like deployment platform that automates end-to-end builds and preview deployments for frontend and backend applications. Backend services are implemented in Node.js (TypeScript) with Redis-based queues for build orchestration, real-time log streaming for debugging, and dynamic namespace provisioning on an AWS EKS cluster for isolated previews. The platform integrates Supabase for authentication/metadata, Prisma for the ORM layer, and ClickHouse for high-performance analytics. Artifacts are containerized with Docker; deployments are driven by GitHub Actions, and preview URLs are exposed immediately for reviewers."
+    },
+    tags: [
+      "Node.js (TypeScript)",
+      "Docker",
+      "Kubernetes (AWS EKS)",
+      "Redis (queues)",
+      "GitHub Actions",
+      "Supabase",
+      "Prisma",
+      "ClickHouse",
+      "Real-time logs",
+      "Preview Environments"
+    ],
+    image_url: "/assets/landing-page/mini-vercel.png",
+    github_link: "https://github.com/ujjwalkirti/mini-vercel",
+    // deployed_link: "https://academy.binapani.com"
+  }
+  ,
   {
     "title": "Patient Management System",
     "desc": {
@@ -46,22 +72,22 @@ const featuredProjects: Array<Object> = [
     github_link: "https://github.com/ujjwalkirtitests/grocery-shopping-nextjs",
     deployed_link: "https://grocery-shopping-nextjs-web.onrender.com/"
   },
-  {
-    title: "MMNCT Website",
-    desc: {
-      short:
-        "A full stack web application for day-night cricketing event of my institute.",
-      long: "The website was used to display real time live scores, video streaming of the match, take polls on outcome of matches, make announcements, host contests, attract sponsorship as well as display fixtures and points table which updated dynamically.",
-    },
-    tags: ["Next.js", "Tailwind CSS", "Firebase", "Vercel"],
-    image_url:
-      "/assets/landing-page/sports-website.webp",
-    github_link: "https://github.com/ujjwalkirti/mmnct",
-    deployed_link: "https://mmnct-yzbk.vercel.app/",
-  }
+  // {
+  //   title: "MMNCT Website",
+  //   desc: {
+  //     short:
+  //       "A full stack web application for day-night cricketing event of my institute.",
+  //     long: "The website was used to display real time live scores, video streaming of the match, take polls on outcome of matches, make announcements, host contests, attract sponsorship as well as display fixtures and points table which updated dynamically.",
+  //   },
+  //   tags: ["Next.js", "Tailwind CSS", "Firebase", "Vercel"],
+  //   image_url:
+  //     "/assets/landing-page/sports-website.webp",
+  //   github_link: "https://github.com/ujjwalkirti/mmnct",
+  //   deployed_link: "https://mmnct-yzbk.vercel.app/",
+  // }
 ];
 
-const NoteworthyProjects: Array<Object> = [
+const NoteworthyProjects: NoteworthyProject[] = [
   {
     title: "End to End Ecommerce Website",
     desc: "A full stack Ecommerce website with real-time order tracking, multi-vendor support, authentication, secure payments, and an intuitive checkout process.",
@@ -76,19 +102,11 @@ const NoteworthyProjects: Array<Object> = [
     github_link: "https://github.com/ujjwalkirti/scalable-realtime-chat-app",
   },
   {
-    title: "Reddit Clone",
-    desc: "Reddit 2.0, made using Next.js, TypeScript and backed by graphql.",
-
-    tags: [
-      "Next.js",
-      "Tailwind CSS",
-      "Supabase",
-      "StepZen",
-      "Graphql",
-      "Vercel",
-    ],
-    github_link: "https://github.com/ujjwalkirti/reddit-clone",
-    // deployed_link: "https://www.mmnct.in/",
+    title: "MMNCT Website",
+    desc: "A full stack web application for day-night cricketing event of my institute.",
+    tags: ["Next.js", "Tailwind CSS", "Firebase", "Vercel"],
+    github_link: "https://github.com/ujjwalkirti/mmnct",
+    deployed_link: "https://mmnct-yzbk.vercel.app/",
   },
   {
     title: "LAC Website",
