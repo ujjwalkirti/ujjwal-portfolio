@@ -3,7 +3,7 @@ import {
   Inter,
   Libre_Caslon_Text,
   Montserrat,
-} from "@next/font/google";
+} from "next/font/google";
 import { SiAmazonaws, SiAngular, SiDocker, SiExpress, SiFirebase, SiGithubactions, SiKubernetes, SiMongodb, SiNginx, SiPostgresql, SiSupabase, SiTailwindcss, SiVercel } from "react-icons/si";
 import { IoLogoPython } from "react-icons/io";
 import { TbBrandNextjs } from "react-icons/tb";

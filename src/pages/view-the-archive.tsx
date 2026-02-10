@@ -1,5 +1,5 @@
 import { url } from "@/constants/urls";
-import { Fira_Mono } from "@next/font/google";
+import { Fira_Mono } from "next/font/google";
 import axios from "axios";
 import Head from "next/head";
 import Link from "next/link";

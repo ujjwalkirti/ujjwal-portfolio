@@ -1,5 +1,5 @@
 import { github_url, instagram_url, linkedin_url, twitter_url } from "@/constants/urls";
-import { Fira_Mono } from "@next/font/google";
+import { Fira_Mono } from "next/font/google";
 import Link from "next/link";
 import React from "react";
 import { FiGithub, FiInstagram, FiLinkedin, FiTwitter } from "react-icons/fi";
