@@ -20,12 +20,12 @@ interface ExperienceCardProps {
 function ExperienceCard({ exp }: ExperienceCardProps) {
     return (
 		<li className="mb-12">
-			<div className="group relative grid px-3 pb-1 transition-all lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+			<div className="group relative grid lg:px-3 pb-1 transition-all lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
 				<div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
 
 				<div className="z-10">
-					<div className="font-medium leading-snug text-gray-900 flex justify-between items-center">
-						<h3 className="lg:inline-flex items-baseline font-semibold leading-tight text-xl">
+					<div className="font-medium leading-snug text-gray-900 flex flex-col lg:flex-row justify-between lg:items-center gap-2">
+						<h3 className="lg:inline-flex items-baseline font-semibold leading-tight text-sm lg:text-xl">
 							<span>{exp.title} · </span>
 							<Link href={exp.website} target="_blank" rel="noopener noreferrer" aria-label={exp.company} title={exp.company} className="inline-block ml-1 hover:text-orange-600">
 								{exp.company}
@@ -37,7 +37,7 @@ function ExperienceCard({ exp }: ExperienceCardProps) {
 							{exp.date}
 						</header>
 					</div>
-					<ul className="mt-2 text-sm list-disc pl-5 leading-relaxed text-gray-600">
+					<ul className="mt-2 text-xs lg:text-sm list-disc pl-2 lg:pl-5 leading-relaxed text-gray-600">
 						{exp.description.map((desc, descIndex) => (
 							<li className="my-2" key={descIndex}>
 								{desc.text}

@@ -10,18 +10,18 @@ const FeaturedProject = ({ font, project }) => {
 		<div
 			onMouseEnter={() => setIsHovered(true)}
 			onMouseLeave={() => setIsHovered(false)}
-			className={`shadow-xl lg:shadow-none lg:flex lg:justify-between lg:gap-2 rounded-md p-[25px] my-5 bg-gray-50 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg ${
+			className={`shadow-xl lg:shadow-none lg:flex lg:justify-between lg:gap-2 rounded-md p-3 lg:p-[25px] my-5 bg-gray-50 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg ${
 				isHovered ? "transform active:scale-90 transition-transform duration-200 lg:bg-gray-50 lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg" : ""
 			}`}
 		>
-			<div className={`lg:flex lg:flex-col lg:justify-center  lg:gap-4 w-full lg:w-1/2`}>
+			<div className={`lg:flex lg:flex-col lg:justify-center space-y-2  lg:gap-4 w-full lg:w-1/2`}>
 				<p className={"text-orange-600 text-xs rounded-md w-fit " + font[1].className}>Featured Project</p>
 
 				{/* name of project */}
 				<p className={` text-sm font-semibold leading-tight ${isHovered ? "text-orange-600" : "text-gray-900"}`}>{project.title}</p>
 
 				{/* description of project */}
-				<ul className={`list-disc pl-5 text-justify lg:text-left text-xs leading-relaxed text-gray-700 lg:rounded-md ${isHovered ? "text-gray-900" : "text-gray-600"}`}>
+				<ul className={`list-disc pl-5 text-justify lg:text-left text-xs lg:leading-relaxed text-gray-700 lg:rounded-md ${isHovered ? "text-gray-900" : "text-gray-600"}`}>
 					{project.desc.long.split(". ").map((line: string, index: number) => (
 						<li className="px-2" key={index}>
 							{line}
