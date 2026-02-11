@@ -1,5 +1,5 @@
 import React from 'react'
-import { inter } from '../../constants/data'
+import { pressStart2P } from '../../constants/data'
 import ExperienceList from './ExperienceList'
 
 function ExperienceSection() {
@@ -11,11 +11,11 @@ function ExperienceSection() {
             <div className="flex pt-[10px] pb-[20px]">
                 <p
                     className={
-                        "text-gray-900 text-[26px] mt-[10px] mb-[20px] font-semibold " +
-                        inter.className
+                        "text-gray-900 text-lg mt-[10px] mb-[20px] font-semibold " +
+                        pressStart2P.className
                     }
                 >
-                    <span className="text-blue-600 text-[18px]">02.</span> Experience
+                    <span className="text-blue-600 text-xs">02.</span> Experience
                 </p>
                 <hr className="dark-text-gray-900" />
             </div>

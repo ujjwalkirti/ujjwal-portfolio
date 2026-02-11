@@ -1,5 +1,5 @@
 import { url } from "@/constants/urls";
-import { Fira_Mono } from "next/font/google";
+import { pressStart2P } from "@/constants/data";
 import axios from "axios";
 import Head from "next/head";
 import Link from "next/link";
@@ -15,17 +15,11 @@ interface Repository {
 	svn_url: String;
 }
 
-const firamono = Fira_Mono({
-	subsets: ["latin"],
-	weight: ["400", "500", "700"],
-	display: "swap",
-});
-
 const iconsStyle = "hover:text-blue-600 cursor-pointer";
 
 function ViewTheArchive({ repos }) {
 	return (
-		<div className="bg-white min-h-screen">
+		<div className="bg-retro-bg text-retro-text min-h-screen">
 			<Head>
 				<title>Ujjwal Kirti | Projects Archive</title>
 				<meta name="description" content="A collection of all projects by Ujjwal Kirti, including full-stack development, distributed systems, cloud architecture, and more." />
@@ -51,10 +45,10 @@ function ViewTheArchive({ repos }) {
 					{" "}
 					<IoIosArrowBack className="bg-gray-900 text-white text-2xl rounded-full hover:bg-blue-600 cursor-pointer" />
 				</Link>
-				<p className="text-gray-900 text-start font-semibold py-4 text-[50px] lg:mt-[60px]">Archive</p>
-				<p className={"text-blue-600 lg:mb-[60px] " + firamono.className}>A big list of things I have worked on!</p>
+				<p className="text-gray-900 text-start font-semibold py-4 text-2xl lg:text-3xl lg:mt-[60px]">Archive</p>
+				<p className={"text-blue-600 text-xs lg:mb-[60px] " + pressStart2P.className}>A big list of things I have worked on!</p>
 				{repos.length !== 0 && (
-					<div className={"grid grid-cols-1 gap-2 lg:grid-cols-2 " + firamono.className}>
+					<div className={"grid grid-cols-1 gap-2 lg:grid-cols-2 " + pressStart2P.className}>
 						{repos.map((repo: Repository, index: number) => {
 							return (
 								<div key={index} className="text-gray-900 shadow-xl px-2 lg:w-[92%] lg:mx-auto py-4 flex flex-col lg:flex-row lg:items-center justify-between hover:bg-gray-100">

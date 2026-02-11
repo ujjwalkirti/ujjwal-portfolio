@@ -5,7 +5,7 @@ import "@/styles/LandingPage.css";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Loader from "@/components/Loader";
-import { monsterrat } from "@/constants/data";
+import { pressStart2P } from "@/constants/data";
 import { ChakraProvider } from "@chakra-ui/react";
 import Navbar from "@/components/Navbar";
 import GlowCursor from "@/components/GlowCursor";
@@ -35,7 +35,7 @@ export default function App({ Component, pageProps }: AppProps) {
 	}, []);
 
 	return (
-		<div className={"bg-white " + monsterrat.className}>
+		<div className={"bg-retro-bg text-retro-text " + pressStart2P.className}>
 			{loading && <Loader />}
 			<GlowCursor />
 			<ChakraProvider>

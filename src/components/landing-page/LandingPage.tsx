@@ -1,6 +1,5 @@
 import GetInTouch from "./GetInTouch";
-import { inter } from "../../constants/data";
-import { firamono } from "@/constants/data";
+import { pressStart2P } from "@/constants/data";
 import Header from "./Header";
 import AboutMe from "./AboutMe";
 import WorkSection from "./WorkSection";
@@ -25,7 +24,7 @@ const LandingPage = () => {
 
 			{/* <TechStack /> */}
 			<div id="contact">
-				<GetInTouch font={[inter, firamono]} />
+				<GetInTouch font={[pressStart2P, pressStart2P]} />
 			</div>
 			<Footer />
 		</section>

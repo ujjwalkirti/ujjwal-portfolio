@@ -15,13 +15,13 @@ const FeaturedProject = ({ font, project }) => {
 			}`}
 		>
 			<div className={`lg:flex lg:flex-col lg:justify-center  lg:gap-4 w-full lg:w-1/2`}>
-				<p className={"text-blue-600 text-[14px] rounded-md w-fit " + font[1].className}>Featured Project</p>
+				<p className={"text-blue-600 text-xs rounded-md w-fit " + font[1].className}>Featured Project</p>
 
 				{/* name of project */}
-				<p className={` text-[24px] font-semibold leading-tight ${isHovered ? "text-blue-600" : "text-gray-900"}`}>{project.title}</p>
+				<p className={` text-sm font-semibold leading-tight ${isHovered ? "text-blue-600" : "text-gray-900"}`}>{project.title}</p>
 
 				{/* description of project */}
-				<ul className={`list-disc pl-5 text-justify lg:text-left text-[14px] text-gray-700 lg:rounded-md ${isHovered ? "text-gray-900" : "text-gray-600"}`}>
+				<ul className={`list-disc pl-5 text-justify lg:text-left text-xs leading-relaxed text-gray-700 lg:rounded-md ${isHovered ? "text-gray-900" : "text-gray-600"}`}>
 					{project.desc.long.split(". ").map((line: string, index: number) => (
 						<li className="px-2" key={index}>
 							{line}
@@ -32,9 +32,9 @@ const FeaturedProject = ({ font, project }) => {
 				</ul>
 
 				{/* tags of project */}
-				<div className={"break-words my-[10px] text-[13px] gap-2 flex flex-wrap text-gray-900 "}>
+				<div className={"break-words my-[10px] text-xs gap-2 flex flex-wrap text-gray-900 "}>
 					{project.tags.map((tag: string, index: number) => (
-						<span key={index} className="flex items-center rounded-full bg-blue-50 px-3 py-1 text-xs font-medium leading-5 text-blue-600 ">
+						<span key={index} className="flex items-center rounded-full bg-blue-50 px-2 py-1 text-xs font-medium leading-5 text-blue-600 ">
 							{tag}
 						</span>
 					))}

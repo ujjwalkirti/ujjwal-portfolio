@@ -3,6 +3,7 @@ import {
   Inter,
   Libre_Caslon_Text,
   Montserrat,
+  Press_Start_2P,
 } from "next/font/google";
 import { SiAmazonaws, SiAngular, SiDocker, SiExpress, SiFirebase, SiGithubactions, SiKubernetes, SiMongodb, SiNginx, SiPostgresql, SiSupabase, SiTailwindcss, SiVercel } from "react-icons/si";
 import { IoLogoPython } from "react-icons/io";
@@ -121,6 +122,12 @@ const inter = Inter({
   display: "swap",
 });
 
+const pressStart2P = Press_Start_2P({
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+});
+
 const tools = [
   { title: "JavaScript (ES6+)", icon: IoLogoJavascript },
   { title: "Python", icon: IoLogoPython },
@@ -144,8 +151,8 @@ const tools = [
 
 const navbarOptionStyle = "hover:text-blue-600 cursor-pointer";
 const smallNavbarOptionStyle =
-  "hover:text-blue-600 cursor-pointer flex items-center gap-3 text-[18px] px-[20px] pb-[20px] pt-[3px] hover:scale-105 transition-all " +
-  firamono.className;
+  "hover:text-blue-600 cursor-pointer flex items-center gap-3 text-sm px-[20px] pb-[20px] pt-[3px] hover:scale-105 transition-all " +
+  pressStart2P.className;
 
 export {
   featuredProjects,
@@ -154,6 +161,7 @@ export {
   firamono,
   libre_caslon_text,
   inter,
+  pressStart2P,
   tools,
   navbarOptionStyle,
   smallNavbarOptionStyle,

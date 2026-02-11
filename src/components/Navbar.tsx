@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { FaHamburger } from "react-icons/fa";
-import { firamono, navbarOptionStyle, smallNavbarOptionStyle } from "../constants/data";
+import { pressStart2P, navbarOptionStyle, smallNavbarOptionStyle } from "../constants/data";
 import { navbarLinks } from "@/constants";
 import { resume_url } from "@/constants/urls";
 import { MdOutlineClose } from "react-icons/md";
@@ -60,7 +60,7 @@ function Navbar() {
 						setShowNavbar(true);
 					}}
 				/>
-				<div className={firamono.className + " hidden lg:flex items-center gap-4 text-[14px] text-gray-900"}>
+				<div className={pressStart2P.className + " hidden lg:flex items-center gap-4 text-xs text-gray-900"}>
 					{navbarLinks.map((link, index) => {
 						if (link.link) {
 							return (
@@ -132,7 +132,7 @@ function Navbar() {
 									);
 								}
 							})}
-							<Link href={resume_url} className={"text-blue-600 flex items-center w-[153.4px] text-center mx-auto border-blue-600 text-[14px] border px-[50px] py-[18px] mt-[38px] rounded-md hover:bg-blue-50 " + firamono.className}>
+							<Link href={resume_url} className={"text-blue-600 flex items-center w-[153.4px] text-center mx-auto border-blue-600 text-xs border px-[50px] py-[18px] mt-[38px] rounded-md hover:bg-blue-50 " + pressStart2P.className}>
 								Resume <IoDocumentTextOutline className="text-blue-600" />
 							</Link>
 						</div>

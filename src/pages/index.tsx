@@ -4,7 +4,7 @@ import { github_url, instagram_url, linkedin_url, twitter_url, url } from "@/con
 
 export default function Home() {
 	return (
-		<main className="bg-white min-h-screen">
+		<main className="bg-retro-bg min-h-screen">
 			<Head>
 				<title>Ujjwal Kirti | Software Engineer Portfolio</title>
 				<meta name="description" content="Ujjwal Kirti's portfolio - Software Engineer specializing in full-stack development, distributed systems, cloud architecture, and scalable backend solutions." />

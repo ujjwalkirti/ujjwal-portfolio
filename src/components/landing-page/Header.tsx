@@ -1,26 +1,26 @@
-import React from "react";
-import { firamono, inter } from "../../constants/data";
+// import React from "react";
+import { pressStart2P } from "../../constants/data";
 import Link from "next/link";
-import { linkedin_url } from "@/constants/urls";
-import Image from "next/image";
+// import { linkedin_url } from "@/constants/urls";
+// import Image from "next/image";
 
 const Header = () => {
-	const [removeWrapper, setRemoveWrapper] = React.useState(false);
+	// const [removeWrapper, setRemoveWrapper] = React.useState(false);
 
 	return (
 		<section className="flex lg:flex-row flex-col items-center justify-center px-[15px] lg:px-[100px] lg:w-11/12 mx-auto min-h-[80vh]">
 			<div className="flex flex-col justify-start lg:justify-center gap-y-4 items-start pt-[20px] lg:mx-auto w-full  lg:pr-[25px]">
 				{" "}
-				<p className={"font-normal text-blue-600 text-[16px] lg:ml-[4px] lg:mb-[2px] " + firamono.className}>👋 Hi, my name is</p>
-				<p className={"text-[40px] lg:text-[40px] font-semibold text-gray-900 my-[2px] " + inter.className}>Ujjwal Kirti.</p>
-				<p className={"text-[40px] lg:text-[22px] text-gray-600 mt-[5px] font-semibold leading-[1.2] lg:leading-none " + inter.className}>I build things for the web.🌐</p>
-				<div className={"mt-[10px] lg:text-justify text-[14px] lg:text-[16px] text-gray-600 " + firamono.className}>
+				<p className={"font-normal text-blue-600 text-xs lg:ml-[4px] lg:mb-[2px] " + pressStart2P.className}>👋 Hi, my name is</p>
+				<p className={"text-2xl lg:text-3xl font-semibold text-gray-900 my-[2px] " + pressStart2P.className}>Ujjwal Kirti.</p>
+				<p className={"text-xl lg:text-base text-gray-600 mt-[5px] font-semibold leading-tight lg:leading-relaxed " + pressStart2P.className}>I build <span className="underline decoration-2 underline-offset-4">async</span>-first web applications 🌐</p>
+				<div className={"mt-[10px] lg:text-justify text-xs text-gray-600 leading-relaxed " + pressStart2P.className}>
 					<p>
 						I build scalable full-stack applications, design distributed systems, and architect cloud-native solutions for reliability and performance. <br />
 						Currently, I'm diving deeper into <span className="text-blue-600 font-semibold">distributed systems</span> and <span className="text-blue-600 font-semibold">Machine Learning</span> to create smarter, more efficient applications.
 					</p>
 				</div>
-				<Link href={`mailto:ujjwalkirti2000@gmail.com`} className={"text-blue-600 border border-blue-600 rounded-lg text-[14px] mt-[30px] py-[10px] px-[18px] hover:bg-blue-50 " + firamono.className}>
+				<Link href={`mailto:ujjwalkirti2000@gmail.com`} className={"text-blue-600 border border-blue-600 rounded-lg text-xs mt-[30px] py-[10px] px-[18px] hover:bg-blue-50 " + pressStart2P.className}>
 					Let's connect!
 				</Link>
 			</div>
