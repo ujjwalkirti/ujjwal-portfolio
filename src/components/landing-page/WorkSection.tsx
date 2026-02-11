@@ -13,13 +13,13 @@ function WorkSection() {
             <div className="flex pt-[10px] pb-[20px]">
                 <p
                     className={
-                        "grayish-text text-[26px] mt-[10px] mb-[20px] font-semibold " +
+                        "text-gray-900 text-[26px] mt-[10px] mb-[20px] font-semibold " +
                         inter.className
                     }
                 >
-                    <span className="aqua text-[18px]">03.</span> Some Things I've Built
+                    <span className="text-blue-600 text-[18px]">03.</span> Some Things I've Built
                 </p>
-                <hr className="dark-grayish-text" />
+                <hr className="dark-text-gray-900" />
             </div>
 
             {/* featured project section */}
@@ -37,10 +37,10 @@ function WorkSection() {
 
             {/* other Projects section */}
             <div className={"text-center pb-[60px] " + inter.className}>
-                <p className="grayish-text text-[24px] mb-[10px] font-semibold">
+                <p className="text-gray-900 text-[24px] mb-[10px] font-semibold">
                     Other Noteworthy Projects
                 </p>
-                <p className={"text-[14px] mb-[50px] aqua " + firamono.className}>
+                <p className={"text-[14px] mb-[50px] text-blue-600 " + firamono.className}>
                     <Link href={`/view-the-archive`} className="hover:underline">
                         view the archive
                     </Link>

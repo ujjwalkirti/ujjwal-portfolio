@@ -11,13 +11,13 @@ function ExperienceSection() {
             <div className="flex pt-[10px] pb-[20px]">
                 <p
                     className={
-                        "grayish-text text-[26px] mt-[10px] mb-[20px] font-semibold " +
+                        "text-gray-900 text-[26px] mt-[10px] mb-[20px] font-semibold " +
                         inter.className
                     }
                 >
-                    <span className="aqua text-[18px]">02.</span> Experience
+                    <span className="text-blue-600 text-[18px]">02.</span> Experience
                 </p>
-                <hr className="dark-grayish-text" />
+                <hr className="dark-text-gray-900" />
             </div>
             <ExperienceList />
         </section>

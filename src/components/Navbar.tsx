@@ -46,7 +46,7 @@ function Navbar() {
 	return (
 		<nav>
 			<section
-				className={`h-[80px] px-[25px] text-[#64FFDA] flex items-center justify-between pr-[25px] relative lg:px-[50px] navbar-parent fade-in-from-top bg-opacity-50 backdrop-filter backdrop-blur ${
+				className={`h-[80px] px-[25px] text-blue-600 flex items-center justify-between pr-[25px] relative lg:px-[50px] navbar-parent fade-in-from-top bg-opacity-50 backdrop-filter backdrop-blur ${
 					scrollDirection === "up" ? "transform-gpu  transition-transform duration-300 top-0 sticky z-30" : ""
 				}`}
 				id="navbar"
@@ -60,12 +60,12 @@ function Navbar() {
 						setShowNavbar(true);
 					}}
 				/>
-				<div className={firamono.className + " hidden lg:flex items-center gap-4 text-[14px] grayish-text"}>
+				<div className={firamono.className + " hidden lg:flex items-center gap-4 text-[14px] text-gray-900"}>
 					{navbarLinks.map((link, index) => {
 						if (link.link) {
 							return (
 								<Link href={link.link} key={link.id} className={navbarOptionStyle}>
-									<span className="aqua">0{index + 1}.</span> {link.title}
+									<span className="text-blue-600">0{index + 1}.</span> {link.title}
 								</Link>
 							);
 						}
@@ -83,21 +83,21 @@ function Navbar() {
 									setShowNavbar(false);
 								}}
 							>
-								<span className="aqua">0{index + 1}.</span> {link.title}
+								<span className="text-blue-600">0{index + 1}.</span> {link.title}
 							</div>
 						);
 					})}
-					<Link href={resume_url} className="aqua border-[#64FFDA] border px-6 py-2 rounded-md hover:bg-[#64ffda1a]">
+					<Link href={resume_url} className="text-blue-600 border-blue-600 border px-6 py-2 rounded-md hover:bg-blue-50">
 						Resume
 					</Link>
 				</div>
 			</section>
 			{showNavbar && (
 				<div className={"fixed top-0 right-0  w-screen min-h-screen z-50 flex justify-end filter backdrop-filter backdrop-blur-sm "}>
-					<div className="w-[75%] px-[15px] md:w-[56%] h-screen bg-[#112240] pt-10 grayish-text flex flex-col ">
+					<div className="w-[75%] px-[15px] md:w-[56%] h-screen bg-gray-50 pt-10 text-gray-900 flex flex-col ">
 						<div className="flex justify-end h-1/6">
 							<MdOutlineClose
-								className="text-[40px] aqua cursor-pointer transition-all transform-gpu hover:rotate-180 duration-300"
+								className="text-[40px] text-blue-600 cursor-pointer transition-all transform-gpu hover:rotate-180 duration-300"
 								onClick={() => {
 									setShowNavbar(false);
 								}}
@@ -109,7 +109,7 @@ function Navbar() {
 								if (link.link) {
 									return (
 										<Link href={link.link} key={link.id} className={smallNavbarOptionStyle}>
-											<span className="aqua">0{index + 1}.</span> {link.title} <LuExternalLink className="aqua" />
+											<span className="text-blue-600">0{index + 1}.</span> {link.title} <LuExternalLink className="text-blue-600" />
 										</Link>
 									);
 								} else {
@@ -127,13 +127,13 @@ function Navbar() {
 											}}
 											className={smallNavbarOptionStyle}
 										>
-											<span className="aqua">0{index + 1}.</span> {link.title} <LuExternalLink className="aqua" />
+											<span className="text-blue-600">0{index + 1}.</span> {link.title} <LuExternalLink className="text-blue-600" />
 										</div>
 									);
 								}
 							})}
-							<Link href={resume_url} className={"aqua flex items-center w-[153.4px] text-center mx-auto border-[#64FFDA] text-[14px] border px-[50px] py-[18px] mt-[38px] rounded-md hover:bg-[#64ffda1a] " + firamono.className}>
-								Resume <IoDocumentTextOutline className="aqua" />
+							<Link href={resume_url} className={"text-blue-600 flex items-center w-[153.4px] text-center mx-auto border-blue-600 text-[14px] border px-[50px] py-[18px] mt-[38px] rounded-md hover:bg-blue-50 " + firamono.className}>
+								Resume <IoDocumentTextOutline className="text-blue-600" />
 							</Link>
 						</div>
 					</div>

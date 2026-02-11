@@ -142,9 +142,9 @@ const tools = [
   { title: "Nginx", icon: SiNginx },
 ];
 
-const navbarOptionStyle = "hover:text-[#64ffda] cursor-pointer";
+const navbarOptionStyle = "hover:text-blue-600 cursor-pointer";
 const smallNavbarOptionStyle =
-  "hover:text-[#64ffda] cursor-pointer flex items-center gap-3 text-[18px] px-[20px] pb-[20px] pt-[3px] hover:scale-105 transition-all " +
+  "hover:text-blue-600 cursor-pointer flex items-center gap-3 text-[18px] px-[20px] pb-[20px] pt-[3px] hover:scale-105 transition-all " +
   firamono.className;
 
 export {

@@ -35,7 +35,7 @@ export default function App({ Component, pageProps }: AppProps) {
 	}, []);
 
 	return (
-		<div className={"bg-[#0a192f] " + monsterrat.className}>
+		<div className={"bg-white " + monsterrat.className}>
 			{loading && <Loader />}
 			<GlowCursor />
 			<ChakraProvider>

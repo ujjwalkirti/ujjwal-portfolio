@@ -13,54 +13,54 @@ function AboutMe() {
             }
             id="about"
         >
-            <div className="dark-grayish-text text-[18px] lg:text-[16px] flex flex-col justify-start align-top h-full lg:gap-[20px]">
+            <div className="text-gray-600 text-[18px] lg:text-[16px] flex flex-col justify-start align-top h-full lg:gap-[20px]">
                 <div className="flex">
-                    <p className="grayish-text text-[26px] font-semibold">
-                        <span className="aqua text-[18px]">01.</span> About Me
+                    <p className="text-gray-900 text-[26px] font-semibold">
+                        <span className="text-blue-600 text-[18px]">01.</span> About Me
                     </p>
-                    <hr className="dark-grayish-text" />
+                    <hr className="text-gray-600" />
                 </div>
                 <div className=" flex flex-col lg:flex-row lg:items-center gap-5 lg:h-full text-[16px] lg:text-md">
                     <p className="mb-[15px] lg:w-1/2">
                         I love building and optimizing systems that power the internet.
-                        Lately, I've been diving deep into <span className="aqua font-semibold">DevOps</span>, exploring automation, cloud infrastructure, and system reliability.
-                        My goal is to create seamless deployment pipelines and scalable architectures that keep applications running efficiently.
+                        Lately, I've been focused on <span className="text-blue-600 font-semibold">distributed systems</span> and <span className="text-blue-600 font-semibold">cloud architecture</span>, exploring microservices, scalable backend solutions, and modern web technologies.
+                        My goal is to create robust, high-performance applications that deliver exceptional user experiences.
                     </p>
 
 
-                    <div className="lg:w-1/2 border-2 border-[#64ffda] px-3 py-5 rounded-lg relative my-4">
-                        <p className="absolute -top-[15px] text-xl font-bold aqua bg-[#0a192f] px-2">
+                    <div className="lg:w-1/2 border-2 border-blue-600 px-3 py-5 rounded-lg relative my-4">
+                        <p className="absolute -top-[15px] text-xl font-bold text-blue-600 bg-white px-2">
                             My Educational Background:
                         </p>
                         <ul className="list-inside mt-4">
                             <li className="list-item">
-                                <span className="aqua">Latest Education</span>: Graduate
+                                <span className="text-blue-600">Latest Education</span>: Graduate
                             </li>
                             <li className="list-item">
-                                <span className="aqua">Degree</span>: Bachelors of Technology
+                                <span className="text-blue-600">Degree</span>: Bachelors of Technology
                             </li>
                             <li className="list-item">
-                                <span className="aqua">Major</span>: Civil Engineering{" "}
+                                <span className="text-blue-600">Major</span>: Civil Engineering{" "}
                             </li>
                             <li className="list-item">
-                                <span className="aqua">Institute</span>: National Institute of
+                                <span className="text-blue-600">Institute</span>: National Institute of
                                 Technology, Surat (SVNIT){" "}
                                 <Link
-                                    className="aqua hover:underline"
+                                    className="text-blue-600 hover:underline"
                                     href={`https://svnit.ac.in/`}
                                 >
                                     link
                                 </Link>
                             </li>
                             <li className="list-item">
-                                <span className="aqua">Duration</span>: 2019-2023
+                                <span className="text-blue-600">Duration</span>: 2019-2023
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <Marquee gradient gradientWidth={20} gradientColor='#0a192f' pauseOnHover className="w-full">
+            <Marquee gradient gradientWidth={20} gradientColor='white' pauseOnHover className="w-full">
                 {tools.map((tool, index) => (
                     <ToolComponent
                         tool={tool}
