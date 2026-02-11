@@ -15,7 +15,7 @@ interface Repository {
 	svn_url: String;
 }
 
-const iconsStyle = "hover:text-blue-600 cursor-pointer";
+const iconsStyle = "hover:text-orange-600 cursor-pointer";
 
 function ViewTheArchive({ repos }) {
 	return (
@@ -43,10 +43,10 @@ function ViewTheArchive({ repos }) {
 			<div className="w-[90%] lg:w-[78%] mx-auto pt-[40px]">
 				<Link href={`/`}>
 					{" "}
-					<IoIosArrowBack className="bg-gray-900 text-white text-2xl rounded-full hover:bg-blue-600 cursor-pointer" />
+					<IoIosArrowBack className="bg-gray-900 text-white text-2xl rounded-full hover:bg-orange-600 cursor-pointer" />
 				</Link>
 				<p className="text-gray-900 text-start font-semibold py-4 text-2xl lg:text-3xl lg:mt-[60px]">Archive</p>
-				<p className={"text-blue-600 text-xs lg:mb-[60px] " + pressStart2P.className}>A big list of things I have worked on!</p>
+				<p className={"text-orange-600 text-xs lg:mb-[60px] " + pressStart2P.className}>A big list of things I have worked on!</p>
 				{repos.length !== 0 && (
 					<div className={"grid grid-cols-1 gap-2 lg:grid-cols-2 " + pressStart2P.className}>
 						{repos.map((repo: Repository, index: number) => {

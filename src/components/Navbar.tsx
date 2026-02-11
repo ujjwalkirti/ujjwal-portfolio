@@ -46,7 +46,7 @@ function Navbar() {
 	return (
 		<nav>
 			<section
-				className={`h-[80px] px-[25px] text-blue-600 flex items-center justify-between pr-[25px] relative lg:px-[50px] navbar-parent fade-in-from-top bg-opacity-50 backdrop-filter backdrop-blur ${
+				className={`h-[80px] px-[25px] text-orange-600 flex items-center justify-between pr-[25px] relative lg:px-[50px] navbar-parent fade-in-from-top bg-opacity-50 backdrop-filter backdrop-blur ${
 					scrollDirection === "up" ? "transform-gpu  transition-transform duration-300 top-0 sticky z-30" : ""
 				}`}
 				id="navbar"
@@ -65,7 +65,7 @@ function Navbar() {
 						if (link.link) {
 							return (
 								<Link href={link.link} key={link.id} className={navbarOptionStyle}>
-									<span className="text-blue-600">0{index + 1}.</span> {link.title}
+									<span className="text-orange-600">0{index + 1}.</span> {link.title}
 								</Link>
 							);
 						}
@@ -83,11 +83,11 @@ function Navbar() {
 									setShowNavbar(false);
 								}}
 							>
-								<span className="text-blue-600">0{index + 1}.</span> {link.title}
+								<span className="text-orange-600">0{index + 1}.</span> {link.title}
 							</div>
 						);
 					})}
-					<Link href={resume_url} className="text-blue-600 border-blue-600 border px-6 py-2 rounded-md hover:bg-blue-50">
+					<Link href={resume_url} className="text-orange-600 border-orange-600 border px-6 py-2 rounded-md hover:bg-orange-50">
 						Resume
 					</Link>
 				</div>
@@ -97,7 +97,7 @@ function Navbar() {
 					<div className="w-[75%] px-[15px] md:w-[56%] h-screen bg-gray-50 pt-10 text-gray-900 flex flex-col ">
 						<div className="flex justify-end h-1/6">
 							<MdOutlineClose
-								className="text-[40px] text-blue-600 cursor-pointer transition-all transform-gpu hover:rotate-180 duration-300"
+								className="text-[40px] text-orange-600 cursor-pointer transition-all transform-gpu hover:rotate-180 duration-300"
 								onClick={() => {
 									setShowNavbar(false);
 								}}
@@ -109,7 +109,7 @@ function Navbar() {
 								if (link.link) {
 									return (
 										<Link href={link.link} key={link.id} className={smallNavbarOptionStyle}>
-											<span className="text-blue-600">0{index + 1}.</span> {link.title} <LuExternalLink className="text-blue-600" />
+											<span className="text-orange-600">0{index + 1}.</span> {link.title} <LuExternalLink className="text-orange-600" />
 										</Link>
 									);
 								} else {
@@ -127,13 +127,13 @@ function Navbar() {
 											}}
 											className={smallNavbarOptionStyle}
 										>
-											<span className="text-blue-600">0{index + 1}.</span> {link.title} <LuExternalLink className="text-blue-600" />
+											<span className="text-orange-600">0{index + 1}.</span> {link.title} <LuExternalLink className="text-orange-600" />
 										</div>
 									);
 								}
 							})}
-							<Link href={resume_url} className={"text-blue-600 flex items-center w-[153.4px] text-center mx-auto border-blue-600 text-xs border px-[50px] py-[18px] mt-[38px] rounded-md hover:bg-blue-50 " + pressStart2P.className}>
-								Resume <IoDocumentTextOutline className="text-blue-600" />
+							<Link href={resume_url} className={"text-orange-600 flex items-center w-[153.4px] text-center mx-auto border-orange-600 text-xs border px-[50px] py-[18px] mt-[38px] rounded-md hover:bg-orange-50 " + pressStart2P.className}>
+								Resume <IoDocumentTextOutline className="text-orange-600" />
 							</Link>
 						</div>
 					</div>

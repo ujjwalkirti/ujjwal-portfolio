@@ -11,16 +11,16 @@ const Header = () => {
 		<section className="flex lg:flex-row flex-col items-center justify-center px-[15px] lg:px-[100px] lg:w-11/12 mx-auto min-h-[80vh]">
 			<div className="flex flex-col justify-start lg:justify-center gap-y-4 items-start pt-[20px] lg:mx-auto w-full  lg:pr-[25px]">
 				{" "}
-				<p className={"font-normal text-blue-600 text-xs lg:ml-[4px] lg:mb-[2px] " + pressStart2P.className}>👋 Hi, my name is</p>
+				<p className={"font-normal text-orange-600 text-xs lg:ml-[4px] lg:mb-[2px] " + pressStart2P.className}>👋 Hi, my name is</p>
 				<p className={"text-2xl lg:text-3xl font-semibold text-gray-900 my-[2px] " + pressStart2P.className}>Ujjwal Kirti.</p>
 				<p className={"text-xl lg:text-base text-gray-600 mt-[5px] font-semibold leading-tight lg:leading-relaxed " + pressStart2P.className}>I build <span className="underline decoration-2 underline-offset-4">async</span>-first web applications 🌐</p>
 				<div className={"mt-[10px] lg:text-justify text-xs text-gray-600 leading-relaxed " + pressStart2P.className}>
 					<p>
 						I build scalable full-stack applications, design distributed systems, and architect cloud-native solutions for reliability and performance. <br />
-						Currently, I'm diving deeper into <span className="text-blue-600 font-semibold">distributed systems</span> and <span className="text-blue-600 font-semibold">Machine Learning</span> to create smarter, more efficient applications.
+						Currently, I'm diving deeper into <span className="text-orange-600 font-semibold">distributed systems</span> and <span className="text-orange-600 font-semibold">Machine Learning</span> to create smarter, more efficient applications.
 					</p>
 				</div>
-				<Link href={`mailto:ujjwalkirti2000@gmail.com`} className={"text-blue-600 border border-blue-600 rounded-lg text-xs mt-[30px] py-[10px] px-[18px] hover:bg-blue-50 " + pressStart2P.className}>
+				<Link href={`mailto:ujjwalkirti2000@gmail.com`} className={"text-orange-600 border border-orange-600 rounded-lg text-xs mt-[30px] py-[10px] px-[18px] hover:bg-orange-50 " + pressStart2P.className}>
 					Let's connect!
 				</Link>
 			</div>
@@ -43,7 +43,7 @@ const Header = () => {
               width={259.52}
             />
             <div
-              className={`h-[279.52px] w-[279.52px] absolute border-2 border-blue-600 top-4   left-4 rounded-lg -z-10 ${removeWrapper
+              className={`h-[279.52px] w-[279.52px] absolute border-2 border-orange-600 top-4   left-4 rounded-lg -z-10 ${removeWrapper
                 ? "-translate-y-2 -translate-x-2 duration-300"
                 : "translate-y-2 translate-x-2 duration-300"
                 }`}

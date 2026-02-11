@@ -27,7 +27,7 @@ function ExperienceCard({ exp }: ExperienceCardProps) {
 					<div className="font-medium leading-snug text-gray-900 flex justify-between items-center">
 						<h3 className="lg:inline-flex items-baseline font-semibold leading-tight text-xl">
 							<span>{exp.title} · </span>
-							<Link href={exp.website} target="_blank" rel="noopener noreferrer" aria-label={exp.company} title={exp.company} className="inline-block ml-1 hover:text-blue-600">
+							<Link href={exp.website} target="_blank" rel="noopener noreferrer" aria-label={exp.company} title={exp.company} className="inline-block ml-1 hover:text-orange-600">
 								{exp.company}
 								{exp.website && <LuExternalLink className="inline-block ml-2" />}
 							</Link>
@@ -42,7 +42,7 @@ function ExperienceCard({ exp }: ExperienceCardProps) {
 							<li className="my-2" key={descIndex}>
 								{desc.text}
 								{desc.link && (
-									<Link href={desc.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center ml-2 text-blue-600 hover:underline" onClick={(e) => e.stopPropagation()}>
+									<Link href={desc.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center ml-2 text-orange-600 hover:underline" onClick={(e) => e.stopPropagation()}>
 										<LuExternalLink className="inline-block w-3 h-3" />
 									</Link>
 								)}
@@ -52,7 +52,7 @@ function ExperienceCard({ exp }: ExperienceCardProps) {
 					<ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
 						{exp.technologies.map((tech, techIndex) => (
 							<li key={techIndex} className="mr-1.5 mt-2">
-								<div className="flex items-center rounded-full bg-blue-50 px-2 py-1 text-xs font-medium leading-5 text-blue-600">{tech}</div>
+								<div className="flex items-center rounded-full bg-orange-50 px-2 py-1 text-xs font-medium leading-5 text-orange-600">{tech}</div>
 							</li>
 						))}
 					</ul>

@@ -6,7 +6,7 @@ const GetInTouch = ({ font }) => {
     <div className="text-center pb-10 px-[25px] lg:max-w-[600px] lg:mx-auto lg:mb-[100px]">
       <p
         className={
-          "text-blue-600 text-sm lg:text-xs lg:mb-[20px] lg:mt-[10px] " +
+          "text-orange-600 text-sm lg:text-xs lg:mb-[20px] lg:mt-[10px] " +
           font[1].className
         }
       >
@@ -23,7 +23,7 @@ const GetInTouch = ({ font }) => {
       <Link
         href={`mailto:ujjwalkirti2000@gmail.com`}
         className={
-          "text-blue-600 border border-blue-600 hover:bg-blue-50 transition-all rounded-md mt-[50px] px-[28px] py-[20px] text-xs " +
+          "text-orange-600 border border-orange-600 hover:bg-orange-50 transition-all rounded-md mt-[50px] px-[28px] py-[20px] text-xs " +
           font[1].className
         }
       >

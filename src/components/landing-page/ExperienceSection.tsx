@@ -15,7 +15,7 @@ function ExperienceSection() {
                         pressStart2P.className
                     }
                 >
-                    <span className="text-blue-600 text-xs">02.</span> Experience
+                    <span className="text-orange-600 text-xs">02.</span> Experience
                 </p>
                 <hr className="dark-text-gray-900" />
             </div>

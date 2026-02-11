@@ -149,9 +149,9 @@ const tools = [
   { title: "Nginx", icon: SiNginx },
 ];
 
-const navbarOptionStyle = "hover:text-blue-600 cursor-pointer";
+const navbarOptionStyle = "hover:text-orange-600 cursor-pointer";
 const smallNavbarOptionStyle =
-  "hover:text-blue-600 cursor-pointer flex items-center gap-3 text-sm px-[20px] pb-[20px] pt-[3px] hover:scale-105 transition-all " +
+  "hover:text-orange-600 cursor-pointer flex items-center gap-3 text-sm px-[20px] pb-[20px] pt-[3px] hover:scale-105 transition-all " +
   pressStart2P.className;
 
 export {

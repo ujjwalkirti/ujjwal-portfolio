@@ -13,22 +13,22 @@ const NoteWorthyProjectsCard = ({ project }) => {
       }
     >
       <div className="flex justify-between mb-7">
-        <BsFolder2Open className="text-blue-600 text-[30px] hover:text-blue-600" />
+        <BsFolder2Open className="text-orange-600 text-[30px] hover:text-orange-600" />
         <div className="flex gap-4">
           {" "}
           {project.github_link && (
             <Link href={project.github_link}>
-              <FiGithub className="text-gray-900 text-[25px] hover:text-blue-600" />
+              <FiGithub className="text-gray-900 text-[25px] hover:text-orange-600" />
             </Link>
           )}
           {project.deployed_link && (
             <Link href={project.deployed_link}>
-              <BsLink45Deg className="text-gray-900 text-[25px] hover:text-blue-600" />
+              <BsLink45Deg className="text-gray-900 text-[25px] hover:text-orange-600" />
             </Link>
           )}
         </div>
       </div>
-      <p className="font-semibold text-gray-900 text-sm mb-4 hover:text-blue-600">
+      <p className="font-semibold text-gray-900 text-sm mb-4 hover:text-orange-600">
         {project.title}
       </p>
       <p className="text-xs leading-relaxed text-gray-600">{project.desc}</p>
@@ -36,7 +36,7 @@ const NoteWorthyProjectsCard = ({ project }) => {
         {project.tags.map((tag: string, index: number) => (
           <span
             key={index}
-            className="flex items-center rounded-full bg-blue-50 px-2 py-1 text-xs font-medium leading-5 text-blue-600 "
+            className="flex items-center rounded-full bg-orange-50 px-2 py-1 text-xs font-medium leading-5 text-orange-600 "
           >
             {tag}
           </span>

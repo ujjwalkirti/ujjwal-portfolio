@@ -17,7 +17,7 @@ function WorkSection() {
                         pressStart2P.className
                     }
                 >
-                    <span className="text-blue-600 text-xs">03.</span> Some Things I've Built
+                    <span className="text-orange-600 text-xs">03.</span> Some Things I've Built
                 </p>
                 <hr className="dark-text-gray-900" />
             </div>
@@ -40,7 +40,7 @@ function WorkSection() {
                 <p className="text-gray-900 text-base mb-[10px] font-semibold">
                     Other Noteworthy Projects
                 </p>
-                <p className={"text-xs mb-[50px] text-blue-600 " + pressStart2P.className}>
+                <p className={"text-xs mb-[50px] text-orange-600 " + pressStart2P.className}>
                     <Link href={`/view-the-archive`} className="hover:underline">
                         view the archive
                     </Link>

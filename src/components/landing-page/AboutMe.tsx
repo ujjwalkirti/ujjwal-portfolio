@@ -10,36 +10,36 @@ function AboutMe() {
 			<div className="text-gray-600 text-xs lg:text-xs flex flex-col justify-start align-top h-full lg:gap-[20px]">
 				<div className="flex">
 					<p className="text-gray-900 text-lg font-semibold">
-						<span className="text-blue-600 text-xs">01.</span> About Me
+						<span className="text-orange-600 text-xs">01.</span> About Me
 					</p>
 					<hr className="text-gray-600" />
 				</div>
 				<div className=" flex flex-col gap-5 lg:h-full text-xs leading-relaxed">
 					<p className=" ">
-						I love building and optimizing systems that power the internet. Lately, I've been focused on <span className="text-blue-600 font-semibold">distributed systems</span> and <span className="text-blue-600 font-semibold">cloud architecture</span>, exploring
+						I love building and optimizing systems that power the internet. Lately, I've been focused on <span className="text-orange-600 font-semibold">distributed systems</span> and <span className="text-orange-600 font-semibold">cloud architecture</span>, exploring
 						microservices, scalable backend solutions, and modern web technologies. My goal is to create robust, high-performance applications that deliver exceptional user experiences.
 					</p>
 
 					<div className=" py-5 rounded-lg my-4">
-						<p className=" text-xs font-bold text-blue-600 bg-retro-bg">My Educational Background:</p>
+						<p className=" text-xs font-bold text-orange-600 bg-retro-bg">My Educational Background:</p>
 						<ul className="list-inside mt-4">
 							<li className="list-item">
-								<span className="text-blue-600">Latest Education</span>: Graduate
+								<span className="text-orange-600">Latest Education</span>: Graduate
 							</li>
 							<li className="list-item">
-								<span className="text-blue-600">Degree</span>: Bachelors of Technology
+								<span className="text-orange-600">Degree</span>: Bachelors of Technology
 							</li>
 							<li className="list-item">
-								<span className="text-blue-600">Major</span>: Civil Engineering{" "}
+								<span className="text-orange-600">Major</span>: Civil Engineering{" "}
 							</li>
 							<li className="list-item">
-								<span className="text-blue-600">Institute</span>: National Institute of Technology, Surat (SVNIT){" "}
-								<Link className="text-blue-600 hover:underline" href={`https://svnit.ac.in/`}>
+								<span className="text-orange-600">Institute</span>: National Institute of Technology, Surat (SVNIT){" "}
+								<Link className="text-orange-600 hover:underline" href={`https://svnit.ac.in/`}>
 									link
 								</Link>
 							</li>
 							<li className="list-item">
-								<span className="text-blue-600">Duration</span>: 2019-2023
+								<span className="text-orange-600">Duration</span>: 2019-2023
 							</li>
 						</ul>
 					</div>

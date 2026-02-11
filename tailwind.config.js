@@ -19,6 +19,18 @@ module.exports = {
           accent: '#f77f00',
           text: '#1a1a1a',
           yellow: '#ffdd00',
+        },
+        orange: {
+          50: '#fff4ed',
+          100: '#ffe6d5',
+          200: '#feccaa',
+          300: '#fdac74',
+          400: '#fb923c',
+          500: '#f97316',
+          600: '#ff6b35',
+          700: '#c2410c',
+          800: '#9a3412',
+          900: '#7c2d12',
         }
       },
       fontFamily: {
