@@ -1,5 +1,5 @@
 import React from 'react'
-import { featuredProjects, firamono, inter, NoteworthyProjects } from '../../constants/data';
+import { featuredProjects, pressStart2P, NoteworthyProjects } from '../../constants/data';
 import NoteWorthyProjectsCard from './NoteWorthyProjectsCard';
 import Link from 'next/link';
 import FeaturedProject from './FeaturedProject';
@@ -13,13 +13,13 @@ function WorkSection() {
             <div className="flex pt-[10px] pb-[20px]">
                 <p
                     className={
-                        "grayish-text text-[26px] mt-[10px] mb-[20px] font-semibold " +
-                        inter.className
+                        "text-gray-900 text-lg mt-[10px] mb-[20px] font-semibold " +
+                        pressStart2P.className
                     }
                 >
-                    <span className="aqua text-[18px]">03.</span> Some Things I've Built
+                    <span className="text-orange-600 text-xs">03.</span> Some Things I've Built
                 </p>
-                <hr className="dark-grayish-text" />
+                <hr className="dark-text-gray-900" />
             </div>
 
             {/* featured project section */}
@@ -28,7 +28,7 @@ function WorkSection() {
                     return (
                         <FeaturedProject
                             key={index}
-                            font={[firamono, inter]}
+                            font={[pressStart2P, pressStart2P]}
                             project={project}
                         />
                     );
@@ -36,11 +36,11 @@ function WorkSection() {
             </div>
 
             {/* other Projects section */}
-            <div className={"text-center pb-[60px] " + inter.className}>
-                <p className="grayish-text text-[24px] mb-[10px] font-semibold">
+            <div className={"text-center pb-[60px] " + pressStart2P.className}>
+                <p className="text-gray-900 text-base mb-[10px] font-semibold">
                     Other Noteworthy Projects
                 </p>
-                <p className={"text-[14px] mb-[50px] aqua " + firamono.className}>
+                <p className={"text-xs mb-[50px] text-orange-600 " + pressStart2P.className}>
                     <Link href={`/view-the-archive`} className="hover:underline">
                         view the archive
                     </Link>

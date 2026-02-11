@@ -14,7 +14,7 @@ const GlowCursor = () => {
 
 	return (
 		<div
-			className="pointer-events-none fixed z-50 h-40 w-40 rounded-full bg-teal-400 opacity-20 blur-3xl transition-transform duration-75 ease-in-out"
+			className="pointer-events-none fixed z-50 h-40 w-40 rounded-full bg-blue-400 opacity-20 blur-3xl transition-transform duration-75 ease-in-out"
 			style={{
 				transform: `translate(${position.x - 80}px, ${position.y - 80}px)`,
 			}}
