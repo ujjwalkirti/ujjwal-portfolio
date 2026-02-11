@@ -6,7 +6,7 @@ import Marquee from "react-fast-marquee";
 
 function AboutMe() {
 	return (
-		<section className={"flex flex-col items-center gap-10 py-10 lg:px-[100px] px-[25px] mt-10 lg:w-11/12 lg:mx-auto "} id="about">
+		<section className={"flex flex-col items-center gap-10 py-10 lg:px-[100px] px-4 mt-10 lg:w-11/12 lg:mx-auto "} id="about">
 			<div className="text-gray-600 text-xs lg:text-xs flex flex-col justify-start align-top h-full lg:gap-[20px]">
 				<div className="flex">
 					<p className="text-gray-900 text-lg font-semibold">
@@ -15,9 +15,10 @@ function AboutMe() {
 					<hr className="text-gray-600" />
 				</div>
 				<div className=" flex flex-col gap-5 lg:h-full text-xs leading-relaxed">
-					<p className=" ">
-						I love building and optimizing systems that power the internet. Lately, I've been focused on <span className="text-orange-600 font-semibold">distributed systems</span> and <span className="text-orange-600 font-semibold">cloud architecture</span>, exploring
-						microservices, scalable backend solutions, and modern web technologies. My goal is to create robust, high-performance applications that deliver exceptional user experiences.
+					<p className="">
+						I love building and optimizing systems that power the internet.
+                        <br/> Lately, I've been focused on <span className="text-orange-600 font-semibold">distributed systems</span> and <span className="text-orange-600 font-semibold">cloud architecture</span>, exploring
+						microservices, scalable backend solutions, and modern web technologies. <br/>My goal is to create robust, high-performance applications that deliver exceptional user experiences.
 					</p>
 
 					<div className=" py-5 rounded-lg my-4">
