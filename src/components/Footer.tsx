@@ -1,7 +1,6 @@
 import { github_url, instagram_url, linkedin_url, twitter_url } from "@/constants/urls";
 import { pressStart2P } from "@/constants/data";
 import Link from "next/link";
-import React from "react";
 import { FiGithub, FiInstagram, FiLinkedin, FiTwitter } from "react-icons/fi";
 const iconStyle = "text-[24px] mb-6 hover:-translate-y-2 hover:text-orange-600 transition-all";
 const Footer = () => {
@@ -15,12 +14,12 @@ const Footer = () => {
 				<Link href={instagram_url}>
 					<FiInstagram className={iconStyle} />
 				</Link>
-				{/* <Link href={twitter_url}>
-          <FiTwitter className={iconStyle} />
-        </Link> */}
-				{/* <Link href={linkedin_url}>
-          <FiLinkedin className={iconStyle} />
-        </Link> */}
+				<Link href={twitter_url}>
+					<FiTwitter className={iconStyle} />
+				</Link>
+				<Link href={linkedin_url}>
+					<FiLinkedin className={iconStyle} />
+				</Link>
 				<div className="border-r-2 h-[150px] border-gray-600 hidden lg:flex"></div>
 			</div>
 			{/* email address link */}

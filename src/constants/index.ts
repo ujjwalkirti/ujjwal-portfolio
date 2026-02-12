@@ -48,6 +48,9 @@ export const experiences: Experience[] = [
             {
                 text: "Built a community-driven blogging platform using a GitHub PR workflow (inspired by Hugging Face), enabling scalable content contributions and streamlined editorial review.",
                 link: "https://binapani.com/blogs"
+            }, {
+                text: "A communication toolkit (for neurodivergent and autistic individuals) that breaks down ambiguous language, explains idioms, and provides social context—helping everyone understand and respond with confidence.",
+                link: "https://aspra.binapani.com"
             }
         ]
         ,
