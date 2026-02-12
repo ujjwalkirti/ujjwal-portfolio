@@ -1,4 +1,3 @@
-import React from "react";
 import ToolComponent from "./ToolComponent";
 import { tools } from "../../constants/data";
 import Link from "next/link";
@@ -9,7 +8,7 @@ function AboutMe() {
 		<section className={"flex flex-col items-center gap-10 py-10 lg:px-[100px] px-4 mt-10 lg:w-11/12 lg:mx-auto "} id="about">
 			<div className="text-gray-600 text-xs lg:text-xs flex flex-col justify-start align-top h-full lg:gap-[20px]">
 				<div className="flex">
-					<p className="text-gray-900 text-lg font-semibold">
+					<p className="text-gray-900 text-xl font-semibold">
 						<span className="text-orange-600 text-xs">01.</span> About Me
 					</p>
 					<hr className="text-gray-600" />

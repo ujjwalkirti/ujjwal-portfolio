@@ -43,7 +43,7 @@ function ExperienceCard({ exp }: ExperienceCardProps) {
 								{desc.text}
 								{desc.link && (
 									<Link href={desc.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center ml-2 text-orange-600 hover:underline" onClick={(e) => e.stopPropagation()}>
-										<LuExternalLink className="inline-block w-3 h-3" />
+										<span>Link</span><LuExternalLink className="inline-block ml-2 w-4 h-4" />
 									</Link>
 								)}
 							</li>
