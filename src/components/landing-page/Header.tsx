@@ -17,7 +17,7 @@ const Header = () => {
 				<div className={"mt-[10px] lg:text-justify text-xs text-gray-600 leading-relaxed " + pressStart2P.className}>
 					<p>
 						I build scalable full-stack applications, design distributed systems, and architect cloud-native solutions for reliability and performance. <br />
-						Currently, I'm diving deeper into <span className="text-orange-600 font-semibold">distributed systems</span> and <span className="text-orange-600 font-semibold">Machine Learning</span> to create smarter, more efficient applications.
+						Currently, I'm diving deeper into <span className="text-orange-600 font-semibold">distributed systems</span> and <span className="text-orange-600 font-semibold">using LLMs to build</span> to create smarter, more efficient applications.
 					</p>
 				</div>
 				<Link href={`mailto:ujjwalkirti2000@gmail.com`} className={"text-orange-600 border border-orange-600 rounded-lg text-xs mt-[30px] py-[10px] px-[18px] hover:bg-orange-50 " + pressStart2P.className}>
