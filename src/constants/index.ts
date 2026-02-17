@@ -58,7 +58,7 @@ export const experiences: Experience[] = [
         technologies: ["JavaScript", "Angular", "Express.js", "Nextjs (App Router)", "Azure", "App Container", "PostgreSQL", "Github Actions", "Docker", "AI/ML", "Chrome Extensions"],
     },
     {
-        date: "07/2023 - 05/2024",
+        date: "07/2022 - 05/2024",
         title: "Full Stack Developer",
         company: "Root On Immigrations",
         website: "https://rooton.ca/",
