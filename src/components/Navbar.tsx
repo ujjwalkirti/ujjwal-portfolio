@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { FaHamburger } from "react-icons/fa";
@@ -46,14 +45,11 @@ function Navbar() {
 	return (
 		<nav>
 			<section
-				className={`h-[80px] px-[25px] text-orange-600 flex items-center justify-between pr-[25px] relative lg:px-[50px] navbar-parent fade-in-from-top bg-opacity-50 backdrop-filter backdrop-blur ${
+				className={`h-[80px] px-[25px] text-orange-600 flex items-center justify-end pr-[25px] relative lg:px-[50px] navbar-parent fade-in-from-top bg-opacity-50 backdrop-filter backdrop-blur ${
 					scrollDirection === "up" ? "transform-gpu  transition-transform duration-300 top-0 sticky z-30" : ""
 				}`}
 				id="navbar"
 			>
-				<Link href={`/`}>
-					<Image alt="my logo" src={`/UK.png`} height={60} width={60} priority />
-				</Link>
 				<FaHamburger
 					className="text-[34px] lg:hidden cursor-pointer transi"
 					onClick={() => {
