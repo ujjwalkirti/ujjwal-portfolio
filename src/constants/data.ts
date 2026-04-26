@@ -7,11 +7,23 @@ import {
 } from "next/font/google";
 import { SiAmazonaws, SiAngular, SiDocker, SiExpress, SiFirebase, SiGithubactions, SiKubernetes, SiMongodb, SiNginx, SiPostgresql, SiSupabase, SiTailwindcss, SiVercel } from "react-icons/si";
 import { IoLogoPython } from "react-icons/io";
-import { TbBrandNextjs } from "react-icons/tb";
+import { TbBrandNextjs, TbBrandReactNative } from "react-icons/tb";
 import { IoLogoJavascript } from "react-icons/io5";
 
 
 const featuredProjects: Array<Object> = [
+  {
+    title: "Aspra",
+    desc: {
+      short: "A cross-platform AI communication system for neurodivergent users with safe prompt flows designed for school environments.",
+      long: "Developed a cross-platform AI communication system for neurodivergent users using Next.js and React Native. Designed safe prompt flows and response handling pipelines to ensure controlled, school-safe outputs. Adopted across multiple primary schools in the UK. Available as a web app and on the Google Play Store for Android."
+    },
+    tags: ["React Native", "Next.js", "NLP", "AI/ML", "Android", "Google Play Store"],
+    image_url: "/assets/landing-page/aspra.webp",
+    image_fit: "contain",
+    deployed_link: "https://aspra.binapani.com",
+    play_store_link: "https://play.google.com/store/apps/details?id=com.binapani.aspra&hl=en_IN",
+  },
   {
     title: "Web App Deployment Platform (Vercel-like)",
     desc: {
@@ -132,6 +144,7 @@ const tools = [
   { title: "JavaScript (ES6+)", icon: IoLogoJavascript },
   { title: "Python", icon: IoLogoPython },
   { title: "React, Next.js", icon: TbBrandNextjs },
+  { title: "React Native", icon: TbBrandReactNative },
   // angular
   { title: "Angular", icon: SiAngular },
   { title: "Firebase", icon: SiFirebase },

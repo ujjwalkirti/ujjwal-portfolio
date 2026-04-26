@@ -36,6 +36,9 @@ yarn-error.log*
 next-env.d.ts
 
 
+# claude
+.claude/
+
 # next-sitemap generated files
 /public/sitemap.xml
 /public/sitemap-*.xml

@@ -5,6 +5,7 @@ import { LuExternalLink } from 'react-icons/lu';
 interface ExperienceDescription {
     text: string;
     link?: string;
+    links?: { href: string; label: string }[];
 }
 
 interface ExperienceCardProps {
@@ -46,6 +47,11 @@ function ExperienceCard({ exp }: ExperienceCardProps) {
 										<span>Link</span><LuExternalLink className="inline-block ml-2 w-4 h-4" />
 									</Link>
 								)}
+								{desc.links && desc.links.map((l, i) => (
+									<Link key={i} href={l.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center ml-2 text-orange-600 hover:underline" onClick={(e) => e.stopPropagation()}>
+										<span>{l.label}</span><LuExternalLink className="inline-block ml-2 w-4 h-4" />
+									</Link>
+								))}
 							</li>
 						))}
 					</ul>

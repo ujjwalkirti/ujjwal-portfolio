@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { AiFillGithub } from "react-icons/ai";
 import { BsLink45Deg } from "react-icons/bs";
+import { SiAndroid } from "react-icons/si";
 
 const FeaturedProject = ({ font, project }) => {
 	const [isHovered, setIsHovered] = React.useState(false);
@@ -52,11 +53,16 @@ const FeaturedProject = ({ font, project }) => {
 							<BsLink45Deg className="cursor-pointer hover:-translate-y-1 hover:text-orange-600 transition-all" />
 						</Link>
 					)}
+					{project.play_store_link && (
+						<Link href={project.play_store_link}>
+							<SiAndroid className="cursor-pointer hover:-translate-y-1 hover:text-orange-600 transition-all" />
+						</Link>
+					)}
 				</div>
 			</div>
 
 			<div className="hidden lg:block lg:relative w-1/2">
-				<Image src={project.image_url} alt={project.title} className="rounded-md" fill style={{ objectFit: "cover", objectPosition: "top" }} />
+				<Image src={project.image_url} alt={project.title} className="rounded-md" fill style={{ objectFit: project.image_fit ?? "cover", objectPosition: "top" }} />
 			</div>
 		</div>
 	);

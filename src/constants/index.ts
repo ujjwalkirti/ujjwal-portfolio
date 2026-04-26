@@ -7,6 +7,7 @@ interface NavbarLink {
 interface ExperienceDescription {
     text: string;
     link?: string;
+    links?: { href: string; label: string }[];
 }
 
 interface Experience {
@@ -31,7 +32,7 @@ export const experiences: Experience[] = [
                 link: "https://academy.binapani.com"
             },
             {
-                text: "Built an AI-powered storytelling platform with Next.js that generates personalized stories using generative models to enhance student and educator engagement.",
+                text: "Shipped an AI storytelling platform (Next.js + generative models) that produces personalized, curriculum-aligned stories on demand — cutting educator content preparation time and driving measurable increases in student session depth.",
                 link: "https://curio.binapani.com"
             },
             {
@@ -46,11 +47,11 @@ export const experiences: Experience[] = [
                 link: "https://chromewebstore.google.com/detail/binapani-academy-your-web/bgfkhoimhjgbgokbgdhackeokkeloblc?pli=1"
             },
             {
-                text: "Built a community-driven blogging platform using a GitHub PR workflow (inspired by Hugging Face), enabling scalable content contributions and streamlined editorial review.",
-                link: "https://binapani.com/blogs"
-            }, {
-                text: "A communication toolkit (for neurodivergent and autistic individuals) that breaks down ambiguous language, explains idioms, and provides social context—helping everyone understand and respond with confidence.",
-                link: "https://aspra.binapani.com"
+                text: "Developed Aspra, a cross-platform AI communication system (Next.js + React Native) for neurodivergent users; designed safe prompt flows and response handling pipelines to ensure controlled outputs for school environments — adopted across multiple primary schools in the UK and available on the Google Play Store.",
+                links: [
+                    { href: "https://aspra.binapani.com", label: "Web" },
+                    { href: "https://play.google.com/store/apps/details?id=com.binapani.aspra&hl=en_IN", label: "Play Store" }
+                ]
             }
         ]
         ,

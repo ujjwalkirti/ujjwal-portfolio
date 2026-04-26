@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { BsFolder2Open, BsLink45Deg } from "react-icons/bs";
 import { FiGithub } from "react-icons/fi";
+import { SiAndroid } from "react-icons/si";
 import { pressStart2P } from "../../constants/data";
 
 const NoteWorthyProjectsCard = ({ project }) => {
@@ -24,6 +25,11 @@ const NoteWorthyProjectsCard = ({ project }) => {
           {project.deployed_link && (
             <Link href={project.deployed_link}>
               <BsLink45Deg className="text-gray-900 text-[25px] hover:text-orange-600" />
+            </Link>
+          )}
+          {project.play_store_link && (
+            <Link href={project.play_store_link}>
+              <SiAndroid className="text-gray-900 text-[25px] hover:text-orange-600" />
             </Link>
           )}
         </div>
