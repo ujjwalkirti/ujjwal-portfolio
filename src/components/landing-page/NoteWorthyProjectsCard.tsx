@@ -13,32 +13,33 @@ const NoteWorthyProjectsCard = ({ project }) => {
         pressStart2P.className
       }
     >
-      <div className="flex justify-between mb-7">
-        <BsFolder2Open className="text-orange-600 text-[30px] hover:text-orange-600" />
-        <div className="flex gap-4">
-          {" "}
-          {project.github_link && (
-            <Link href={project.github_link}>
-              <FiGithub className="text-gray-900 text-[25px] hover:text-orange-600" />
-            </Link>
-          )}
-          {project.deployed_link && (
-            <Link href={project.deployed_link}>
-              <BsLink45Deg className="text-gray-900 text-[25px] hover:text-orange-600" />
-            </Link>
-          )}
-          {project.play_store_link && (
-            <Link href={project.play_store_link}>
-              <SiAndroid className="text-gray-900 text-[25px] hover:text-orange-600" />
-            </Link>
-          )}
+      <div>
+        <div className="flex justify-between mb-7">
+          <BsFolder2Open className="text-orange-600 text-[30px] hover:text-orange-600" />
+          <div className="flex gap-4">
+            {project.github_link && (
+              <Link href={project.github_link}>
+                <FiGithub className="text-gray-900 text-[25px] hover:text-orange-600" />
+              </Link>
+            )}
+            {project.deployed_link && (
+              <Link href={project.deployed_link}>
+                <BsLink45Deg className="text-gray-900 text-[25px] hover:text-orange-600" />
+              </Link>
+            )}
+            {project.play_store_link && (
+              <Link href={project.play_store_link}>
+                <SiAndroid className="text-gray-900 text-[25px] hover:text-orange-600" />
+              </Link>
+            )}
+          </div>
         </div>
+        <p className="font-semibold text-gray-900 text-sm mb-4 hover:text-orange-600">
+          {project.title}
+        </p>
+        <p className="text-xs leading-relaxed text-gray-600">{project.desc}</p>
       </div>
-      <p className="font-semibold text-gray-900 text-sm mb-4 hover:text-orange-600">
-        {project.title}
-      </p>
-      <p className="text-xs leading-relaxed text-gray-600">{project.desc}</p>
-      <div className="break-words mt-[25px] mb-[10px] text-xs flex flex-wrap text-gray-900 gap-2">
+      <div className="break-words mt-[25px] text-xs flex flex-wrap text-gray-900 gap-2">
         {project.tags.map((tag: string, index: number) => (
           <span
             key={index}
