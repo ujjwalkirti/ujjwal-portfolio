@@ -22,7 +22,12 @@ export default function Home() {
 				{/* Open Graph Tags */}
 				<meta property="og:title" content="Ujjwal Kirti | Full-Stack Engineer — AI-native, Distributed Systems" />
 				<meta property="og:description" content="Full-stack engineer shipping production systems for 100K+ DAUs. Distributed systems, LLM integration, Next.js, Go, TypeScript." />
-				<meta property="og:image" content={url + "me.png"} />
+				<meta property="og:image" content={url + "og-image.png"} />
+				<meta property="og:image:secure_url" content={url + "og-image.png"} />
+				<meta property="og:image:type" content="image/png" />
+				<meta property="og:image:width" content="1200" />
+				<meta property="og:image:height" content="630" />
+				<meta property="og:image:alt" content="Ujjwal Kirti — Full-Stack Engineer" />
 				<meta property="og:url" content={url} />
 				<meta property="og:type" content="website" />
 				<meta property="og:site_name" content="Ujjwal Kirti" />
