@@ -62,7 +62,7 @@ const FeaturedProject = ({ font, project }) => {
 			</div>
 
 			<div className="hidden lg:block lg:relative w-1/2">
-				<Image src={project.image_url} alt={project.title} className="rounded-md" fill style={{ objectFit: project.image_fit ?? "cover", objectPosition: "top" }} />
+				<Image src={project.image_url} alt={project.alt ?? `${project.title} — ${project.desc.short}`} className="rounded-md" fill style={{ objectFit: project.image_fit ?? "cover", objectPosition: "top" }} />
 			</div>
 		</div>
 	);

@@ -2,11 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [
-      "avatars.githubusercontent.com",
-      "firebasestorage.googleapis.com",
-      "tghtovqmkscbuoezwsqx.supabase.co",
-      'cdn.sanity.io'
+    remotePatterns: [
+      { protocol: "https", hostname: "avatars.githubusercontent.com" },
+      { protocol: "https", hostname: "firebasestorage.googleapis.com" },
+      { protocol: "https", hostname: "tghtovqmkscbuoezwsqx.supabase.co" },
+      { protocol: "https", hostname: "cdn.sanity.io" },
     ],
   },
 };

@@ -5,10 +5,9 @@ import {
   Montserrat,
   Press_Start_2P,
 } from "next/font/google";
-import { SiAmazonaws, SiAngular, SiDocker, SiExpress, SiFirebase, SiGithubactions, SiKubernetes, SiMongodb, SiNginx, SiPostgresql, SiSupabase, SiTailwindcss, SiVercel } from "react-icons/si";
+import { SiAmazonaws, SiApachekafka, SiClickhouse, SiDocker, SiExpress, SiGo, SiGithubactions, SiKubernetes, SiNginx, SiPostgresql, SiRabbitmq, SiRedis, SiSupabase, SiTailwindcss, SiTypescript, SiVercel } from "react-icons/si";
 import { IoLogoPython } from "react-icons/io";
 import { TbBrandNextjs, TbBrandReactNative } from "react-icons/tb";
-import { IoLogoJavascript } from "react-icons/io5";
 
 
 const featuredProjects: Array<Object> = [
@@ -20,6 +19,7 @@ const featuredProjects: Array<Object> = [
     },
     tags: ["React Native", "Next.js", "NLP", "AI/ML", "Android", "Google Play Store"],
     image_url: "/assets/landing-page/aspra.webp",
+    alt: "Aspra — cross-platform AI communication app for neurodivergent students, adopted across UK primary schools.",
     image_fit: "contain",
     deployed_link: "https://aspra.binapani.com",
     play_store_link: "https://play.google.com/store/apps/details?id=com.binapani.aspra&hl=en_IN",
@@ -32,6 +32,7 @@ const featuredProjects: Array<Object> = [
     },
     tags: ["Go", "Chi Router", "AWS ECS Fargate", "Docker", "Apache Kafka", "ClickHouse", "PostgreSQL", "Cloudflare R2", "JWT", "React 19", "Vite", "Tailwind CSS", "Radix UI"],
     image_url: "/assets/landing-page/deployment-platform.png",
+    alt: "Vercel-like deployment platform — Go microservices on AWS ECS Fargate with Kafka log streaming and instant preview URLs.",
     github_link: "https://github.com/ujjwalkirti/mini-vercel",
     // deployed_link: "https://your-deployment-platform.com"
   },
@@ -43,33 +44,10 @@ const featuredProjects: Array<Object> = [
     },
     "tags": ["Java", "Spring Boot", "Microservices", "PostgreSQL", "Kafka", "RabbitMQ", "Docker", "AWS"],
     "image_url": "/assets/landing-page/patient-management.png",
+    "alt": "Patient Management System — modular Spring Boot microservices for healthcare records, appointments, and billing.",
     // "github_link": "https://github.com/ujjwalkirti/your-patient-management-repo",
     // "deployed_link": "https://your-patient-management-demo-link.com"
   },
-  {
-    title: "Grocery Delivery Application",
-    desc: {
-      short: "An ecommerce application for grocery delivery right to your doorstep.",
-      long: "The web app provided a seamless grocery shopping experience with real-time order tracking, multi-vendor support, secure payments, and an intuitive checkout process. It ensured smooth performance, responsive design, and efficient handling of user and order data."
-    },
-    tags: ["Next.js (app router)", "TypeScript", "Shadcn/ui", "Zustand", "MongoDB", "Razorpay", "next-auth", "Render"],
-    image_url: "/assets/landing-page/ecommerce-marketplace.webp",
-    github_link: "https://github.com/ujjwalkirtitests/grocery-shopping-nextjs",
-    deployed_link: "https://grocery-shopping-nextjs-web.onrender.com/"
-  },
-  {
-    title: "MMNCT Website",
-    desc: {
-      short:
-        "A full stack web application for day-night cricketing event of my institute.",
-      long: "The website was used to display real time live scores, video streaming of the match, take polls on outcome of matches, make announcements, host contests, attract sponsorship as well as display fixtures and points table which updated dynamically.",
-    },
-    tags: ["Next.js", "Tailwind CSS", "Firebase", "Vercel"],
-    image_url:
-      "/assets/landing-page/sports-website.webp",
-    github_link: "https://github.com/ujjwalkirti/mmnct",
-    deployed_link: "https://mmnct-yzbk.vercel.app/",
-  }
 ];
 
 const NoteworthyProjects: Array<Object> = [
@@ -85,21 +63,6 @@ const NoteworthyProjects: Array<Object> = [
     desc: " Developed a full-stack chat application using Next.js for the frontend and Node.js for the backend,following the MVC design pattern.",
     tags: ["Next.js", "Expressjs", "Kafka", "Postgresql", "Socket.io", "Turborepo"],
     github_link: "https://github.com/ujjwalkirti/scalable-realtime-chat-app",
-  },
-  {
-    title: "Reddit Clone",
-    desc: "Reddit 2.0, made using Next.js, TypeScript and backed by graphql.",
-
-    tags: [
-      "Next.js",
-      "Tailwind CSS",
-      "Supabase",
-      "StepZen",
-      "Graphql",
-      "Vercel",
-    ],
-    github_link: "https://github.com/ujjwalkirti/reddit-clone",
-    // deployed_link: "https://www.mmnct.in/",
   },
   {
     title: "LAC Website",
@@ -141,25 +104,52 @@ const pressStart2P = Press_Start_2P({
 });
 
 const tools = [
-  { title: "JavaScript (ES6+)", icon: IoLogoJavascript },
+  { title: "TypeScript", icon: SiTypescript },
+  { title: "Go", icon: SiGo },
   { title: "Python", icon: IoLogoPython },
-  { title: "React, Next.js", icon: TbBrandNextjs },
+  { title: "Next.js", icon: TbBrandNextjs },
   { title: "React Native", icon: TbBrandReactNative },
-  // angular
-  { title: "Angular", icon: SiAngular },
-  { title: "Firebase", icon: SiFirebase },
-  { title: "Tailwind CSS", icon: SiTailwindcss },
   { title: "Express", icon: SiExpress },
+  { title: "PostgreSQL", icon: SiPostgresql },
+  { title: "Redis", icon: SiRedis },
+  { title: "Apache Kafka", icon: SiApachekafka },
+  { title: "RabbitMQ", icon: SiRabbitmq },
+  { title: "ClickHouse", icon: SiClickhouse },
   { title: "Docker", icon: SiDocker },
   { title: "Kubernetes", icon: SiKubernetes },
-  { title: "Github Actions", icon: SiGithubactions },
+  { title: "GitHub Actions", icon: SiGithubactions },
   { title: "AWS", icon: SiAmazonaws },
   { title: "Vercel", icon: SiVercel },
   { title: "Supabase", icon: SiSupabase },
-  // mongodb
-  { title: "MongoDB", icon: SiMongodb },
-  { title: "Postgresql", icon: SiPostgresql },
   { title: "Nginx", icon: SiNginx },
+  { title: "Tailwind CSS", icon: SiTailwindcss },
+];
+
+const skillCategories = [
+  {
+    label: "Languages",
+    items: ["TypeScript", "Go", "Python", "Java", "JavaScript"],
+  },
+  {
+    label: "Frontend",
+    items: ["Next.js", "React", "React Native", "Tailwind CSS", "Radix UI"],
+  },
+  {
+    label: "Backend",
+    items: ["Express", "Chi Router", "Spring Boot", "FastAPI", "Node.js"],
+  },
+  {
+    label: "Data & Infra",
+    items: ["PostgreSQL", "Redis", "ClickHouse", "Kafka", "RabbitMQ"],
+  },
+  {
+    label: "Cloud & DevOps",
+    items: ["AWS (ECS, EC2, S3)", "Azure", "Docker", "Kubernetes", "GitHub Actions", "Nginx", "Cloudflare R2"],
+  },
+  {
+    label: "AI / LLM",
+    items: ["OpenAI", "RAG pipelines", "Prompt orchestration", "Vector DBs"],
+  },
 ];
 
 const navbarOptionStyle = "hover:text-orange-600 cursor-pointer";
@@ -176,6 +166,7 @@ export {
   inter,
   pressStart2P,
   tools,
+  skillCategories,
   navbarOptionStyle,
   smallNavbarOptionStyle,
 };

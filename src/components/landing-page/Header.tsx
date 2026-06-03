@@ -13,12 +13,26 @@ const Header = () => {
 				{" "}
 				<p className={"font-normal text-orange-600 text-xs lg:ml-[4px] lg:mb-[2px] " + pressStart2P.className}>👋 Hi, my name is</p>
 				<p className={"text-2xl lg:text-3xl font-semibold text-gray-900 my-[2px] " + pressStart2P.className}>Ujjwal Kirti.</p>
-				<p className={"text-xl lg:text-base text-gray-600 mt-[5px] font-semibold leading-tight lg:leading-relaxed " + pressStart2P.className}>I build <span className="underline decoration-2 underline-offset-4">async</span>-first web applications 🌐</p>
+				<p className={"text-xl lg:text-base text-gray-600 mt-[5px] font-semibold leading-tight lg:leading-relaxed " + pressStart2P.className}>Full-stack engineer building <span className="underline decoration-2 underline-offset-4">AI-native</span>, distributed systems at scale 🌐</p>
 				<div className={"mt-[10px] lg:text-justify text-xs text-gray-600 leading-relaxed " + pressStart2P.className}>
 					<p>
-						I build scalable full-stack applications, design distributed systems, and architect cloud-native solutions for reliability and performance. <br />
-						Currently, I'm diving deeper into <span className="text-orange-600 font-semibold">distributed systems</span> and <span className="text-orange-600 font-semibold">using LLMs to build</span> smarter, more efficient applications.
+						I ship production systems serving <span className="text-orange-600 font-semibold">100K+ DAUs</span>, cut API latency from <span className="text-orange-600 font-semibold">350ms → 80ms</span>, and reduced LLM costs by <span className="text-orange-600 font-semibold">30%</span> through prompt orchestration and caching. <br />
+						Currently going deeper on <span className="text-orange-600 font-semibold">distributed systems</span> and <span className="text-orange-600 font-semibold">LLM-powered</span> products.
 					</p>
+				</div>
+				<div className={"mt-[15px] grid grid-cols-3 gap-3 lg:gap-6 w-full lg:w-auto " + pressStart2P.className}>
+					<div className="flex flex-col items-start">
+						<span className="text-orange-600 text-sm lg:text-base font-bold">100K+</span>
+						<span className="text-[10px] lg:text-xs text-gray-600 mt-1">Daily active users</span>
+					</div>
+					<div className="flex flex-col items-start">
+						<span className="text-orange-600 text-sm lg:text-base font-bold">80ms</span>
+						<span className="text-[10px] lg:text-xs text-gray-600 mt-1">p99 API latency</span>
+					</div>
+					<div className="flex flex-col items-start">
+						<span className="text-orange-600 text-sm lg:text-base font-bold">-30%</span>
+						<span className="text-[10px] lg:text-xs text-gray-600 mt-1">LLM cost reduction</span>
+					</div>
 				</div>
 				<Link href={`mailto:ujjwalkirti2000@gmail.com`} className={"text-orange-600 border border-orange-600 rounded-lg text-xs mt-[30px] py-[10px] px-[18px] hover:bg-orange-50 " + pressStart2P.className}>
 					Let's connect!

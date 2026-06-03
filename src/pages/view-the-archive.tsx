@@ -21,10 +21,15 @@ function ViewTheArchive({ repos }) {
 	return (
 		<div className="bg-retro-bg text-retro-text min-h-screen">
 			<Head>
-				<title>Ujjwal Kirti | Projects Archive</title>
-				<meta name="description" content="A collection of all projects by Ujjwal Kirti, including full-stack development, distributed systems, cloud architecture, and more." />
+				<title>Ujjwal Kirti | Projects Archive — Full-Stack & Distributed Systems</title>
+				<meta name="description" content="Full archive of projects by Ujjwal Kirti — full-stack engineer working with Next.js, Go, TypeScript, LLM integration, and distributed systems." />
+				<meta name="keywords" content="full-stack engineer, LLM integration, distributed systems, Next.js, Go, projects archive" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<link rel="icon" href="/UK.png" />
+				<link rel="icon" href="/favicon.ico" sizes="any" />
+				<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+				<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+				<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+				<link rel="manifest" href="/site.webmanifest" />
 
 				{/* Open Graph Tags */}
 				<meta property="og:title" content="Ujjwal Kirti | Projects Archive" />
@@ -34,10 +39,10 @@ function ViewTheArchive({ repos }) {
 				<meta property="og:type" content="website" />
 
 				{/* Twitter Card Tags */}
-				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:title" content="Ujjwal Kirti | Projects Archive" />
-				<meta name="twitter:description" content="Browse through Ujjwal Kirti's complete project archive – from full-stack applications to distributed systems and everything in between." />
-				<meta name="twitter:image" content={url + "me.png"} />
+				{/* <meta name="twitter:card" content="summary_large_image" /> */}
+				{/* <meta name="twitter:title" content="Ujjwal Kirti | Projects Archive" /> */}
+				{/* <meta name="twitter:description" content="Browse through Ujjwal Kirti's complete project archive – from full-stack applications to distributed systems and everything in between." /> */}
+				{/* <meta name="twitter:image" content={url + "me.png"} /> */}
 			</Head>
 
 			<div className="w-[90%] lg:w-[78%] mx-auto pt-[40px]">

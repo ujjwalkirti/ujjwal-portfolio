@@ -24,8 +24,8 @@ export const navbarLinks: NavbarLink[] = [{ title: "About", id: "about" }, { tit
 export const experiences: Experience[] = [
     {
         date: "06/2024 — Present",
-        title: "Full Stack Developer",
-        company: "Freelance",
+        title: "Full Stack Engineer",
+        company: "Binapani Edu",
         description: [
             {
                 text: "Architected and scaled modular REST APIs using Express.js, PostgreSQL, and Sequelize across Auth, CMS, Syllabus, Analytics, and PYQs services; implemented JWT + RBAC and async processing via RabbitMQ/PubSub, reducing latency by 40% and serving 100K+ users.",
